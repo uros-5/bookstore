@@ -1,0 +1,18 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% block title_html %}
+{{ block.super }} Dodavanje stavke narudzbine
+{% endblock %}
+
+{% block h1 %}
+Dodavanje stavke narudzbine
+{% endblock %}
+
+{% block article_content %}
+
+        <form method="post "action="">
+            <table>
+                {{ form.as_table }}
+            </table>
+        </form>
+{% endblock %}

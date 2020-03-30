@@ -1,0 +1,18 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% block title_html %}
+{{ block.super }} Unos knjige
+{% endblock %}
+
+{% block h1 %}
+Unos knjige(autor)
+{% endblock %}
+
+{% block article_content %}
+
+        <form method="post "action="">
+            <table>
+                {{ form.as_table }}
+            </table>
+        </form>
+{% endblock %}
