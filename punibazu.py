@@ -80,17 +80,39 @@ def kreirajKorisnike():
             brojPoste = randomm('brojPoste')
             grad = randomm('grad')
             telefon = randomm('telefon')
+
             if(redosled=="korisnik"):
+                password = "PASSWORD1"
+                novi_korisnik = User.objects.create_user(username=username,
+                                                         email=email,
+                                                         password=password
+                                                         )
+                novi_korisnik.is_active = True
+                novi_korisnik.first_name = first_name
+                novi_korisnik.last_name = last_name
+                novi_korisnik.save()
+
                 is_korisnik = True
-                korisnik = Korisnici(username=username,email=email,first_name=first_name,
-                                    last_name=last_name,ulicaIBroj=ulicaIBroj,brojPoste=brojPoste,
-                                    grad=grad,telefon=telefon,is_korisnik=is_korisnik,password="ABC123")
+                korisnik = Korisnici(ulicaIBroj=ulicaIBroj,brojPoste=brojPoste,
+                                    grad=grad,telefon=telefon,is_korisnik=is_korisnik)
+
+                korisnik.korisnik = novi_korisnik
+
                 korisnik.save()
             else:
+                password = "PASSWORD12"
+                novi_korisnik = User.objects.create_user(username=username,
+                                                         email=email,
+                                                         password=password
+                                                         )
+                novi_korisnik.is_active = True
+                novi_korisnik.first_name = first_name
+                novi_korisnik.last_name = last_name
+                novi_korisnik.save()
                 is_autor = True
-                korisnik = Korisnici(username=username, email=email, first_name=first_name,
-                                    last_name=last_name, ulicaIBroj=ulicaIBroj, brojPoste=brojPoste,
-                                    grad=grad, telefon=telefon, is_autor=is_autor,password="ABC123")
+                korisnik = Korisnici(ulicaIBroj=ulicaIBroj, brojPoste=brojPoste,
+                                    grad=grad, telefon=telefon, is_autor=is_autor)
+                korisnik.korisnik = novi_korisnik
                 korisnik.save()
         if(redosled=="korisnik"):
             zaDodati-=100-36
@@ -150,7 +172,7 @@ def kreirajNarudzbine():
         narudzbina.save()
 
 # stavke narudzbine
-def kreirajNarudzbine():
+def kreirajStavkeNarudzbine():
     for i in range(75):
         knjiga = random.randint(1,140)
         narudzbina = random.randint(1,36)
@@ -182,4 +204,3 @@ def kreirajOceneNaKnjigama():
     stavka = StavkeNarudzbine.objects.filter(narudzbina = narudzbina.id,knjiga = knjiga)
     onk = OceneKnjiga(korisnik=korisnik,ocena=5)
 
-print('ocenjene.')

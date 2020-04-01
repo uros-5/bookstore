@@ -4,13 +4,22 @@ from TaskRestAPI import views
 from django.conf.urls import url
 from TaskRestAPI.models import *
 from TaskRestAPI.views import *
+from django.contrib.auth.decorators import login_required
+# from TaskRestAPI.views import regpage,Unos_knjiga_forma,Dodavanje_stavki_narudzbine_forma,Ocenjivanje_knjiga_forma,Komentarisanje_knjiga_forma,Korisnici_lista
 
 urlpatterns = [
     path(r'',views.index,name="index"),
-    path(r'registracija',Registraciona_forma.as_view(),name="registracija"),
-    path(r'unos_knjige',Unos_knjiga_forma.as_view(),name="unos_knjige"),
-    path(r'dodavanje_stavke_narudzbine', Dodavanje_stavki_narudzbine_forma.as_view(), name="dodavanje_stavke_narudzbine"),
-    path(r'ocenjivanje_knjiga', Ocenjivanje_knjiga_forma.as_view(), name="ocenjivanje_knjiga"),
-    path(r'komentarisanje_knjiga', Komentarisanje_knjiga_forma.as_view(
-    ), name="komentarisanje_knjiga")
+    #deo sajta sa formama
+    path(r'registracija',regpage,name="registracija"),
+    path(r'unos_knjige',login_required(Unos_knjiga_forma.as_view()),name="unos_knjige"),
+    path(r'dodavanje_stavke_narudzbine', login_required(Dodavanje_stavki_narudzbine_forma.as_view()), name="dodavanje_stavke_narudzbine"),
+    path(r'ocenjivanje_knjiga', login_required(Ocenjivanje_knjiga_forma.as_view()), name="ocenjivanje_knjiga"),
+    path(r'komentarisanje_knjiga', login_required(Komentarisanje_knjiga_forma.as_view()), name="komentarisanje_knjiga"),
+
+    #deo sajta za login
+    path(r'login',views.login_korisnika,name="login"),
+    path(r'logout',views.logout_korisnika,name="logout"),
+
+    #
+    path(r'lista_korisnika',Korisnici_lista.as_view(),name="lista_korisnika")
 ]

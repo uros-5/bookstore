@@ -10,9 +10,48 @@ Registracija
 
 {% block article_content %}
 
-        <form method="post "action="">
-            <table>
-                {{ form.as_table }}
-            </table>
-        </form>
+{#        <form method="post "action="">#}
+{#            <table>#}
+{#                {{ form.as_table }}#}
+{#            </table>#}
+{#            <input type="button" value="SUMBIT"/>#}
+{#        </form>#}
+    <form method="post" action="{% url "registracija" %}" >
+    {% csrf_token %}
+        <table>
+            <tr>
+                <td>Ime</td>
+                <td>
+                <input type="text" name="first_name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Prezime</td>
+                <td><input type="text" name="last_name" /> </td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" /> </td>
+            </tr>
+
+            <tr>
+                <td>username</td>
+                <td><input type="text" name="username" /> </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" /></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="password" name="password_bis" /></td>
+            </tr>
+
+        </table>
+            <input type="submit" value="Registruj se" />
+    </form>
 {% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% block title_html %}
+{{ block.super }} Login page
+{% endblock %}
+
+{% block h1 %}
+Login page
+{% endblock %}
+
+{% block article_content %}
+    {% if user.is_authenticated %}
+        <h1>
+            You are connected.
+        </h1>
+        <p>
+            Your email:{{ user.email }}
+        </p>
+
+    {% else %}
+        <h1>Connection</h1>
+       <form method="post" action="{{ login }}">
+           {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <input type="submit" class="button" value="Uloguj se"/>
+       </form>
+    {% endif %}
+{% endblock %}
+
+{#            <tr>#}
+{#                <td>Username:<input type="text"/> <br/></td>#}
+{#                <td>Password:<input type="password"/> <br/></td>#}
+{#            </tr>#}

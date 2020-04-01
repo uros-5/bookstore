@@ -77,6 +77,7 @@ TEMPLATES = [
         },
     },
 ]
+LOGIN_URL = 'login'
 
 WSGI_APPLICATION = 'Server.wsgi.application'
 
@@ -135,4 +136,4 @@ LANGUAGE_CODE = 'en'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-AUTH_USER_MODEL = 'TaskRestAPI.Korisnici'
+# AUTH_USER_MODEL = 'TaskRestAPI.Korisnici'
