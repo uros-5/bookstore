@@ -9,11 +9,13 @@ Unos knjige(autor)
 {% endblock %}
 
 {% block article_content %}
+        {% if user.is_authenticated and user.id in ids %}
+            <form method="post "action="">
+                <table>
+                    {{ form.as_table }}
+                </table>
+                <input type="button" value="SUMBIT"/>
+            </form>
 
-        <form method="post "action="">
-            <table>
-                {{ form.as_table }}
-            </table>
-            <input type="button" value="SUMBIT"/>
-        </form>
+        {% endif %}
 {% endblock %}

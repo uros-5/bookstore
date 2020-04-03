@@ -3,8 +3,8 @@ from django.utils.timezone import timezone
 from string import ascii_lowercase as lista
 import random
 from django.utils import timezone
-
-
+import shelve
+fajl = shelve.open("zabazu\\podaci.dat","r")
 # korisnici
 
 def randomm(podatak=''):
@@ -46,14 +46,9 @@ def randomm(podatak=''):
         brojPoste = random.randint(1000,5000)
         return brojPoste
     elif (podatak == 'grad'):
-        grad = ""
-        duzina = random.randint(10, 17)
-        for i in range(duzina):
-            if (len(grad) == 0):
-                grad = str(lista[random.randint(1, 25)]).upper()
-            else:
-                grad += str(lista[random.randint(1, 25)])
-        return grad
+        gradovi = fajl["gradovi"]
+        grad0 = random.choice(list(gradovi.items()))
+        return (grad0[0],grad0[1])
     elif (podatak == 'telefon'):
         telefon = ""
         prefiksi = ["060","061","062","063","064","065","066","068","069"]
@@ -69,18 +64,21 @@ def randomm(podatak=''):
 def kreirajKorisnike():
     zaDodati = 101
     redosled = "korisnik"
+    fajl = shelve.open("zabazu\\podaci.dat", "r")
+    imena = fajl["imena"]
+    prezimena = fajl["prezimena"]
     while(True):
         for i in range(1,zaDodati):
             username = redosled + str(i)
             email = redosled + str(i) + '@mejl.com'
-            first_name = redosled.capitalize() + str(i)
-            last_name = redosled.capitalize()+"ovic" + str(i)
 
+            first_name = random.choice(imena)
+            last_name = random.choice(prezimena)
             ulicaIBroj = randomm('ulica')
-            brojPoste = randomm('brojPoste')
-            grad = randomm('grad')
+            grad0 = randomm('grad')
+            grad = grad0[0]
+            brojPoste = grad0[1]
             telefon = randomm('telefon')
-
             if(redosled=="korisnik"):
                 password = "PASSWORD1"
                 novi_korisnik = User.objects.create_user(username=username,
@@ -114,11 +112,13 @@ def kreirajKorisnike():
                                     grad=grad, telefon=telefon, is_autor=is_autor)
                 korisnik.korisnik = novi_korisnik
                 korisnik.save()
+
         if(redosled=="korisnik"):
             zaDodati-=100-36
             redosled="autor"
         elif(redosled=="autor"):
             break
+    fajl.close()
 
 #izdavaci
 def kreirajIzdavace():
@@ -144,11 +144,13 @@ def randrange_float(start, stop, step):
 # knjige
 
 def kreirajKnjige():
-    for i in range(150):
+    fajl = shelve.open("zabazu\\podaci.dat", "r")
+    knjigee = fajl["knjige"]
+    for i in range(30,500):
         isbn = ""
         strana = random.randint(50,370)
-        cena = randrange_float(450.00,6500.00,0.50)
-        godina = random.randint(1870,2020)
+        # cena = randrange_float(450.00,6500.00,0.50)
+        godina = random.randint(2000,2020)
         izdavac = random.randint(1,6)
         autor = random.randint(0,35)
         while (True):
@@ -158,10 +160,22 @@ def kreirajKnjige():
             elif (len(isbn) == 15):
                 break
             isbn += str(random.randint(1, 9))
-        knjiga = Knjige(naslov="Prelepi trenutci "+str(godina),strana=strana,cena=(cena),godinaIzdanja=godina,ISBN=isbn)
+        knjigaizfajla = knjigee[i]
+        cena = knjigaizfajla[2].split(",")
+        tup1 = cena[0]
+        tup2 = ""
+        if("." in cena[0]):
+            tup1 = cena[0].replace(".","")
+        if(cena[1].endswith("0")):
+            tup2 = cena[1][0]+"5"
+        else:
+            tup2 = cena[1]
+        cena = float(str(tup1+"."+tup2))
+        knjiga = Knjige(naslov=knjigaizfajla[0],strana=strana,cena=(cena),godinaIzdanja=godina,ISBN=isbn)
         knjiga.izdavac = Izdavaci.objects.get(id=izdavac)
         knjiga.autor = Korisnici.objects.filter(is_autor=True)[autor]
         knjiga.save()
+        fajl.close()
 # narudzbine
 def kreirajNarudzbine():
     for i in range(35):

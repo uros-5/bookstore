@@ -1,7 +1,13 @@
 {% extends 'public/base.html' %}
 {% load static %}
+
+
 {% block title_html %}
-{{ block.super }} Login page
+    {{ block.super }} Login page
+{% endblock %}
+
+{% block headcss %}
+    {{ block.super }}<link rel="stylesheet" href='{% static "css/login.css" %}' type="text/css">
 {% endblock %}
 
 {% block h1 %}
@@ -10,12 +16,32 @@ Login page
 
 {% block article_content %}
     {% if user.is_authenticated %}
-        <h1>
-            You are connected.
-        </h1>
-        <p>
-            Your email:{{ user.email }}
-        </p>
+        <div class="korisnik-infos ">
+                <h1>Vas nalog</h1>
+
+                <div class="korisnik-info korisnik-info__i">
+                    <p>Vasi podaci</p>
+                </div>
+
+                <div class="korisnik-info">
+                    <p>Naruceno</p>
+                </div>
+
+                <div class="korisnik-info">
+                    <p>Utisci</p>
+                </div>
+
+                <div class="korisnik-info">
+                    <p>Ocene i misljenja</p>
+                </div>
+
+                <div class="korisnik-info korisnik-info__i">
+                    <p>Odjavljivanje/logout</p>
+                </div>
+
+
+
+        </div>
 
     {% else %}
         <h1>Connection</h1>

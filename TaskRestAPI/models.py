@@ -46,7 +46,7 @@ class Knjige(models.Model):
     kategorije = ()
     naslov = models.CharField(max_length=30, verbose_name="naslov")
     strana = models.IntegerField(verbose_name="strana",null=True,default=None,blank=True)
-    cena = models.DecimalField(verbose_name="cena",max_digits=6, decimal_places=2)
+    cena = models.DecimalField(verbose_name="cena",max_digits=9, decimal_places=2)
     opis = models.TextField(verbose_name="opis",max_length=300,null=True,default=None,blank=True)
     godinaIzdanja = models.IntegerField(verbose_name="godinaIzdanja", default=2020)
     ISBN = models.CharField(verbose_name="ISBN",max_length=28,unique=True)

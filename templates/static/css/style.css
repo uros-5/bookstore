@@ -1,0 +1,61 @@
+* {
+	box-sizing:border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+	margin:0px;
+	box-sizing:border-box;
+}
+
+
+.main-header {
+	width:90%;
+	background-color:#96948f;
+	padding:8px 16px;
+	margin:0 auto;
+	text-align: center;
+	color:black;
+	background-image:url("../images/forheader.png");
+	background-repeat:repeat-x;
+	
+}
+.main-header > div:first-child {
+	display:inline-block;
+	background:#96948f;
+	padding:15px 10px;
+	font-size:22px;
+	font-weight:bold;
+	vertical-align:middle;
+	
+}
+.main-nav {
+	display:inline-block;
+	vertical-align:middle;
+}
+.main-nav__items {
+	margin:0;
+	padding:0;
+	list-style:none;
+	vertical-align:middle;
+}
+.main-nav__item  {
+	display:inline-block;
+	margin:0 16px ;
+	color:#0e4f1f;
+	vertical-align:middle;
+}
+.article-section {
+	width: 70%;
+	margin:15px auto;
+	height:auto;
+	padding:10px;
+	/*border:1px solid black;*/
+	margin-bottom:10px;
+}
+.section-footer {
+	width:90%;
+	height:110px;
+	background-color:#96948f;
+	margin:0 auto;
+}
+

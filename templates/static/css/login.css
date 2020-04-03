@@ -1,0 +1,32 @@
+.korisnik-infos {
+	width:35%;
+	border:1px solid black;
+	margin:0 auto;
+}
+
+.korisnik-infos h1 {
+	color: #262626;
+	padding:8px 16px;
+}
+.korisnik-info {
+	text-align:center;
+	width:80%;
+	color:black;
+	background-color:#dddddd;
+	margin:18px auto;
+	padding:10px;
+	vertical-align:middle;
+}
+.korisnik-info__i {
+	background-color:#edc475;
+}
+.korisnik-info__i:hover,
+.korisnik-info__i:active{
+	background-color: #d5a953;
+	cursor:pointer;
+}
+.korisnik-info:hover,
+.korisnik-info:active{
+	background-color: #bbbbbb;
+	cursor:pointer;
+}

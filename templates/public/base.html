@@ -1,20 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    {% load static %}
-    <link rel="stylesheet" href='{% static "css/stajl.css" %}' type="text/css">
-    <meta charset="UTF-8">
-    <title>
-        {% block title_html %}TaskRestAPI - {% endblock  %}
-    </title>
-</head>
-<body>
-    <h1>
-        {% block h1 %} {% endblock %}
-    </h1>
 
-    <article>
-            {% block article_content %}{% endblock %}
-    </article>
+<head>
+	{% load static %}
+    <title>
+        {% block title_html %}Knjizara test - {% endblock  %}
+    </title>
+    {% block headcss %}
+        <link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    {% endblock %}
+</head>
+
+<body>
+
+	<form action="" method="get" accept-charset="utf-8">
+		<header class="main-header">
+            <div><a href="{% url "index" %}">KnjizaraTest</a>
+			</div>
+			<div class="main-nav">
+				<ul class="main-nav__items">
+					<li class="main-nav__item">
+						<input style="width:270px;" type="text"/>
+					</li>
+					<li class="main-nav__item">
+						<a href="search.index"> <ion-icon style="font-size:25px;" name="search-outline"></ion-icon></a>
+					</li>
+					<!-- <li class="main-nav__item"> -->
+						<!-- <a href="customers/index.html" style="display:none;"></a> -->
+					<!-- </li> -->
+					<li class="main-nav__item">
+						<a href="{% url "dodavanje_stavke_narudzbine" %}"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></a>
+					</li>
+                    {% if user.is_authenticated %}
+                        <li class="main-nav__item main-nav__item--cta">
+						    <a href="{% url "login" %}"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></a>
+					    </li>
+                        <li class="main-nav__item main-nav__item--cta" style="font-size:15px;">
+                            Ulogovan kao: </br>{{ user.username }}
+                            {% with ulogovan=True %}
+                            {% endwith %}
+                        </li>
+                    {% else %}
+                        <li class="main-nav__item main-nav__item--cta">
+						<a href="{% url "login" %}"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></a>
+					</li>
+                    {% endif %}
+				</ul>
+			</div>
+		</header>
+	</form>
+	
+	<section class="article-section">
+	    {% block article_content %}{% endblock %}
+	</section>
+	
+	<footer class="section-footer">
+	
+	</footer>
 </body>
+
+
 </html>

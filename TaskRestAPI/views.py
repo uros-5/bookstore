@@ -75,6 +75,14 @@ class Unos_knjiga_forma(CreateView):
     template_name='public/unos_knjige.html'
     success_url="index"
     fields=("naslov","cena","ISBN","kategorija","izdavac")
+
+    def get_context_data(self, **kwargs):
+        context = super(Unos_knjiga_forma, self).get_context_data(**kwargs)
+        lista = []
+        for i in range(102,138):
+            lista.append(i)
+        context['ids'] = lista
+        return context
 class Dodavanje_stavki_narudzbine_forma(CreateView):
     model = StavkeNarudzbine
     template_name = 'public/dodavanje_stavke_narudzbine.html'
