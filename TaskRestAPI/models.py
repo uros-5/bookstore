@@ -1,10 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser,User
 from django.utils import timezone
+
+User._meta.get_field('email')._unique = True
 # Create your models here.
 
 class Korisnici(models.Model):
     korisnik = models.OneToOneField(User,on_delete=models.CASCADE)
+    # email = models.EmailField(verbose_name='email address',max_length=255,unique=True)
     ulicaIBroj = models.CharField(max_length=45, verbose_name="ulicaIBroj",null=True,default=None,blank=True)
     brojPoste = models.IntegerField(verbose_name="brojPoste",null=True,blank=True)
     grad = models.CharField(max_length=20, verbose_name="grad",null=True,default=None,blank=True)
@@ -14,7 +17,7 @@ class Korisnici(models.Model):
 
     def __str__(self):
         if(self.is_autor):
-            return str(self.korisnikfirst_name + " " + self.korisnik.last_name)
+            return str(self.korisnik.first_name + " " + self.korisnik.last_name)
         else:
             return self.korisnik.username
 

@@ -20,6 +20,8 @@ urlpatterns = [
     path(r'login',views.login_korisnika,name="login"),
     path(r'logout',views.logout_korisnika,name="logout"),
 
-    #
-    path(r'lista_korisnika',Korisnici_lista.as_view(),name="lista_korisnika")
+    # informacije korisnika
+    path(r'korisnik_podaci_(?P<pk>\d+)$',Korisnici_podaci.as_view(),name="korisnik_podaci"),
+    path(r'lista_korisnika',Korisnici_lista.as_view(),name="lista_korisnika"),
+    path(r'narudzbine',Korisnici_narudzbine.as_view(),name="narudzbine")
 ]

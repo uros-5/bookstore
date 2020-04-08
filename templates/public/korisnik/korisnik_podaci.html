@@ -1,0 +1,76 @@
+{% extends 'public/base.html' %}
+{% load static %}
+
+
+{% block title_html %}
+    {{ block.super }} Vasi podaci
+{% endblock %}
+
+{% block headcss %}
+    {{ block.super }}<link rel="stylesheet" href='{% static "css/login.css" %}' type="text/css">
+{% endblock %}
+
+{% block h1 %}
+Vasi nalog > Vasi podaci
+{% endblock %}
+
+{% block article_content %}
+    <div class="row center-content-color d-flex justify-content-center">
+
+        <form method="post" action="">
+            {% csrf_token %}
+
+            <div class="d-flex justify-content-center default-look">
+                <div class="col">
+                    <h3>Vasi podaci</h3>
+
+                    <div class="bitne-inf-look">
+                        <p>E-mail</p>
+                        <div class="bitne-inf-look__part">{{ user.email }}</div>
+                        <p>Username</p>
+                        <div class="bitne-inf-look__part">{{ user.username }}</div>
+                    </div>
+
+                    <div class="bitne-inf-look__part bitne-inf-look__part2" style="display:none;">
+                        <input type="text" class="form-control" value="{{ user.first_name }}"/>
+                    </div>
+
+                    <p>Ime</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ user.first_name }}">
+                    </div>
+
+                    <p>Prezime</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ user.last_name }}">
+                    </div>
+
+                    <p>Ulica i broj</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ object.ulicaIBroj }}">
+                    </div>
+
+                    <p>Ulica i broj</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ object.brojPoste }}">
+                    </div>
+
+                    <p>Mesto</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ object.grad }}">
+                    </div>
+
+                    <p>Telefon</p>
+                    <div class="bitne-inf-look__part bitne-inf-look__part2">
+                        <input type="text" class="form-control" value="{{ object.telefon }}">
+                    </div>
+                    <a href="{% url 'registracija' %}"><button class="btn btn-outline-success my-2 default-btn">Snimi izmene</button></a>
+
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

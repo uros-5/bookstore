@@ -189,7 +189,7 @@ def kreirajNarudzbine():
 def kreirajStavkeNarudzbine():
     for i in range(75):
         knjiga = random.randint(1,140)
-        narudzbina = random.randint(1,36)
+        narudzbina = random.randint(1,34)
         querry = StavkeNarudzbine.objects.filter(knjiga=knjiga, narudzbina=narudzbina)
         if(querry.count()==0):
             stavkeNarudzbine= StavkeNarudzbine()

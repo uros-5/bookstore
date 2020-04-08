@@ -36,9 +36,9 @@ Korisnici lista
             {% endif %}
             {% for korisnik in object_list %}
                 <tr>
-                    <td>{{ korisnik.first_name }}</td>
-                    <td>{{ korisnik.last_name }}</td>
-                    <td>{{ korisnik.username }}</td>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.username }}</td>
                     <td>{{ korisnik.ulicaIBroj }}</td>
                     <td>{{ korisnik.brojPoste }}</td>
                     <td>{{ korisnik.grad }}</td>

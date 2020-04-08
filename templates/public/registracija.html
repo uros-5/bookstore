@@ -19,44 +19,117 @@ Registracija
     {% if user.is_authenticated %}
         <h1>Vec ste registrovani! {{ ulogovan }}</h1>
     {% else %}
-        <form method="post" action="{% url "registracija" %}" >
-            {% csrf_token %}
-                <table>
-                    <tr>
-                        <td>Ime</td>
-                        <td>
-                        <input type="text" name="first_name" />
-                        </td>
-                    </tr>
+        <div class="row center-content-color d-flex justify-content-center">
+            <form method="post" action="{{ registracija }}">
+               {% csrf_token %}
+               <div class="d-flex justify-content-center default-look">
 
-                    <tr>
-                        <td>Prezime</td>
-                        <td><input type="text" name="last_name" /> </td>
-                    </tr>
+                    <div class="col">
+                        <h3>Otvorite nalog</h3>
+                        <table>
+                            <tr>
+                                <td>Ime</td>
+                                <td>
+                                <input type="text" name="first_name" />
+                                </td>
+                            </tr>
 
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email" /> </td>
-                    </tr>
+                            <tr>
+                                <td>Prezime</td>
+                                <td><input type="text" name="last_name" /> </td>
+                            </tr>
 
-                    <tr>
-                        <td>username</td>
-                        <td><input type="text" name="username" /> </td>
-                    </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td><input type="text" name="email" /> </td>
+                            </tr>
 
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" /></td>
-                    </tr>
+                            <tr>
+                                <td>username</td>
+                                <td><input type="text" name="username" /> </td>
+                            </tr>
 
-                    <tr>
-                        <td></td>
-                        <td><input type="password" name="password_bis" /></td>
-                    </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td><input type="password" name="password" /></td>
+                            </tr>
 
-                </table>
-                    <input type="submit" value="Registruj se" />
+                            <tr>
+                                <td></td>
+                                <td><input type="password" name="password_bis" /></td>
+                            </tr>
+
+                            <tr>
+                                <td>Registruj se kao:</td>
+                                <td>
+                                    <select name="userType">
+                                        <option value="autor">autor</option>
+                                        <option value="korisnik">korisnik</option>
+                                    </select>
+                                </td>
+
+                            </tr>
+                        </table>
+                        <button class="btn btn-outline-success my-2" type="submit">Otvorite KT nalog</button>
+{#                        <input type="submit" class="button" value="Uloguj se"/>#}
+                    </div>
+
+               </div>
+
             </form>
+        </div>
+
+{#        <form method="post" action="{% url "registracija" %}" >#}
+{#            {% csrf_token %}#}
+{#            <div class="d-flex justify-content-center default-look">#}
+{#                <table>#}
+{#                    <tr>#}
+{#                        <td>Ime</td>#}
+{#                        <td>#}
+{#                        <input type="text" name="first_name" />#}
+{#                        </td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td>Prezime</td>#}
+{#                        <td><input type="text" name="last_name" /> </td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td>Email</td>#}
+{#                        <td><input type="text" name="email" /> </td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td>username</td>#}
+{#                        <td><input type="text" name="username" /> </td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td>Password</td>#}
+{#                        <td><input type="password" name="password" /></td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td></td>#}
+{#                        <td><input type="password" name="password_bis" /></td>#}
+{#                    </tr>#}
+{##}
+{#                    <tr>#}
+{#                        <td>Registruj se kao:</td>#}
+{#                        <td>#}
+{#                            <select name="userType">#}
+{#                                <option value="autor">autor</option>#}
+{#                                <option value="korisnik">korisnik</option>#}
+{#                            </select>#}
+{#                        </td>#}
+{##}
+{#                    </tr>#}
+{##}
+{##}
+{#                </table>#}
+{#                    <input type="submit" value="Registruj se" />#}
+{#            </form>#}
     {% endif %}
 
 {% endblock %}

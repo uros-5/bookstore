@@ -1,0 +1,58 @@
+{% extends 'public/base.html' %}
+{% load static %}
+
+
+{% block title_html %}
+    {{ block.super }} Narudzbine
+{% endblock %}
+
+{% block h1 %}
+Narudzbine
+{% endblock %}
+{% block article_content %}
+    {% if user.is_authenticated %}
+        <div class="row center-content-color d-flex justify-content-center">
+            <div class="d-flex justify-content-center default-look">
+                <div class="col">
+                    <h3>Vase narudzbine</h3>
+                    <table class="table">
+                        <p>Narudzbine od datum u sati</p>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Naslov</th>
+                                <th scope="col">Cena</th>
+                                <th scope="col">Kom.</th>
+                                <th scope="col">Kom.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>sd</td>
+                              <td>tgwerf</td>
+                              <td>dfssdfsd</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>sdfgsr</td>
+                              <td>sdgsdg</td>
+                              <td>sfdgsdfgg</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>dgsgdfg</td>
+                              <td>dgdsfg df</td>
+                              <td>gdsfgdfg
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    {% else %}
+
+    {% endif %}
+{% endblock %}

@@ -8,6 +8,7 @@ from django.views.generic import CreateView,ListView,DetailView,UpdateView,Delet
 from TaskRestAPI.models import *
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.safestring import mark_safe
 # Create your views here.
 
 def index(request):
@@ -26,6 +27,8 @@ def regpage(request):
             username = form.cleaned_data["username"]
             email = form.cleaned_data["email"]
             password = form.cleaned_data["password"]
+            userType = form.cleaned_data["userType"]
+
             novi_korisnik = User.objects.create_user(username=username,
                                                      email=email,
                                                      password=password
@@ -37,12 +40,18 @@ def regpage(request):
 
             korisnik = Korisnici()
             korisnik.korisnik = novi_korisnik
-            korisnik.is_korisnik = True
+
+            if (str(userType) == "korisnik"):
+                korisnik.is_korisnik = True
+            elif (str(userType) == "autor"):
+                korisnik.is_autor = True
             korisnik.save()
             return HttpResponseRedirect(reverse('index'))
         else:
+            print("okkk")
             return render(request,'public/registracija.html',{'form':form})
     else:
+
         form = Registraciona_forma()
         return render(request,'public/registracija.html',{'form':form})
 class Registraciona_forma(forms.Form):
@@ -52,7 +61,10 @@ class Registraciona_forma(forms.Form):
     email = forms.EmailField(label="email")
     password = forms.CharField(label="password",widget=forms.PasswordInput)
     password_bis = forms.CharField(label="password",widget=forms.PasswordInput)
+    CHOICES = (('korisnik', 'korisnik'),
+               ('autor', 'autor'))
 
+    userType = forms.ChoiceField(widget=forms.Select, choices=CHOICES)
     def clean(self):
         cleaned_data = super(Registraciona_forma,self).clean()
         password = self.cleaned_data.get("password")
@@ -78,9 +90,10 @@ class Unos_knjiga_forma(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(Unos_knjiga_forma, self).get_context_data(**kwargs)
+        korisnici = Korisnici.objects.filter(is_autor=True)
         lista = []
-        for i in range(102,138):
-            lista.append(i)
+        for i in range(len(korisnici)):
+            lista.append(korisnici[i].korisnik_id)
         context['ids'] = lista
         return context
 class Dodavanje_stavki_narudzbine_forma(CreateView):
@@ -101,7 +114,11 @@ class Komentarisanje_knjiga_forma(CreateView):
 
 # login korisnika
 def login_korisnika(request):
-
+    if ("korisnikInfoId" not in request.session.keys()):
+        if ("_auth_user_id" in request.session.keys()):
+            korisnik1 = Korisnici.objects.filter(korisnik_id=request.session["_auth_user_id"])
+            if(len(korisnik1)>0):
+                request.session["korisnikInfoId"] = korisnik1[0].id
     if request.POST:
         print("jeste")
         form = Form_login(request.POST)
@@ -118,13 +135,13 @@ def login_korisnika(request):
                 return HttpResponseRedirect(reverse('index'))
         else:
             print("pogresno")
-            return render(request,'public/login.html',{'form':form})
+            return render(request, 'public/korisnik/login.html', {'form':form})
     else:
         form = Form_login()
-        return render(request,'public/login.html',{'form':form})
+        return render(request, 'public/korisnik/login.html', {'form':form})
 class Form_login(forms.Form):
-    username = forms.CharField(label="username")
-    password = forms.CharField(label="password",widget=forms.PasswordInput)
+    username = forms.CharField(label="Username")
+    password = forms.CharField(label="Lozinka",widget=forms.PasswordInput)
     def clean(self):
         cleaned_data = super(Form_login,self).clean()
         username = self.cleaned_data.get("username")
@@ -136,7 +153,7 @@ class Form_login(forms.Form):
 #logout korisnika
 def logout_korisnika(request):
     logout(request)
-    return render(request,'public/logout.html')
+    return render(request, 'public/korisnik/logout.html')
 
 # za prikaz liste
 class Korisnici_lista(ListView):
@@ -156,4 +173,22 @@ class Korisnici_lista(ListView):
     def get_queryset(self):
         queryset = Korisnici.objects.filter(is_korisnik=True)
         print(queryset.count())
+        print(queryset)
         return queryset
+class Korisnici_podaci(DetailView):
+    model = Korisnici
+    template_name = 'public/korisnik/korisnik_podaci.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Korisnici_podaci, self).get_context_data(**kwargs)
+        korisnik = Korisnici.objects.get(korisnik_id=self.object.id)
+        context["korisnik"] = korisnik
+        return context
+class Korisnici_narudzbine(ListView):
+    model = Korisnici
+    template_name = 'public/korisnik/narudzbine.html'
+    paginate_by = 5
+    def get_queryset(self):
+        queryset = Korisnici.objects.filter(is_korisnik=True)
+        return queryset
+
