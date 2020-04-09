@@ -15,7 +15,6 @@ def index(request):
     return render(request,'public/index.html')
 
 #registracija
-
 def regpage(request):
     if request.POST:
         form = Registraciona_forma(request.POST)
@@ -63,7 +62,6 @@ class Registraciona_forma(forms.Form):
     password_bis = forms.CharField(label="password",widget=forms.PasswordInput)
     CHOICES = (('korisnik', 'korisnik'),
                ('autor', 'autor'))
-
     userType = forms.ChoiceField(widget=forms.Select, choices=CHOICES)
     def clean(self):
         cleaned_data = super(Registraciona_forma,self).clean()
@@ -160,21 +158,29 @@ class Korisnici_lista(ListView):
 
     model = Korisnici
     template_name = 'public/lista_korisnika.html'
-    paginate_by = 0
-    def get_queryset(self):
-        queryset = Korisnici.objects.all().order_by('username')
-        return queryset
-
-class Korisnici_lista(ListView):
-
-    model = Korisnici
-    template_name = 'public/lista_korisnika.html'
     paginate_by = 5
     def get_queryset(self):
         queryset = Korisnici.objects.filter(is_korisnik=True)
-        print(queryset.count())
-        print(queryset)
-        return queryset
+        lista = []
+        for i in range(len(queryset)):
+            recnik = {}
+            recnik.setdefault("ulicaIBroj",queryset[i].ulicaIBroj)
+            recnik.setdefault("brojPoste", queryset[i].brojPoste)
+            recnik.setdefault("grad", queryset[i].grad)
+            recnik.setdefault("telefon", queryset[i].telefon)
+
+            user = User.objects.get(id=queryset[i].korisnik_id)
+            recnik.setdefault("first_name",user.first_name)
+            recnik.setdefault("last_name", user.last_name)
+            recnik.setdefault("username", user.username)
+
+            lista.append(recnik)
+
+            user = None
+
+        return lista
+
+        # return queryset
 class Korisnici_podaci(DetailView):
     model = Korisnici
     template_name = 'public/korisnik/korisnik_podaci.html'
@@ -184,11 +190,38 @@ class Korisnici_podaci(DetailView):
         korisnik = Korisnici.objects.get(korisnik_id=self.object.id)
         context["korisnik"] = korisnik
         return context
+
 class Korisnici_narudzbine(ListView):
     model = Korisnici
     template_name = 'public/korisnik/narudzbine.html'
     paginate_by = 5
+
     def get_queryset(self):
-        queryset = Korisnici.objects.filter(is_korisnik=True)
-        return queryset
+        narudzbine_korisnika = Narudzbine.objects.filter(korisnik_id=self.request.session["korisnikInfoId"])
+        narudzbine = []
+        if (len(narudzbine_korisnika) > 0):
+            narudzbine = []
+            # narudzbine = [[{'id':6,'poslato':"ne"},["naslov","cena","kom"],["naslov","cena","kom"]]]
+            for i in range(len(narudzbine_korisnika)):
+                narudzbina = []
+                narudzbina.append(
+                    {'id': narudzbine_korisnika[i].id, 'placeno': narudzbine_korisnika[i].placeno, 'ukupno': 0,
+                     'kolicina': 0,'datum':narudzbine_korisnika[i].datumNarucivanja})
+                stavke_narudzbine = StavkeNarudzbine.objects.filter(narudzbina_id=narudzbine_korisnika[i].id)
+                knjige = []
+
+                for i2 in range(len(stavke_narudzbine)):
+                    knjiga0 = []
+                    knjiga = Knjige.objects.get(id=stavke_narudzbine[i2].knjiga_id)
+                    knjiga0.append(knjiga.naslov)
+                    knjiga0.append(float(knjiga.cena))
+                    narudzbina[0]['kolicina'] += stavke_narudzbine[i2].kolicina
+                    narudzbina[0]['ukupno'] += float(knjiga.cena)
+                    knjiga0.append(stavke_narudzbine[i2].kolicina)
+                    knjige.append(knjiga0)
+                if(len(stavke_narudzbine)>0):
+                    narudzbina.append(knjige)
+                    narudzbine.append(narudzbina)
+        print(len(narudzbine))
+        return narudzbine
 
