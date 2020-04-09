@@ -32,7 +32,8 @@ Narudzbine
                         <tbody>
                             {% for knjiga in i.1 %}
                             <tr>
-                              <th scope="row">#</th>
+{#                            <p>{{ MEDIA_URL }}</p>#}
+                              <th scope="row"><img src="{{ knjiga.3.url }}" width="84"></th>
                               <td>{{ knjiga.0 }}</td>
                               <td>{{ knjiga.1 }}</td>
                               <td>{{ knjiga.2 }}</td>
