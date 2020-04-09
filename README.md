@@ -1,4 +1,4 @@
-# Simple Book Store
+# Simple Bookstore app
 
 I made this web app in the last year at the college :school:.
 
@@ -8,19 +8,19 @@ There is hype going around with HTMX library. So I decided to give it a try :coo
 
 ## Tech Stack
 
-Backend: Python + Django + HTMX :snake:
+Backend: Python + Django :snake:
 
 Database: SQLite :department_store:
 
-Frontend: Alpine.js :snowboarder: 
+Frontend: HTMX + Alpine.js :snowboarder: 
 
 ## Run the application
 
 ### Clone the repo
 
 ```console
-git clone https://github.com/uros-5/django-books
-cd django-books
+git clone https://github.com/uros-5/bookstore
+cd bookstore
 ```
 
 ### Setup virtual environment for python.
