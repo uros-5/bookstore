@@ -53,7 +53,7 @@ class Knjige(models.Model):
     opis = models.TextField(verbose_name="opis",max_length=300,null=True,default=None,blank=True)
     godinaIzdanja = models.IntegerField(verbose_name="godinaIzdanja", default=2020)
     ISBN = models.CharField(verbose_name="ISBN",max_length=28,unique=True)
-    slika = models.ImageField(upload_to=None, height_field=None, width_field=None,null=True,default=None,blank=True)
+    slika = models.ImageField(upload_to="images/slike_proizvoda", height_field=None, width_field=None,null=True,default=None,blank=True)
     kategorija = models.CharField(choices=kategorije,verbose_name="kategorija",max_length=30,default="")
     izdavac = models.ForeignKey(Izdavaci,verbose_name="izdavac",related_name="izdavac+",on_delete=models.CASCADE)
     autor = models.ForeignKey(Korisnici,verbose_name="autor",related_name="autor+", on_delete=models.CASCADE)

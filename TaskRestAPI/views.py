@@ -218,6 +218,7 @@ class Korisnici_narudzbine(ListView):
                     narudzbina[0]['kolicina'] += stavke_narudzbine[i2].kolicina
                     narudzbina[0]['ukupno'] += float(knjiga.cena)
                     knjiga0.append(stavke_narudzbine[i2].kolicina)
+                    knjiga0.append(knjiga.slika)
                     knjige.append(knjiga0)
                 if(len(stavke_narudzbine)>0):
                     narudzbina.append(knjige)
@@ -225,3 +226,19 @@ class Korisnici_narudzbine(ListView):
         print(len(narudzbine))
         return narudzbine
 
+class Korisnici_ocenjene_knjige(ListView):
+    model = Korisnici
+    template_name = 'public/korisnik/ocenjene_knjige.html'
+    paginate_by = 5
+
+    def get_queryset(self):
+        ocene = OceneKnjiga.objects.filter(korisnik_id=self.request.session["korisnikInfoId"])
+        lista = []
+
+        for i in range(len(ocene)):
+            review = {}
+            review.setdefault('ocena',ocene[i].ocena)
+            knjiga = Knjige.objects.get(id=ocene[i].knjiga_id)
+            review.setdefault('naslov',knjiga.naslov)
+            lista.append(review)
+        return lista

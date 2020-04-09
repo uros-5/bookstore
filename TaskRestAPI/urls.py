@@ -5,6 +5,9 @@ from django.conf.urls import url
 from TaskRestAPI.models import *
 from TaskRestAPI.views import *
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.conf.urls.static import static
+
 # from TaskRestAPI.views import regpage,Unos_knjiga_forma,Dodavanje_stavki_narudzbine_forma,Ocenjivanje_knjiga_forma,Komentarisanje_knjiga_forma,Korisnici_lista
 
 urlpatterns = [
@@ -23,5 +26,6 @@ urlpatterns = [
     # informacije korisnika
     path(r'korisnik_podaci_(?P<pk>\d+)$',Korisnici_podaci.as_view(),name="korisnik_podaci"),
     path(r'lista_korisnika',Korisnici_lista.as_view(),name="lista_korisnika"),
-    path(r'narudzbine',Korisnici_narudzbine.as_view(),name="narudzbine")
+    path(r'narudzbine',Korisnici_narudzbine.as_view(),name="narudzbine"),
+    path(r'ocenjivanje_knjiga',Korisnici_ocenjene_knjige.as_view(),name="ocenjivanje_knjiga")
 ]
