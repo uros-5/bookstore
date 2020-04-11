@@ -19,13 +19,18 @@ urlpatterns = [
     path(r'ocenjivanje_knjiga', login_required(Ocenjivanje_knjiga_forma.as_view()), name="ocenjivanje_knjiga"),
     path(r'komentarisanje_knjiga', login_required(Komentarisanje_knjiga_forma.as_view()), name="komentarisanje_knjiga"),
 
-    #deo sajta za login
-    path(r'login',views.login_korisnika,name="login"),
-    path(r'logout',views.logout_korisnika,name="logout"),
 
     # informacije korisnika
-    path(r'korisnik_podaci_(?P<pk>\d+)$',Korisnici_podaci.as_view(),name="korisnik_podaci"),
-    path(r'lista_korisnika',Korisnici_lista.as_view(),name="lista_korisnika"),
-    path(r'narudzbine',Korisnici_narudzbine.as_view(),name="narudzbine"),
-    path(r'ocenjivanje_knjiga',Korisnici_ocenjene_knjige.as_view(),name="ocenjivanje_knjiga")
+    path('nalog/',include('TaskRestAPI.korisnik_urls')),
+
+    # linkovi sa knjigama
+    path('ljubavni_roman/',include('TaskRestAPI.knjige_urls.ljubavni_roman')),
+    path('istorija/',include('TaskRestAPI.knjige_urls.istorija')),
+    path('horor/',include('TaskRestAPI.knjige_urls.horor')),
+    path('filozofija/',include('TaskRestAPI.knjige_urls.filozofija')),
+    path('fantastika/',include('TaskRestAPI.knjige_urls.fantastika')),
+    path('drama/',include('TaskRestAPI.knjige_urls.drama'))
+
+
 ]
+
