@@ -133,10 +133,10 @@ def login_korisnika(request):
                 return HttpResponseRedirect(reverse('index'))
         else:
             print("pogresno")
-            return render(request, 'public/korisnik/login.html', {'form':form})
+            return render(request, 'public/korisnik/nalog.html', {'form':form})
     else:
         form = Form_login()
-        return render(request, 'public/korisnik/login.html', {'form':form})
+        return render(request, 'public/korisnik/nalog.html', {'form':form})
 class Form_login(forms.Form):
     username = forms.CharField(label="Username")
     password = forms.CharField(label="Lozinka",widget=forms.PasswordInput)
@@ -216,7 +216,7 @@ class Korisnici_narudzbine(ListView):
                     knjiga0.append(knjiga.naslov)
                     knjiga0.append(float(knjiga.cena))
                     narudzbina[0]['kolicina'] += stavke_narudzbine[i2].kolicina
-                    narudzbina[0]['ukupno'] += float(knjiga.cena)
+                    narudzbina[0]['ukupno'] += float(knjiga.cena*stavke_narudzbine[i2].kolicina)
                     knjiga0.append(stavke_narudzbine[i2].kolicina)
                     knjiga0.append(knjiga.slika)
                     knjige.append(knjiga0)
@@ -242,3 +242,63 @@ class Korisnici_ocenjene_knjige(ListView):
             review.setdefault('naslov',knjiga.naslov)
             lista.append(review)
         return lista
+# class Knjiga_look(ListView):
+#     model = Knjige
+#     template_name = 'public/test.html'
+#     paginate_by = 5
+#
+#     def get_queryset(self):
+#         br = 1
+#         return [br]
+
+class Kategorija_look(ListView):
+    model = Korisnici
+    template_name = 'public/knjige.html'
+    paginate_by = 12
+
+    def get_queryset(self):
+        # print(self.request.path)
+        if (str(self.request.path) == "/ljubavni_roman/"):
+            knjige_all = Knjige.objects.filter(kategorija="Ljubavni roman")
+            return knjige_all
+        elif (self.request.path == "/istorija/"):
+            knjige_all = Knjige.objects.filter(kategorija="Istorija")
+            return knjige_all
+
+        elif (self.request.path == "/fantastika/"):
+            knjige_all = Knjige.objects.filter(kategorija="Fantastika")
+            return knjige_all
+
+        elif (self.request.path == "/filozofija/"):
+            knjige_all = Knjige.objects.filter(kategorija="Filozofija")
+            return knjige_all
+
+        elif (self.request.path == "/horor/"):
+            knjige_all = Knjige.objects.filter(kategorija="Horor")
+            return knjige_all
+
+        elif (self.request.path == "/drama/"):
+            knjige_all = Knjige.objects.filter(kategorija="Drama")
+            return knjige_all
+
+
+
+def knjiga_look(request,id=0):
+    print(request.path)
+    if (request.path.startswith("/ljubavni_roman/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+
+    elif (request.path.startswith("/istorija/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+
+    elif (request.path.startswith("/fantastika/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+
+    elif (request.path.startswith("/filozofija/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+
+    elif (request.path.startswith("/horor/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+
+    elif (request.path.startswith("/drama/")):
+        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
