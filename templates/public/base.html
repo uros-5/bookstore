@@ -19,19 +19,30 @@
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 			<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 			<link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
+
+            <script>
+            function navurl(url) {
+{#                window.open(url,"_self");#}
+                window.open(url,"_blank");
+            }
+            </script>
 		{% endblock %}
+
 	</head>
 
 	<body>
 
 		<nav class="navbar navbar-light bg-light justify-content-center header-footer-bg-color">
-			  <form class="form-inline">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url 'index' %}" data-info="logo">KnjizaraTest</a></button>
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url 'index' %}"> <ion-icon style="font-size:25px;" name="search-outline"></ion-icon></a></button>
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="{% url "dodavanje_stavke_narudzbine" %}"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></a></button>
-				<button class="btn btn-outline-success my-2" type="submit"><a href="{% url "nalog" %}"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></a></button>
-			  </form>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "index" %}')" type="submit">KnjizaraTest</button>
+
+                <form class="form-inline">
+				    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "index" %}')" type="submit"><ion-icon style="font-size:25px;" name="search-outline">s</ion-icon></button>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "dodavanje_stavke_narudzbine" %}')" type="submit"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></button>
+            <button class="btn btn-outline-success my-2" onclick="navurl('{% url "nalog" %}')" type="submit"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></button>
+
 		</nav>
 
 		<div class="container justify-content-center" style="margin-bottom:8px;margin-top:8px;">

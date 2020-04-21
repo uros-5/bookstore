@@ -5,17 +5,148 @@
 {{ block.super }} Primer knjige
 {% endblock %}
 
+{% block headcss %}
+    {{ block.super }}
+    <style>
+    table,tr,th,td {
+        border:1px solid black;
+    }
+    td {
+        vertical-align: text-top;
+        text-align:left;
+    }
+    </style>
+    <script>
+    function zvezdice(br) {
+        var ukupno = "";
+        var i;
+        for (i=0;i<br;i++) {
+            ukupno+="&#11088;";
+        }
+        document.write(ukupno);
+    }
+    </script>
+{% endblock %}
+
+
 {% block h1 %}
 Primer knjige
 {% endblock %}
 
 {% block article_content %}
     <div class="row center-content-color d-flex justify-content-center">
+
         <div class="d-flex justify-content-center default-look">
-            <div class="col-sm-12">
-                <p>{{ naslov }}</p>
+
+            <div class="col">
+
+
+                <div class="col-xs-2" style="margin-right: 10px;">
+                    <img src="{{ knjiga.slika.url }}" width="300px" height="380"/>
+                </div>
+
+                <div class="col-xs-5" style="margin-right: 10px;">
+                    <span>
+                        <p style="font-size:26px;">
+                            <b>{{ knjiga.naslov }}</b>
+
+                        </p>
+
+                        <p>
+                            Autor:
+                            <span>
+                                {{ knjiga.autor }}
+                            </span>
+                        </p>
+
+                        <p>
+                            Strana:
+                            <span>
+                                {{ knjiga.strana }}
+                            </span>
+                        </p>
+
+                        <p>
+                            Oblast:
+                            <span>
+                                {{ knjiga.kategorija }}
+                            </span>
+                        </p>
+
+                    </span>
+                </div>
+
+                <div class="col-xs-5 narucivanje-kol">
+                    <div style="height:20%;background-color:white;">
+                        <h5>Narucite</h5>
+                    </div>
+                    <div>
+                        <h8>Cena:</h8><br>
+                        {{ knjiga.cena }}
+                        <p>Komada:</p>
+                        <a href="#"><button class="btn btn-outline-success my-2 default-btn">Stavi u korpu</button></a><br>
+
+                    </div>
+
+                </div>
+
+                <div class="col-xs-12">
+                    </br>
+                    <h5>Ocene i misljenja citalaca</h5>
+                    {% if ocene|length < 1 %}
+                    <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Budite prvi koji ce da oceni knjigu.</p></span>
+                    {% endif %}
+                </div>
+
+                <div class="col-xs-12">
+
+                    <table>
+                        <tr>
+                            <th >Ocenio</th>
+                            <th>Ocena</th>
+                        </tr>
+                        <tr>
+                            {% for i in ocene %}
+
+                                <td><b>{{ i.0 }}</b></td>
+                                <td><script>zvezdice({{ i.1 }});</script></td>
+                            {% endfor %}
+                        </tr>
+                    </table>
+
+                </div>
+
+                <hr>
+
+                <div class="col-xs-12">
+
+                    <h5>Pitanja, odgovori, mišljenja...</h5>
+
+                </div>
+
+                <div class="col-xs-12">
+                    <table>
+                        <tr>
+                            <th >Poruku poslao</th>
+                            <th>Poruka</th>
+                        </tr>
+                        <tr>
+                            {% for i in komentarLista %}
+
+                            <td><b>{{ i.0 }}</b><br>{{ i.1 }}</td>
+                            <td>{{ i.2 }}</td>
+                            {% endfor %}
+                        </tr>
+                    </table>
+                </div>
+
             </div>
+
         </div>
+
+
+
     </div>
+
 
 {% endblock %}
