@@ -37,8 +37,8 @@ Primer knjiga
                 <div class="row justify-content-center">
                     {% for knjiga in object_list %}
                         <div class="col-sm-3" style="margin:10px;">
-                            <a href="{% url request.path|change_url:1 knjiga.id %}">
-{#                                <p>{{ request.path }}</p>#}
+                            <a href="{% url request.path|change_url:1 knjiga.ISBN %}">
+{#                                <p>{{ knjiga.ISBN }}</p>#}
                                 <img src="{{ knjiga.slika.url }}" width="200"/>
                             </a>
                         </div>

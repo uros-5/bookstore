@@ -283,22 +283,55 @@ class Kategorija_look(ListView):
 
 
 
-def knjiga_look(request,id=0):
+def knjiga_look(request,ISBN=0):
     print(request.path)
     if (request.path.startswith("/ljubavni_roman/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(knjiga)
+
+        return render(request,'public/knjiga.html',{"knjiga":Knjige.objects.get(id=knjiga),"ocene":oceneLista})
 
     elif (request.path.startswith("/istorija/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(ISBN)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista})
 
     elif (request.path.startswith("/fantastika/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(knjiga)
+        komentarLista = komentari(knjiga)
+        print(len(komentarLista))
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista":komentarLista})
 
     elif (request.path.startswith("/filozofija/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
 
     elif (request.path.startswith("/horor/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
 
     elif (request.path.startswith("/drama/")):
-        return render(request,'public/knjiga.html',{"naslov":Knjige.objects.get(id=id).naslov})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
+
+def oceneKnjiga(knjigaID):
+    oceneLista = []
+    knjiga = knjigaID
+    ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
+    for i in range(len(ocene)):
+        ocena = ocene[i].ocena
+        username = ocene[i].korisnik
+        oceneLista.append([username, ocena])
+    return oceneLista
+def komentari(knjigaID):
+    komentarLista = []
+    komentari = KomentariNaKnjigama.objects.filter(knjiga=knjigaID,odobren=True)
+    for i in range(len(komentari)):
+        korisnik = Korisnici.objects.get(id=komentari[i].korisnik.id)
+        grad = korisnik.grad
+        komentar = komentari[i].komentar
+        username = komentari[i].korisnik
+        komentarLista.append([username,grad,komentar])
+    return komentarLista

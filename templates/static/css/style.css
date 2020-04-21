@@ -36,6 +36,10 @@ a[data-info="logo"] {
 	width:140px;
 	height:130px;
 }
+/*.col-sm-2 .p-3 img {*/
+	/*width:350px;*/
+	/*height:400px;*/
+/*}*/
 .top-knjige-wh {
 	width:55px !important;
 	height:70px !important;
@@ -62,4 +66,13 @@ a[data-info="logo"] {
 }
 .default-btn {
 	width:100%;
+}
+.narucivanje-kol {
+	background-color: #1877c4;
+	text-align:center;
+	/*height:250px;*/
+	/*vertical-align: bottom;*/
+	align-self: flex-end;
+  width: auto;
+  height: auto;
 }
