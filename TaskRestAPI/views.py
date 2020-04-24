@@ -9,6 +9,12 @@ from TaskRestAPI.models import *
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.safestring import mark_safe
+from django.http import HttpResponse
+from django import forms
+from django.views.decorators.csrf import csrf_exempt
+import json
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 def index(request):
@@ -117,8 +123,10 @@ def login_korisnika(request):
             korisnik1 = Korisnici.objects.filter(korisnik_id=request.session["_auth_user_id"])
             if(len(korisnik1)>0):
                 request.session["korisnikInfoId"] = korisnik1[0].id
+
+    if ("korpa" not in request.session.keys()):
+        request.session["korpa"] = []
     if request.POST:
-        print("jeste")
         form = Form_login(request.POST)
         if (form.is_valid()):
             username = form.cleaned_data["username"]
@@ -284,37 +292,47 @@ class Kategorija_look(ListView):
 
 
 def knjiga_look(request,ISBN=0):
-    print(request.path)
     if (request.path.startswith("/ljubavni_roman/")):
         knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
         oceneLista = oceneKnjiga(knjiga)
-
-        return render(request,'public/knjiga.html',{"knjiga":Knjige.objects.get(id=knjiga),"ocene":oceneLista})
+        komentarLista = komentari(knjiga)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista": komentarLista})
 
     elif (request.path.startswith("/istorija/")):
         knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
-        oceneLista = oceneKnjiga(ISBN)
-        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista})
+        oceneLista = oceneKnjiga(knjiga)
+        komentarLista = komentari(knjiga)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista": komentarLista})
 
     elif (request.path.startswith("/fantastika/")):
         knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
         oceneLista = oceneKnjiga(knjiga)
         komentarLista = komentari(knjiga)
-        print(len(komentarLista))
         return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
                                                       "komentarLista":komentarLista})
 
     elif (request.path.startswith("/filozofija/")):
-        knjiga = Knjige.objects.filter(ISBN=ISBN)
-        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(knjiga)
+        komentarLista = komentari(knjiga)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista": komentarLista})
 
     elif (request.path.startswith("/horor/")):
-        knjiga = Knjige.objects.filter(ISBN=ISBN)
-        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(knjiga)
+        komentarLista = komentari(knjiga)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista": komentarLista})
 
     elif (request.path.startswith("/drama/")):
-        knjiga = Knjige.objects.filter(ISBN=ISBN)
-        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga[0].id)})
+        knjiga = Knjige.objects.filter(ISBN=ISBN)[0].id
+        oceneLista = oceneKnjiga(knjiga)
+        komentarLista = komentari(knjiga)
+        return render(request, 'public/knjiga.html', {"knjiga": Knjige.objects.get(id=knjiga), "ocene": oceneLista,
+                                                      "komentarLista": komentarLista})
 
 def oceneKnjiga(knjigaID):
     oceneLista = []
@@ -335,3 +353,33 @@ def komentari(knjigaID):
         username = komentari[i].korisnik
         komentarLista.append([username,grad,komentar])
     return komentarLista
+
+class Forms__za_korpu(forms.Form):
+    knjigaID = forms.IntegerField()
+    kolicina = forms.IntegerField()
+
+
+@csrf_exempt
+def dodavanje_knjiga_za_korpu(request):
+    return_value = "0"
+
+    if len(request.POST) > 0:
+        form = Forms__za_korpu(request.POST)
+        if form.is_valid():
+            stavke = request.session['korpa']
+            knjigaID = form.cleaned_data["knjigaID"]
+            kolicina = form.cleaned_data["kolicina"]
+            stavka = {}
+            provera = False
+            for i in stavke:
+                if (i["knjigaID"] == int(knjigaID)):
+                    provera = True
+            if (provera == False):
+                stavka.setdefault("knjigaID", int(knjigaID))
+                stavka.setdefault("kolicina", int(kolicina))
+                stavke.append(stavka)
+                request.session["korpa"] = stavke
+            return_value = 1
+    return HttpResponse(json.dumps(return_value), content_type=
+    "application/json")
+

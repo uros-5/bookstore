@@ -15,6 +15,7 @@ urlpatterns = [
     #deo sajta sa formama
     path(r'registracija',regpage,name="registracija"),
     path(r'unos_knjige',login_required(Unos_knjiga_forma.as_view()),name="unos_knjige"),
+    path(r'dodavanje_u_korpu',dodavanje_knjiga_za_korpu,name="dodavanje_u_korpu"),
     path(r'dodavanje_stavke_narudzbine', login_required(Dodavanje_stavki_narudzbine_forma.as_view()), name="dodavanje_stavke_narudzbine"),
     path(r'ocenjivanje_knjiga', login_required(Ocenjivanje_knjiga_forma.as_view()), name="ocenjivanje_knjiga"),
     path(r'komentarisanje_knjiga', login_required(Komentarisanje_knjiga_forma.as_view()), name="komentarisanje_knjiga"),

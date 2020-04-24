@@ -1,6 +1,7 @@
 {% extends 'public/base.html' %}
 {% load static %}
 
+
 {% block title_html %}
 {{ block.super }} Primer knjige
 {% endblock %}
@@ -16,16 +17,7 @@
         text-align:left;
     }
     </style>
-    <script>
-    function zvezdice(br) {
-        var ukupno = "";
-        var i;
-        for (i=0;i<br;i++) {
-            ukupno+="&#11088;";
-        }
-        document.write(ukupno);
-    }
-    </script>
+    <script src="{% static 'javascript/knjiga.js' %}"></script>
 {% endblock %}
 
 
@@ -75,7 +67,15 @@ Primer knjige
 
                     </span>
                 </div>
+                <div id="myModal" class="modal">
 
+                    <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+
+                    </div>
+
+                </div>
                 <div class="col-xs-5 narucivanje-kol">
                     <div style="height:20%;background-color:white;">
                         <h5>Narucite</h5>
@@ -83,13 +83,22 @@ Primer knjige
                     <div>
                         <h8>Cena:</h8><br>
                         {{ knjiga.cena }}
-                        <p>Komada:</p>
-                        <a href="#"><button class="btn btn-outline-success my-2 default-btn">Stavi u korpu</button></a><br>
+                        <p>Komada:
+                            <select id="kolicina">
+                                <option value="1">1</option>
+                                <script>komadi();</script>
+                            </select>
+                        </p>
+                        <a href="#" >
+                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal"
+                            onclick="javscript: dodaj_u_korpu({{ knjiga.id }},'{% url "dodavanje_u_korpu" %}');">
+                                Stavi u korpu
+                            </button></a><br>
 
                     </div>
 
                 </div>
-
+                <script>modalZaDom();</script>
                 <div class="col-xs-12">
                     </br>
                     <h5>Ocene i misljenja citalaca</h5>
