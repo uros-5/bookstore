@@ -1,6 +1,8 @@
 /**
  * Created by Uros on 24.4.2020.
  */
+
+
 function zvezdice(br) {
     var ukupno = "";
     var i;
@@ -10,7 +12,7 @@ function zvezdice(br) {
     document.write(ukupno);
 }
 function komadi() {
-    var ukupno = ""
+    var ukupno = "";
     var i;
     for (i=2;i<12;i++) {
         var br = (i).toString();
@@ -22,24 +24,25 @@ function komadi() {
     }
 
 }
-function dodaj_u_korpu(knjigaID,url) {
+function dodaj_u_korpu(knjigaISBN,url) {
     var kolicina = getKolicina();
+
     $.ajax({
         type: 'POST',
         url: url,
-        data:{'knjigaID':knjigaID,'kolicina':kolicina},
+        data:{'knjigaISBN':knjigaISBN,'kolicina':kolicina},
         dataType:'json',
         success:poruka_nakon_dodavanja,
-        error: function () {alert('Greska pri dodavanju.');}
+        error: $(".modal-body").html("Morate biti prijavljeni za ovu akciju.")
     });
 }
 function poruka_nakon_dodavanja (response) {
     poruka = JSON.parse(response);
-    if (poruka>0) {
-        $('');
+    if (poruka === 1) {
+        $(".modal-body").html("Knjiga je dodata u korpu!");
     }
     else {
-    alert('Error');
+        $(".modal-body").html("Knjiga vec postoji u korpi.");
     }
 }
 function getKolicina() {
@@ -50,7 +53,6 @@ function getKolicina() {
 function testzakol(knjiga) {
 
     alert(knjiga);
-    alert(kol);
 }
 function modalZaDom(){
     document.write(
@@ -58,7 +60,7 @@ function modalZaDom(){
       '<div class="modal-dialog" role="document">' +
       '<div class="modal-content">' +
       '<div class="modal-header">' +
-      '<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>' +
+      '<h5 class="modal-title" id="exampleModalLabel">KnjizaraTest</h5>' +
       '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
       '<span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body">' +
       ' ... ' +
@@ -67,12 +69,10 @@ function modalZaDom(){
       '<button type="button" class="btn btn-secondary" data-dismiss="modal">' +
       'Close' +
       '</button>' +
-      '<button type="button" class="btn btn-primary">' +
-      'Save changes' +
-      '</button>' +
       '</div>' +
       '</div>' +
       '</div>' +
       '</div>'
     );
 }
+

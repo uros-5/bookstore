@@ -355,31 +355,94 @@ def komentari(knjigaID):
     return komentarLista
 
 class Forms__za_korpu(forms.Form):
-    knjigaID = forms.IntegerField()
+    knjigaISBN = forms.CharField()
     kolicina = forms.IntegerField()
 
 
 @csrf_exempt
 def dodavanje_knjiga_za_korpu(request):
     return_value = "0"
-
     if len(request.POST) > 0:
         form = Forms__za_korpu(request.POST)
         if form.is_valid():
             stavke = request.session['korpa']
-            knjigaID = form.cleaned_data["knjigaID"]
+            knjigaISBN = form.cleaned_data["knjigaISBN"]
             kolicina = form.cleaned_data["kolicina"]
             stavka = {}
             provera = False
             for i in stavke:
-                if (i["knjigaID"] == int(knjigaID)):
+                if (i["knjigaISBN"] == knjigaISBN):
+                    print("knjiga je vec u korpi")
                     provera = True
+                    return_value = 5
             if (provera == False):
-                stavka.setdefault("knjigaID", int(knjigaID))
+                stavka.setdefault("knjigaISBN", knjigaISBN)
                 stavka.setdefault("kolicina", int(kolicina))
                 stavke.append(stavka)
                 request.session["korpa"] = stavke
-            return_value = 1
+                return_value = 1
+    print(return_value)
     return HttpResponse(json.dumps(return_value), content_type=
     "application/json")
 
+def prikaz_korpe(request):
+    korpa = request.session["korpa"]
+    stavke = []
+    for stavka in korpa:
+        knjiga = Knjige.objects.get(ISBN=stavka["knjigaISBN"])
+        isbn = knjiga.ISBN
+        slika = knjiga.slika
+        naslov = knjiga.naslov
+        cena = knjiga.cena
+        kolicina = stavka["kolicina"]
+        stavke.append({"isbn":isbn,"slika":slika,"naslov":naslov,"cena":cena,"kolicina":kolicina})
+
+    return render(request,'public/dodavanje_stavke_narudzbine.html',{"korpa":stavke})
+
+@csrf_exempt
+def akcije_za_korpu(request):
+    return_value = {}
+    if len(request.POST) > 0:
+        radnja = request.POST["radnja"]
+        knjiga = request.POST["knjigaISBN"]
+
+        if (radnja == "brisanje"):
+            korpa = request.session["korpa"]
+            for i in range(len(korpa)):
+                if (korpa[i]["knjigaISBN"] == knjiga):
+                    del korpa[i]
+                    request.session["korpa"] = korpa
+                    return_value.setdefault("knjigaISBN",knjiga)
+                    return_value.setdefault("poruka",1)
+                    break
+        elif (radnja == "oduzimanje"):
+            korpa = request.session["korpa"]
+            for i in range(len(korpa)):
+                if (korpa[i]["knjigaISBN"] == knjiga):
+                    kolicina = korpa[i]["kolicina"]
+                    if(kolicina>1):
+                        kolicina -= 1
+                        korpa[i]["kolicina"] = kolicina
+                    request.session["korpa"] = korpa
+                    return_value.setdefault("knjigaISBN", knjiga)
+                    return_value.setdefault("poruka", 1)
+                    return_value.setdefault("kolicina",kolicina)
+                    break
+        elif (radnja == "dodavanje"):
+            korpa = request.session["korpa"]
+            for i in range(len(korpa)):
+                if (korpa[i]["knjigaISBN"] == knjiga):
+                    kolicina = korpa[i]["kolicina"]
+                    if(kolicina<=11):
+                        kolicina += 1
+                        korpa[i]["kolicina"] = kolicina
+                    request.session["korpa"] = korpa
+                    return_value.setdefault("knjigaISBN", knjiga)
+                    return_value.setdefault("poruka", 1)
+                    return_value.setdefault("kolicina",kolicina)
+                    break
+
+    return HttpResponse(json.dumps(return_value), content_type=
+    "application/json")
+# def smanjivanje_kolicine_iz_korpe(request):
+#     return value =
