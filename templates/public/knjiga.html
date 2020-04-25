@@ -1,6 +1,6 @@
 {% extends 'public/base.html' %}
 {% load static %}
-
+{% load change_url %}
 
 {% block title_html %}
 {{ block.super }} Primer knjige
@@ -91,7 +91,7 @@ Primer knjige
                         </p>
                         <a href="#" >
                             <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal"
-                            onclick="javscript: dodaj_u_korpu({{ knjiga.id }},'{% url "dodavanje_u_korpu" %}');">
+                            onclick="dodaj_u_korpu('{{ knjiga.ISBN }}','{% url "dodavanje_u_korpu" %}');">
                                 Stavi u korpu
                             </button></a><br>
 
