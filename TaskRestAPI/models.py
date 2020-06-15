@@ -78,7 +78,7 @@ class OceneKnjiga(models.Model):
     knjiga = models.ForeignKey(Knjige, verbose_name="knjiga", related_name="knjigaID+",on_delete=models.CASCADE)
     def __str__(self):
         return str(self.ocena)
-
+# filter(kategorija = "Fantastika").order_by("-id")[:5]
 class KomentariNaKnjigama(models.Model):
     komentar = models.TextField(verbose_name="komentar",max_length=112,null=True,default="",blank=True)
     korisnik = models.ForeignKey(Korisnici, verbose_name="korisnik", related_name="korisnik+",on_delete=models.CASCADE)
@@ -86,3 +86,8 @@ class KomentariNaKnjigama(models.Model):
     odobren = models.BooleanField(verbose_name="odobren",null=True,default=False,blank=True)
     def __str__(self):
         return self.komentar
+class UtisciKorisnika(models.Model):
+    komentar =  models.CharField(max_length=50, verbose_name="komentar",null=False,default=None,blank=False)
+    korisnik = models.ForeignKey(Korisnici,verbose_name="korisnik",related_name="korisnik+",on_delete=models.CASCADE)
+    odobren = models.BooleanField(verbose_name="odobren",null=True,default=False,blank=True)
+    datum = models.DateTimeField(verbose_name="datum", null=True, blank=True, default=None)

@@ -54,6 +54,29 @@ function smanjiKolicinuDom (response) {
 
     }
 }
+
+function naruciIzKorpe (url) {
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: {'radnja':"narucivanje"},
+        dataType:'json',
+        success:naruciKnjigeDom,
+        error: zaGreske
+    });
+}
+function naruciKnjigeDom(response) {
+    var poruka = response["poruka"];
+
+    if(poruka === 1) {
+        var root = ".d-flex.justify-content-center.default-look"
+        $(".col").remove();
+        $(root).append('<div class="col"></div>');
+        $(".col").append('<h4>Sadrzaj korpe</h4>');
+        $(".col").append('<p id="ukupno">Ukupno: <b> 0.00 din </b></p>');
+    }
+}
+
 function povecajKolicinu(knjigaISBN,url) {
     $.ajax({
         type: 'POST',
@@ -95,8 +118,11 @@ function setUkupno () {
         }
     );
     // console.log(ukupno);
-    $("p#ukupno").html("Ukupno: "+ukupno.toString());
+    $("p#ukupno").html("Ukupno: "+"<b>"+ukupno.toString()+" din</b>");
 }
 function zaGreske() {
     alert("Greska");
+}
+function narucitest() {
+    alert("Naruceno");
 }

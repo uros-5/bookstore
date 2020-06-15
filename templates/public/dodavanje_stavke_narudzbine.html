@@ -23,9 +23,10 @@ Dodavanje stavke narudzbine
 
                     <div class="col">
 
+{#                    {% if user.is_authenticated %}#}
                         <h4>Sadrzaj korpe</h4>
-                        <p id="ukupno">Ukupno: <b>1 din</b></p>
-                        <button class="btn btn-outline-success my-2 default-btn" onClick='testt();'>Naruci</button>
+                        <p id="ukupno">Ukupno: <b>{{ ukupno }} din</b></p>
+                        <button class="btn btn-outline-success my-2 default-btn" onClick="naruciIzKorpe('{% url 'naruci_iz_korpe' %}');">Naruci</button>
 
 
 
@@ -64,7 +65,7 @@ Dodavanje stavke narudzbine
                         {% endfor %}
 
 
-
+{#                    {% endif %}#}
                    </div>
 
             </div>
