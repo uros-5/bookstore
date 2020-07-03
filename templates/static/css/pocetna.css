@@ -14,7 +14,7 @@ a[data-info="logo"] {
 	text-align:center !important;
 	margin-left:2px;
 }
-.nova-knjiga__slika {
+a .nova-knjiga__slika {
 	width:80px;
 	border:1px solid black;
 	text-align:center !important;
@@ -35,6 +35,7 @@ a[data-info="logo"] {
 .p-2 img {
 	width:140px;
 	height:130px;
+	cursor:pointer;
 }
 .top-knjige-wh {
 	width:55px !important;

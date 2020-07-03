@@ -1,71 +1,65 @@
 /**
  * Created by Uros on 25.4.2020.
  */
+
+$(document).ready(function() {
+
+       $(".btn.btn-outline-success.my-2.default-btn").on('click', function () {
+           var putanja = $(this).attr("id").toString().toLowerCase().replace(" ","_");
+            // alert(putanja);
+            window.open(putanja,"_self");
+        });
+});
+
 function testISBN(knjigaISBN) {
     alert(knjigaISBN);
 }
-function obrisiIzKorpe(knjigaISBN,url) {
-    $.ajax({
-        type: 'POST',
-        url: url,
-        data:{'knjigaISBN':knjigaISBN,'radnja':'brisanje'},
-        dataType:'json',
-        success:ukloniDivDom,
-        error: zaGreske
-    });
+
+function korpaAction(knjigaISBN,url) {
+
+    if(url.toString() === "/naruci_iz_korpe") {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data: {'radnja':"narucivanje"},
+            dataType:'json',
+            success:modifyDivDom,
+            error: zaGreske
+        });
+    }
+    else if(url.toString() === "/brisanje_iz_korpe") {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data:{'knjigaISBN':knjigaISBN,'radnja':'brisanje'},
+            dataType:'json',
+            success:modifyDivDom,
+            error: zaGreske
+        });
+    }
+    else if(url.toString() === "/smanji_kolicinu") {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data:{'knjigaISBN':knjigaISBN,'radnja':'oduzimanje'},
+            dataType:'json',
+            success:modifyDivDom,
+            error: zaGreske
+        });
+    }
+    else if(url.toString() === "/povecaj_kolicinu") {
+        $.ajax({
+            type: 'POST',
+            url: url,
+            data:{'knjigaISBN':knjigaISBN,'radnja':'dodavanje'},
+            dataType:'json',
+            success:modifyDivDom,
+            error: zaGreske
+        });
+    }
 }
-function ukloniDivDom(response) {
+function modifyDivDom(response) {
     var knjigaISBN = String(response["knjigaISBN"]);
-    var poruka = response["poruka"];
-    if (poruka===1) {
-        var divKnjige = "knjiga_"+knjigaISBN;
-        $("."+divKnjige).remove();
-    }
-    setUkupno();
-}
-function smanjiKolicinu(knjigaISBN,url) {
-    $.ajax({
-        type: 'POST',
-        url: url,
-        data:{'knjigaISBN':knjigaISBN,'radnja':'oduzimanje'},
-        dataType:'json',
-        success:smanjiKolicinuDom,
-        error: zaGreske
-    });
-}
-function smanjiKolicinuDom (response) {
-
-    var poruka = response["poruka"];
-
-    if(poruka === 1) {
-        var knjigaISBN = String(response["knjigaISBN"]);
-        var kolicina = String(response["kolicina"]);
-        var kolicinaInt = response["kolicina"]
-        var ukupno = (parseFloat($("td#cena_"+knjigaISBN).html().replace("Cena: ",""))*kolicinaInt).toFixed(2);
-        $("td#kolicina_"+knjigaISBN).html("Komada: "+kolicina);
-        if(kolicinaInt == 1) {
-            $("td#kolicina_"+knjigaISBN).hide();
-        }
-        else {
-            $("td#kolicina_"+knjigaISBN).show();
-        }
-        $("td#ukupno_"+knjigaISBN).html("Ukupno: "+ukupno);
-        setUkupno();
-
-    }
-}
-
-function naruciIzKorpe (url) {
-    $.ajax({
-        type: 'POST',
-        url: url,
-        data: {'radnja':"narucivanje"},
-        dataType:'json',
-        success:naruciKnjigeDom,
-        error: zaGreske
-    });
-}
-function naruciKnjigeDom(response) {
     var poruka = response["poruka"];
 
     if(poruka === 1) {
@@ -74,23 +68,29 @@ function naruciKnjigeDom(response) {
         $(root).append('<div class="col"></div>');
         $(".col").append('<h4>Sadrzaj korpe</h4>');
         $(".col").append('<p id="ukupno">Ukupno: <b> 0.00 din </b></p>');
+        $(".modal-body").html("Narudzbina je uspesna!");
     }
-}
+    else if (poruka===2) {
+        var divKnjige = "knjiga_"+knjigaISBN;
+        $("."+divKnjige).remove();
+        setUkupno();
+    }
+    else if (poruka === 3) {
+        var kolicina = String(response["kolicina"]);
+        var kolicinaInt = response["kolicina"]
+        var ukupno = (parseFloat($("td#cena_"+knjigaISBN).html().replace("Cena: ",""))*kolicinaInt).toFixed(2);
+        $("td#kolicina_"+knjigaISBN).html("Komada: "+kolicina);
+        if(kolicinaInt == 1) {
+            $("td#kolicina_"+knjigaISBN).hide();
+        }
+        else {
+            $("td#kolicina_"+knjigaISBN).show();
+        }
+        $("td#ukupno_"+knjigaISBN).html("Ukupno: "+ukupno);
+        setUkupno();
 
-function povecajKolicinu(knjigaISBN,url) {
-    $.ajax({
-        type: 'POST',
-        url: url,
-        data:{'knjigaISBN':knjigaISBN,'radnja':'dodavanje'},
-        dataType:'json',
-        success:povecajKolicinuDom,
-        error: zaGreske
-    });
-}
-function povecajKolicinuDom(response) {
-    var poruka = response["poruka"];
-     if(poruka === 1) {
-        var knjigaISBN = String(response["knjigaISBN"]);
+    }
+    else if (poruka === 4) {
         var kolicina = String(response["kolicina"]);
         var kolicinaInt = response["kolicina"]
         var ukupno = (parseFloat($("td#cena_"+knjigaISBN).html().replace("Cena: ",""))*kolicinaInt).toFixed(2);
@@ -106,6 +106,7 @@ function povecajKolicinuDom(response) {
         setUkupno();
     }
 }
+
 function setUkupno () {
     var ukupno = 0;
     var i = $("table tr td[id^='ukupno_']").each(

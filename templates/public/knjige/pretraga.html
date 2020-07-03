@@ -1,0 +1,66 @@
+{% extends 'public/base.html' %}
+{% load static %}
+
+{% block title_html %}
+    {{ block.super }} Pretraga
+{% endblock %}
+
+{% block h1 %}
+    Pretraga
+{% endblock %}
+
+{% block article_content %}
+
+    <div class="row center-content-color d-flex justify-content-center">
+        <div class="d-flex justify-content-center default-look">
+
+            <div class="col-sm-12">
+
+                    {% if is_paginated %}
+                    <div class="pagination justify-content-center">
+                        <span>
+                            {% if page_obj.has_previous %}
+                                <a href="{% url request.path|change_url %}?page={{ page_obj.previous_page_number }}">Previous</a>
+                            {% endif %}
+                        <span style="margin-left:15px;margin-right:15px;">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+                        {% if page_obj.has_next %}
+                            <a href="{% url request.path|change_url %}?page={{ page_obj.next_page_number }}">Next</a>
+                        {% endif %}
+                        </span>
+                    </div>
+
+                {% endif %}
+
+                <div class="row justify-content-center">
+                    {% for knjiga in object_list %}
+                        <div class="col-sm-3" style="margin:10px;">
+                            <a href="{% url request.path|change_url:1 knjiga.ISBN %}">
+{#                                <p>{{ knjiga.ISBN }}</p>#}
+                                <img src="{{ knjiga.slika.url }}" width="150" height="220"/>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if is_paginated %}
+                    <div class="pagination justify-content-center">
+                        <span>
+                            {% if page_obj.has_previous %}
+                                <a href="{% url request.path|change_url %}?page={{ page_obj.previous_page_number }}">Previous</a>
+                            {% endif %}
+                        <span style="margin-left:15px;margin-right:15px;">
+                            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                        </span>
+                        {% if page_obj.has_next %}
+                            <a href="{% url request.path|change_url %}?page={{ page_obj.next_page_number }}">Next</a>
+                        {% endif %}
+                        </span>
+                    </div>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
