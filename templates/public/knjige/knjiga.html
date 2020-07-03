@@ -40,7 +40,7 @@ Primer knjige
                 <div class="col-xs-5" style="margin-right: 10px;">
                     <span>
                         <p style="font-size:26px;">
-                            <b>{{ knjiga.naslov }}</b>
+                            <b>{{ knjiga.naslov|linebreaksbr  }}</b>
 
                         </p>
 
@@ -97,13 +97,28 @@ Primer knjige
 
                     </div>
 
+
                 </div>
+
                 <script>modalZaDom();</script>
+
+
+
+
+
+
                 <div class="col-xs-12">
                     </br>
                     <h5>Ocene i misljenja citalaca</h5>
-                    {% if ocene|length < 1 %}
-                    <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Budite prvi koji ce da oceni knjigu.</p></span>
+                    {% if ocenjivanje == "DA" %}
+
+                        {% if ocene|length < 1 %}
+                        <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Budite prvi koji ce da oceni knjigu.</p></span>
+                        {% endif %}
+                    {% elif ocenjivanje == "NE" %}
+                        <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Niste kupili knjigu.</p></span>
+                    {% elif ocenjivanje == "LOG" %}
+                        <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Morate biti ulogovani za ovu akciju.</p></span>
                     {% endif %}
                 </div>
 
@@ -133,6 +148,8 @@ Primer knjige
 
                 </div>
 
+
+
                 <div class="col-xs-12">
                     <table>
                         <tr>
@@ -147,6 +164,16 @@ Primer knjige
                             {% endfor %}
                         </tr>
                     </table>
+                </div>
+
+                <div class="col-xs-5 komentar-kol">
+                    <div>
+                        <form method="post" action="{% url "komentarisanje" knjiga.id %}">
+                            {% csrf_token %}
+                            <textarea  name="komentar" type="text" cols="35" rows="5"></textarea>
+                            <button type="submit" style=" display: flex;" class="btn btn-outline-success my-2">Posalji</button>
+                        </form>
+                    </div>
                 </div>
 
             </div>

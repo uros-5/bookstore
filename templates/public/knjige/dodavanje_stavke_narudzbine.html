@@ -1,0 +1,90 @@
+{% extends 'public/base.html' %}
+{% load static %}
+{% load pomnozi %}
+
+{% block title_html %}
+{{ block.super }} Dodavanje stavke narudzbine
+{% endblock %}
+
+{% block headcss %}
+    {{ block.super }}
+    <script src="{% static 'javascript/knjiga.js' %}"></script>
+    <script src="{% static 'javascript/stavkenarudzbine.js' %}"></script>
+{% endblock %}
+
+{% block h1 %}
+Dodavanje stavke narudzbine
+{% endblock %}
+
+{% block article_content %}
+
+
+        <div class="row center-content-color d-flex justify-content-center">
+
+            <div class="d-flex justify-content-center default-look">
+
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+
+                        </div>
+
+                        <div class="col">
+
+
+    {#                    {% if user.is_authenticated %}#}
+                            <h4>Sadrzaj korpe</h4>
+                            <p id="ukupno">Ukupno: <b>{{ ukupno }} din</b></p>
+                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal" onClick="korpaAction('{{ stavka.isbn }}','{% url 'naruci_iz_korpe' %}');">Naruci</button>
+
+
+
+
+                            {% for stavka in korpa %}
+                            <div class="knjiga_{{ stavka.isbn }}">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td rowspan="4"><img src="{{ stavka.slika.url }}" width="84"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><b>{{ stavka.naslov }}</b></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td id="cena_{{ stavka.isbn }}">Cena: {{ stavka.cena }}</td>
+                                    </tr>
+
+                                    <tr>
+                                        {% if stavka.kolicina == 1 %}
+                                        <td id="ukupno_{{ stavka.isbn }}" style="display:none;">Ukupno: </td>
+                                        {% else %}
+                                        <td id="ukupno_{{ stavka.isbn }}">Ukupno: {{ stavka.cena|pomnozi:stavka.kolicina }}</td>
+                                        {% endif %}
+                                    </tr>
+                                    <tr>
+                                        <td id="kolicina_{{ stavka.isbn }}">Komada: {{ stavka.kolicina }}</td>
+                                        <td><button onClick="korpaAction('{{ stavka.isbn }}','{% url 'brisanje_iz_korpe' %}');">Obrisi</button>
+                                            <button onClick="korpaAction('{{ stavka.isbn }}','{% url 'smanji_kolicinu' %}');">-1</button>
+                                            <button onClick="korpaAction('{{ stavka.isbn }}','{% url 'povecaj_kolicinu' %}')">+1</button>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            {% endfor %}
+
+
+
+    {#                    {% endif %}#}
+                       </div>
+
+                        <script>modalZaDom();</script>
+            </div>
+
+        </div>
+
+{% endblock %}

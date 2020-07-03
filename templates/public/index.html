@@ -3,32 +3,24 @@
 {% block headcss %}
     {{ block.super }}
     <link rel="stylesheet" href='{% static "css/pocetna.css" %}' type="text/css">
+    <script src='{% static "javascript/index.js" %}'></script>
+
 {% endblock %}
 
 
 
-	<body>
-
-		<nav class="navbar navbar-light bg-light justify-content-center header-footer-bg-color">
-		  <form class="form-inline">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="#" data-info="logo">KnjizaraTest</a></button>
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="#"> <ion-icon style="font-size:25px;" name="search-outline"></ion-icon></a></button>
-			<button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="#"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></a></button>
-			<button class="btn btn-outline-success my-2" type="submit"><a href="#"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></a></button>
-		  </form>
-		</nav>
 		{% block article_content %}
-		
+
+
 			<div class="row center-content-color">
-				
+
+
 				<div class="col-sm-12"><div class="ml-2"> <h3>Novo u prodavnici</h3> </div></div>
-				
 					{% for knjiga in najnovijeKnjige %}
 						<div class="col nova-knjiga">
 							<h6> {{ knjiga.naslov|truncatechars:14}}</h6>
 
-							<div class="nova-knjiga__slika">
+							<div class="nova-knjiga__slika" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
 								<img src="media{{ knjiga.slika }}" />
 							</div>
 							<p>Cena:<br>{{ knjiga.cena }} </p>
@@ -63,7 +55,7 @@
 
                     {% for knjiga in kategorija1 %}
 
-                        <div class="p-2">
+                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" />
                             <span>
 
@@ -97,7 +89,7 @@
 
 					{% for knjiga in kategorija2 %}
 
-                        <div class="p-2">
+                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" />
                             <span>
 
@@ -138,7 +130,7 @@
 
 					
 					{% for knjiga in randKat1 %}
-                        <div class="p-2">
+                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
                             <span>
 
@@ -162,7 +154,7 @@
 					<h6>TestKnjizara:&nbsp Drama</h6>
 
                     {% for knjiga in randKat2 %}
-                        <div class="p-2">
+                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
                             <span>
 
@@ -196,5 +188,4 @@
 			
 		<!-- </div> -->
 
-	</body>
 </html>

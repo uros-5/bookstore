@@ -7,6 +7,11 @@ import shelve
 fajl = shelve.open("zabazu\\podaci.dat","r")
 # korisnici
 
+komentari = ["Vrh knjiga preporucujem je svima!",
+             "super je knjiga","Morate je procitati","Nisam preterano odusevljen","Moglo je bolje.",
+             "Knjiga je must-buy!","Da li ima u knjizari u ","Najbolja u kategoriji ","Predivna avantura."]
+
+
 def randomm(podatak=''):
     if(podatak=='ulica'):
         ulica = ""
@@ -178,7 +183,7 @@ def kreirajKnjige():
         fajl.close()
 # narudzbine
 def kreirajNarudzbine():
-    for i in range(35):
+    for i in range(79):
         narudzbina = Narudzbine()
         narudzbina.datumNarucivanja = timezone.now()
         narudzbina.placeno = False
@@ -187,16 +192,23 @@ def kreirajNarudzbine():
 
 # stavke narudzbine
 def kreirajStavkeNarudzbine():
-    for i in range(75):
-        knjiga = random.randint(1,140)
-        narudzbina = random.randint(1,34)
-        querry = StavkeNarudzbine.objects.filter(knjiga=knjiga, narudzbina=narudzbina)
-        if(querry.count()==0):
-            stavkeNarudzbine= StavkeNarudzbine()
-            stavkeNarudzbine.kolicina = random.randint(1,3)
-            stavkeNarudzbine.knjiga = Knjige.objects.get(id=knjiga)
-            stavkeNarudzbine.narudzbina = Narudzbine.objects.get(id=narudzbina)
-            stavkeNarudzbine.save()
+    #za svaku narudzbinu
+    for i in range(1,78):
+        brojStavki = random.randint(1,6)
+        brojDodatihKnjiga = 0
+        #dokle god nije dodato nekoliko knjiga proveravaj i dodaj
+        while(brojDodatihKnjiga!=brojStavki):
+            knjiga = random.randint(1,140)
+            narudzbina = i
+            querry = StavkeNarudzbine.objects.filter(knjiga=knjiga, narudzbina=narudzbina)
+            #ako ne postoji ovakav querry
+            if(querry.count()==0):
+                stavkeNarudzbine= StavkeNarudzbine()
+                stavkeNarudzbine.kolicina = random.randint(1,3)
+                stavkeNarudzbine.knjiga = Knjige.objects.get(id=knjiga)
+                stavkeNarudzbine.narudzbina = Narudzbine.objects.get(id=narudzbina)
+                stavkeNarudzbine.save()
+                brojDodatihKnjiga+=1
 # placanje knjiga
 def placanjeKnjiga1():
     for i in range(1,Narudzbine.objects.count()+1):
@@ -207,7 +219,7 @@ def placanjeKnjiga1():
 # komentarisanje knjiga
 def kreirajKomentareNaKnjigama():
     knk = KomentariNaKnjigama()
-    knk.komentar = "vrh je knjiga!!!"
+    knk.komentar = random.choice(komentari)
     knk.korisnik = Korisnici.objects.filter(is_korisnik=True)[5]
     knk.knjiga = Knjige.objects.get(id=10)
     knk.save()

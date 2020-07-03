@@ -19,6 +19,7 @@ a[data-info="logo"] {
 	border:1px solid black;
 	text-align:center !important;
 	margin: 0 auto;
+	cursor: pointer;
 }
 .aktuelne-knjige {
 	display:inline-block;
@@ -75,4 +76,14 @@ a[data-info="logo"] {
 	align-self: flex-end;
   width: auto;
   height: auto;
+}
+.komentar-kol {
+	width: 100%;
+	height: auto;
+	margin-top:10px;
+	margin-bottom:10px;
+
+}
+.komentar-kol textarea {
+	resize: none;
 }
