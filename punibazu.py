@@ -218,11 +218,18 @@ def placanjeKnjiga1():
         narudzbina.save()
 # komentarisanje knjiga
 def kreirajKomentareNaKnjigama():
-    knk = KomentariNaKnjigama()
-    knk.komentar = random.choice(komentari)
-    knk.korisnik = Korisnici.objects.filter(is_korisnik=True)[5]
-    knk.knjiga = Knjige.objects.get(id=10)
-    knk.save()
+
+    stavkeNarudzbine = StavkeNarudzbine.objects.all()
+    for i in range(len(stavkeNarudzbine)):
+        knjiga = Knjige.objects.get(id=stavkeNarudzbine[i].knjiga_id)
+        kor = Narudzbine.objects.get(id=stavkeNarudzbine[i].narudzbina_id).korisnik
+
+        knk = KomentariNaKnjigama()
+        knk.komentar = random.choice(komentari)
+
+        knk.korisnik_id = kor.id
+        knk.knjiga = knjiga
+        knk.save()
 def kreirajOceneNaKnjigama():
     korisnik = Korisnici.objects.get(id=4)
     knjiga = Knjige.objects.get(id=124)
