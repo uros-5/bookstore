@@ -38,7 +38,7 @@ Dodavanje stavke narudzbine
     {#                    {% if user.is_authenticated %}#}
                             <h4>Sadrzaj korpe</h4>
                             <p id="ukupno">Ukupno: <b>{{ ukupno }} din</b></p>
-                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal" onClick="korpaAction('{{ stavka.isbn }}','{% url 'naruci_iz_korpe' %}');">Naruci</button>
+                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal" data-value='{{ stavka.isbn }}' value = '{% url 'naruci_iz_korpe' %}'>Naruci</button>
 
 
 
@@ -67,9 +67,9 @@ Dodavanje stavke narudzbine
                                     </tr>
                                     <tr>
                                         <td id="kolicina_{{ stavka.isbn }}">Komada: {{ stavka.kolicina }}</td>
-                                        <td><button onClick="korpaAction('{{ stavka.isbn }}','{% url 'brisanje_iz_korpe' %}');">Obrisi</button>
-                                            <button onClick="korpaAction('{{ stavka.isbn }}','{% url 'smanji_kolicinu' %}');">-1</button>
-                                            <button onClick="korpaAction('{{ stavka.isbn }}','{% url 'povecaj_kolicinu' %}')">+1</button>
+                                        <td><button data-value='{{ stavka.isbn }}' value = '{% url 'brisanje_iz_korpe' %}' >Obrisi</button>
+                                            <button data-value='{{ stavka.isbn }}' value = '{% url 'smanji_kolicinu' %}' >-1</button>
+                                            <button data-value='{{ stavka.isbn }}' value = '{% url 'povecaj_kolicinu' %}' >+1</button>
                                         </td>
                                     </tr>
 

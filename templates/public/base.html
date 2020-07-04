@@ -19,6 +19,7 @@
 			<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 			<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
             <script src='{% static "javascript/lib/jquery-3.5.0.min.js" %}'></script>
+            <script src='{% static "javascript/forBase.js" %}'></script>
 			<link rel="stylesheet" href='{% static "css/style.css" %}' type="text/css">
 
             <script>
@@ -35,14 +36,14 @@
 	<body>
 
 		<nav class="navbar navbar-light bg-light justify-content-center header-footer-bg-color">
-            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "index" %}')" type="submit">KnjizaraTest</button>
+            <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">KnjizaraTest</button>
 
                 <form class="form-inline">
 				    <input class="form-control mr-sm-2" onclick="navurl('{% url "index" %}')"  type="search" placeholder="Search" aria-label="Search">
                 </form>
 
-            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "pretraga" %}')" type="submit"><ion-icon style="font-size:25px;" name="search-outline">s</ion-icon></button>
-            <button class="btn btn-outline-success my-2 my-sm-0" onclick="navurl('{% url "dodavanje_stavke_narudzbine" %}')" type="submit"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></button>
+            <button class="btn btn-outline-success my-2 my-sm-0"  type="submit"><ion-icon style="font-size:25px;" name="search-outline">s</ion-icon></button>
+            <button class="btn btn-outline-success my-2 my-sm-0"  type="submit"><ion-icon style="font-size:25px;" name="basket-outline"></ion-icon></button>
             <button class="btn btn-outline-success my-2" onclick="navurl('{% url "nalog" %}')" type="submit"><ion-icon style="font-size:25px;" name="person-outline"></ion-icon></button>
 
 		</nav>

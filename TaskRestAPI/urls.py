@@ -13,13 +13,13 @@ from django.conf.urls.static import static
 urlpatterns = [
 	path(r'', views.index, name="index"),
 	# deo sajta sa formama
-	path('', include('TaskRestAPI.POST_urls')),
+	path('', include('TaskRestAPI.urlsKnjizara.POST_urls')),
 
 	# informacije korisnika
-	path('nalog/', include('TaskRestAPI.korisnik_urls')),
+	path('nalog/', include('TaskRestAPI.urlsKnjizara.korisnik_urls')),
 
 	# linkovi sa knjigama
-	path('', include('TaskRestAPI.kategorija_urls'))
+	path('', include('TaskRestAPI.urlsKnjizara.kategorija_urls'))
 	# (?P<pretraga>.*)
 
 ]

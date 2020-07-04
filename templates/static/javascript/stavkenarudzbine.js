@@ -5,10 +5,28 @@
 $(document).ready(function() {
 
        $(".btn.btn-outline-success.my-2.default-btn").on('click', function () {
-           var putanja = $(this).attr("id").toString().toLowerCase().replace(" ","_");
-            // alert(putanja);
-            window.open(putanja,"_self");
+           var knjigaISBN = $(this).attr("data-value");
+           var url = $(this).attr("value");
+           korpaAction(knjigaISBN,url);
+           // var putanja = $(this).attr("id").toString().toLowerCase().replace(" ","_");
+           //  window.open(putanja,"_self");
         });
+       $("button:contains('Obrisi')").on('click', function () {
+           var knjigaISBN = $(this).attr("data-value");
+           var url = $(this).attr("value");
+           korpaAction(knjigaISBN,url);
+        });
+       $("button:contains('-1')").on('click', function () {
+           var knjigaISBN = $(this).attr("data-value");
+           var url = $(this).attr("value");
+           korpaAction(knjigaISBN,url);
+        });
+       $("button:contains('+1')").on('click', function () {
+           var knjigaISBN = $(this).attr("data-value");
+           var url = $(this).attr("value");
+           korpaAction(knjigaISBN,url);
+        });
+
 });
 
 function testISBN(knjigaISBN) {

@@ -1,68 +1,4 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.utils.safestring import mark_safe
-from django.contrib.auth.models import User
-from django.http import HttpResponse
-from django import forms
-from django.views.decorators.csrf import csrf_exempt
-import json
-#sve ove importe koriste views iz viewsKnjizara
-from django.contrib.auth.decorators import login_required
-from TaskRestAPI.models import *
-
-# Create your views here.
-
-
-def index(request):
-	setupSessionForKorisnik(request)
-	najnovijeKnjige = Knjige.objects.values("kategorija", "naslov", "cena","slika","id","ISBN").order_by("-id")[:5].all()
-	kategorija1 = list(Knjige.objects.values("kategorija","naslov","opis","autor","cena","slika","ISBN").filter(kategorija="Filozofija")[:3][:])
-	for i in range(len(kategorija1)):
-		autor = kategorija1[i]["autor"]
-		userId = Korisnici.objects.filter(id=autor).values("korisnik_id")[0]["korisnik_id"]
-		userr = User.objects.get(id=userId)
-		imeIPrezime = userr.first_name + " " + userr.last_name
-		kategorija1[i]["autor"] = imeIPrezime
-
-
-
-	kategorija2 = list(Knjige.objects.values("kategorija","naslov","opis","autor","cena","slika","ISBN").filter(kategorija="Istorija")[:3][:])
-	for i2 in range(len(kategorija2)):
-		autor = kategorija2[i2]["autor"]
-		userId = Korisnici.objects.filter(id=autor).values("korisnik_id")[0]["korisnik_id"]
-		userr = User.objects.get(id=userId)
-		imeIPrezime = userr.first_name + " " + userr.last_name
-		kategorija2[i2]["autor"] = imeIPrezime
-
-	kategorijaRandom1 = list(Knjige.objects.values("kategorija","naslov","opis","autor","cena","slika","ISBN").filter(kategorija="Ljubavni roman")[:10][:])
-	for i3 in range(len(kategorijaRandom1)):
-		autor = kategorijaRandom1[i3]["autor"]
-		userId = Korisnici.objects.filter(id=autor).values("korisnik_id")[0]["korisnik_id"]
-		userr = User.objects.get(id=userId)
-		imeIPrezime = userr.first_name + " " + userr.last_name
-		kategorijaRandom1[i3]["autor"] = imeIPrezime
-
-	kategorijaRandom2 = list(
-		Knjige.objects.values("kategorija","naslov","opis","autor","cena","slika","ISBN").filter(kategorija="Drama")[:10][:])
-	for i4 in range(len(kategorijaRandom2)):
-		autor = kategorijaRandom2[i4]["autor"]
-		userId = Korisnici.objects.filter(id=autor).values("korisnik_id")[0]["korisnik_id"]
-		userr = User.objects.get(id=userId)
-		imeIPrezime = userr.first_name + " " + userr.last_name
-		kategorijaRandom2[i4]["autor"] = imeIPrezime
-
-
-
-	return render(request, 'public/index.html', {"najnovijeKnjige":najnovijeKnjige,
-												 "kategorija1":kategorija1,
-												 "kategorija2":kategorija2,
-												 "randKat1":kategorijaRandom1,
-												 "randKat2":kategorijaRandom2})
-
+from TaskRestAPI.views import *
 
 # registracija
 def regpage(request):
@@ -343,6 +279,36 @@ class Komentar_forma(forms.Form):
 		return self.cleaned_data
 
 @csrf_exempt
+def ocenjivanje_knjige(request):
+
+	return_value = {}
+	if len(request.POST) > 0:
+		try:
+
+			knjigaISBN = request.POST["knjigaISBN"]
+			ocena = request.POST["ocena"]
+			knjigaObj = Knjige.objects.get(ISBN=knjigaISBN)
+			oceneZaKnjigu = OceneKnjiga.objects.filter(korisnik_id=int(request.session["korisnikInfoId"]),knjiga_id=knjigaObj.id)
+
+			if(len(oceneZaKnjigu)>0):
+				oceneZaKnjigu[0].ocena = ocena
+				oceneZaKnjigu[0].save()
+				return_value.setdefault("poruka",1)
+			elif(len(oceneZaKnjigu)<1):
+				ocenaObj = OceneKnjiga()
+				ocenaObj.knjiga = knjigaObj
+				ocenaObj.korisnik_id = int(request.session["korisnikInfoId"])
+				ocenaObj.ocena = ocena
+				ocenaObj.save()
+				return_value.setdefault("poruka", 2)
+
+		except:
+			print("greska")
+	print(return_value)
+	return HttpResponse(json.dumps(return_value), content_type=
+		"application/json")
+
+@csrf_exempt
 def akcije_za_korpu(request):
 	return_value = {}
 	if len(request.POST) > 0:
@@ -449,151 +415,4 @@ def dodavanje_knjiga_za_korpu(request):
 	"application/json")
 
 
-
-
-def setupSessionForKorisnik(request):
-	if ("korisnikInfoId" not in request.session.keys()):
-		if ("_auth_user_id" in request.session.keys()):
-			korisnik1 = Korisnici.objects.filter(korisnik_id=request.session["_auth_user_id"])
-			if (len(korisnik1) > 0):
-				request.session["korisnikInfoId"] = korisnik1[0].id
-				print("e tooooooo")
-
-# class Knjiga_look(ListView):
-#     model = Knjige
-#     template_name = 'public/test.html'
-#     paginate_by = 5
-#
-#     def get_queryset(self):
-#         br = 1
-#         return [br]
-
-@login_required
-def prikaz_korpe(request):
-	korpa = request.session["korpa"]
-	stavke = []
-	for stavka in korpa:
-		knjiga = Knjige.objects.get(ISBN=stavka["knjigaISBN"])
-		isbn = knjiga.ISBN
-		slika = knjiga.slika
-		naslov = knjiga.naslov
-		cena = knjiga.cena
-		kolicina = stavka["kolicina"]
-		stavke.append({"isbn": isbn, "slika": slika, "naslov": naslov, "cena": cena, "kolicina": kolicina}, )
-	ukupno = 0
-	for i in range(len(stavke)):
-		ukupno += stavke[i]["cena"] * stavke[i]["kolicina"]
-
-	return render(request, 'public/knjige/dodavanje_stavke_narudzbine.html', {"korpa": stavke, "ukupno": str(ukupno)})
-
-
-class Kategorija_look(ListView):
-	model = Korisnici
-	template_name = 'public/knjige/knjige.html'
-	paginate_by = 12
-
-	def get_queryset(self):
-		print(self.request.path)
-		if (str(self.request.path) == "/ljubavni_roman/"):
-			knjige_all = Knjige.objects.filter(kategorija="Ljubavni roman")
-			return knjige_all
-		elif (self.request.path == "/istorija/"):
-			knjige_all = Knjige.objects.filter(kategorija="Istorija")
-			return knjige_all
-
-		elif (self.request.path == "/fantastika/"):
-			knjige_all = Knjige.objects.filter(kategorija="Fantastika")
-			return knjige_all
-
-		elif (self.request.path == "/filozofija/"):
-			knjige_all = Knjige.objects.filter(kategorija="Filozofija")
-			return knjige_all
-
-		elif (self.request.path == "/horor/"):
-			knjige_all = Knjige.objects.filter(kategorija="Horor")
-			return knjige_all
-
-		elif (self.request.path == "/drama/"):
-			knjige_all = Knjige.objects.filter(kategorija="Drama")
-			return knjige_all
-
-		elif (self.request.path == "/pretraga"):
-			print("nestoooo")
-			knjige_all = Knjige.objects.filter(kategorija="Ljubavni roman")
-			return knjige_all
-def knjiga_look(request, ISBN):
-	kategorija = "/" + str(request.path).split("/")[1] + "/"
-	pathsCategory = ["/ljubavni_roman/","/istorija/",
-					 "/fantastika/","/filozofija/",
-					 "/horor/","/drama/"
-					 ]
-	if (kategorija in pathsCategory):
-		knjiga = Knjige.objects.get(ISBN=ISBN)
-		knjigaID = Knjige.objects.filter(ISBN=ISBN)[0].id
-		naslov = srediNaslov(knjiga.naslov)
-		oceneLista = oceneKnjiga(knjigaID)
-		komentarLista = komentari(knjigaID)
-		knjiga.naslov = naslov
-		ocenjivanje = "LOG"
-		#OVDE
-		if ("korisnikInfoId" in request.session.keys()):
-			print("tu")
-			#udji u narudzbine i vidi korID
-			narudzbineIDs = Narudzbine.objects.filter(korisnik_id=
-				int(request.session["korisnikInfoId"]))[:]
-			for i in narudzbineIDs:
-				idNar = i.id
-				stavkeNar = StavkeNarudzbine.objects.filter(narudzbina_id=idNar).filter(knjiga_id=knjigaID)
-				if(len(stavkeNar)>0):
-					ocenjivanje = "DA"
-					print("moze ocenjivati")
-				else:
-					ocenjivanje = "NE"
-					print("ne moze ocenjivati")
-
-
-			#za svaku nar udji u stavke
-			#za svaku stvaku vidi knjige
-			#poredi id knjige sa mojim idknjige
-
-		form = komentarisanje(request,knjigaID)
-		return render(request, 'public/knjige/knjiga.html', {"knjiga": knjiga, "ocene": oceneLista,
-													  "komentarLista": komentarLista,"form":form,
-															 "ocenjivanje":ocenjivanje})
-def srediNaslov(naslov):
-	duzina = len(naslov)
-	brojac = 0
-	naslov2 = ""
-	if(duzina>16):
-		for i in range(0, duzina):
-			naslov2 += naslov[i]
-			brojac += 1
-			if (brojac == 18):
-				naslov2 += "\n"
-				brojac = 0
-		return naslov2
-	return naslov
-
-
-def oceneKnjiga(knjigaID):
-	oceneLista = []
-	knjiga = knjigaID
-	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
-	for i in range(len(ocene)):
-		ocena = ocene[i].ocena
-		username = ocene[i].korisnik
-		oceneLista.append([username, ocena])
-	return oceneLista
-
-
-def komentari(knjigaID):
-	komentarLista = []
-	komentari = KomentariNaKnjigama.objects.filter(knjiga=knjigaID, odobren=True)
-	for i in range(len(komentari)):
-		korisnik = Korisnici.objects.get(id=komentari[i].korisnik.id)
-		grad = korisnik.grad
-		komentar = komentari[i].komentar
-		username = komentari[i].korisnik
-		komentarLista.append([username, grad, komentar])
-	return komentarLista
 
