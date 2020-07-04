@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/TaskRestAPI/urls.py" line="0" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="68360c10-f8ce-4b52-b24c-5fd4e9846b29" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/public/dodavanje_stavke_narudzbine.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/drama.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/filozofija.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/horor.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/istorija.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/knjige_urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/ljubavni_roman.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" afterPath="$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskRestAPI/urls.py" afterPath="$PROJECT_DIR$/TaskRestAPI/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskRestAPI/views.py" afterPath="$PROJECT_DIR$/TaskRestAPI/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/punibazu.py" afterPath="$PROJECT_DIR$/punibazu.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/base.html" afterPath="$PROJECT_DIR$/templates/public/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/index.html" afterPath="$PROJECT_DIR$/templates/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/pocetna.css" afterPath="$PROJECT_DIR$/templates/static/css/pocetna.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/style.css" afterPath="$PROJECT_DIR$/templates/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" afterPath="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" afterPath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" afterPath="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/javascript/index.js" afterPath="$PROJECT_DIR$/templates/static/javascript/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/javascript/knjiga.js" afterPath="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" afterPath="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/knjiga.html" afterPath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/knjige.html" afterPath="$PROJECT_DIR$/templates/public/knjige/knjige.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/komentarisanje_knjiga.html" afterPath="$PROJECT_DIR$/templates/public/knjige/komentarisanje_knjiga.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/lista_korisnika.html" afterPath="$PROJECT_DIR$/templates/public/korisnik/lista_korisnika.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/ocenjivanje_knjiga.html" afterPath="$PROJECT_DIR$/templates/public/knjige/ocenjivanje_knjiga.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/registracija.html" afterPath="$PROJECT_DIR$/templates/public/korisnik/registracija.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/unos_knjige.html" afterPath="$PROJECT_DIR$/templates/public/knjige/unos_knjige.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/public/zadva.css" afterPath="$PROJECT_DIR$/templates/static/css/zadva.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/POST_urls.py" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/korisnik_urls.py" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,64 +36,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testSamo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testSamo.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+            <state relative-caret-position="357">
+              <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerMobilnoBankaPosta.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
+      <file leaf-file-name="POST_urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="148" column="51" lean-forward="false" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
+            <state relative-caret-position="330">
+              <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BankNotifCenter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py">
+      <file leaf-file-name="knjiga.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="-504">
+              <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <marker date="1593821173630" expanded="true" signature="3803:3810" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="POSTViews.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="306" column="22" lean-forward="false" selection-start-line="306" selection-start-column="22" selection-end-line="306" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostaNotifCenter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/PostaNotifCenter.py">
+      <file leaf-file-name="knjiga.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+            <state relative-caret-position="234">
+              <caret line="93" column="183" lean-forward="false" selection-start-line="93" selection-start-column="183" selection-end-line="93" selection-end-column="183" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NotifCenter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -97,35 +112,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modal-body</find>
-      <find>modalZaDom</find>
-      <find>naruci</find>
-      <find>naruc</find>
-      <find>evo</find>
-      <find>ovde2</find>
-      <find>ovde</find>
-      <find>evo3</find>
-      <find>OVD</find>
-      <find>pretraga_id</find>
-      <find>id</find>
-      <find>pret</find>
-      <find>cena = \d+\.+\d+</find>
-      <find>godinaI</find>
-      <find>log</find>
-      <find>authenticate</find>
-      <find>ISBN</find>
-      <find>knjiga_look</find>
-      <find>fanta</find>
-      <find>394</find>
-      <find>serbia</find>
       <find>info</find>
       <find>korisnikInfoId</find>
       <find>komentarisanje</find>
@@ -135,9 +130,32 @@
       <find>PORT</find>
       <find>data</find>
       <find>sablon</find>
+      <find>TaskRestAPI.knjige_urls</find>
+      <find>setupSessionForKorisnik</find>
+      <find>Kategorija_look</find>
+      <find>login_korisnika</find>
+      <find>path\(\'ljubavni_roman\/\'\, include\(\'TaskRestAPI\.knjige_urls\.ljubavni_roman\'\)\, name\=\&quot;ljubavni_roman\/\&quot;\)\,\n\	path\(\'istorija\/\'\, include\(\'TaskRestAPI\.knjige_urls\.istorija\'\)\, name\=\&quot;istorija\/\&quot;\)\,\n\	path\(\'horor\/\'\, include\(\'TaskRestAPI\.knjige_urls\.horor\'\)\, name\=\&quot;horor\/\&quot;\)\,\n\	path\(\'filozofija\/\'\, include\(\'TaskRestAPI\.knjige_urls\.filozofija\'\)\, name\=\&quot;filozofija\/\&quot;\)\,\n\	path\(\'fantastika\/\'\, include\(\'TaskRestAPI\.knjige_urls\.fantastika\'\)\, name\=\&quot;fantastika\/\&quot;\)\,\n\	path\(\'drama\/\'\, include\(\'TaskRestAPI\.knjige_urls\.drama\'\)\, name\=\&quot;drama\/\&quot;\)\,</find>
+      <find>include(.*'\))</find>
+      <find>stavi</find>
+      <find>stavi</find>
+      <find>budite</find>
+      <find>id</find>
+      <find>oncli</find>
+      <find>onC</find>
+      <find>onclick</find>
+      <find>onClick</find>
+      <find>PLace</find>
+      <find>isbn</find>
+      <find>session</find>
+      <find>ne moze</find>
+      <find>form</find>
+      <find>dodaj</find>
+      <find>nakon_ocenj1</find>
     </findStrings>
     <replaceStrings>
       <replace>cena = 0.0</replace>
+      <replace>TaskRestAPI.urls.knjige_urls</replace>
+      <replace>Kategorija_look.as_view()</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -149,30 +167,53 @@
         <option value="$PROJECT_DIR$/templates/static/css/pocetna.css" />
         <option value="$PROJECT_DIR$/templates/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/public/dodavanje_stavke_narudzbine.html" />
-        <option value="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
         <option value="$PROJECT_DIR$/templates/public/pretraga.html" />
         <option value="$PROJECT_DIR$/templates/public/index.html" />
-        <option value="$PROJECT_DIR$/templates/public/base.html" />
         <option value="$PROJECT_DIR$/zabazu/ServerZaMobilno.py" />
         <option value="$PROJECT_DIR$/punibazu.py" />
         <option value="$PROJECT_DIR$/ServerZaMobilno/Upiti.py" />
         <option value="$PROJECT_DIR$/templates/public/knjige.html" />
-        <option value="$PROJECT_DIR$/templates/static/javascript/index.js" />
         <option value="$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" />
         <option value="$PROJECT_DIR$/templates/public/knjiga.html" />
         <option value="$PROJECT_DIR$/TaskRestAPI/POST_urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
-        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
         <option value="$PROJECT_DIR$/Server/settings.py" />
         <option value="$PROJECT_DIR$/ServerZaMobilno/ServerZaMobilno.py" />
         <option value="$PROJECT_DIR$/testSamo.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerZaMobilno.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/PostaNotifCenter.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
+        <option value="$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py" />
+        <option value="$USER_HOME$/Desktop/random stuff/little Apps/PostaNotifCenter.py" />
+        <option value="$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urls/kategorija_urls.py" />
+        <option value="$PROJECT_DIR$/Server/urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/drama.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/fantastika.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/filozofija.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/knjige_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/knjigeViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/formViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/ljubavni_roman.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/istorija.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/horor.py" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/index.js" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
+        <option value="$PROJECT_DIR$/templates/public/base.html" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/forBase.js" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
+        <option value="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
+        <option value="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" />
+        <option value="$PROJECT_DIR$/templates/static/css/ocene.css" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
+        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
       </list>
     </option>
   </component>
@@ -204,7 +245,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,6 +355,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="korisnik" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="knjige" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -347,7 +409,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="miniAppsZaKnjizaru" />
+              <option name="myItemId" value="viewsKnjizara" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="urlsKnjizara" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templatetags" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,28 +464,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="miniAppsZaKnjizaru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServerMobilnoBankaPosta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="knjige_urls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -407,23 +483,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python/Python38/test" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\ServerZaMobilno" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI\miniAppsZaKnjizaru" />
+      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI\urlsKnjizara" />
       <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI" />
+      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI\urls" />
+      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI\miniAppsZaKnjizaru" />
       <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\templates\static\css" />
-      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\templates\public\knjige" />
-      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\templates\public\korisnik" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\TaskRestAPI\knjige_urls" />
+      <recent name="D:\DL TB\web-programiranje-projektni-uros-mrkobrada\ServerZaMobilno" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -641,6 +720,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="68360c10-f8ce-4b52-b24c-5fd4e9846b29" name="Default" comment="" />
@@ -655,18 +737,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5064935" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43073592" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27380952" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2771855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24025974" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31709957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2793177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -683,265 +765,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9690">
-          <caret line="570" column="0" lean-forward="false" selection-start-line="570" selection-start-column="0" selection-end-line="570" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/base0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="1160" column="12" lean-forward="true" selection-start-line="1160" selection-start-column="12" selection-end-line="1160" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/pocetna.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="75" column="6" lean-forward="false" selection-start-line="75" selection-start-column="6" selection-end-line="75" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/stajl.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/korisnik_podaci.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-454">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/nalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="23" column="84" lean-forward="true" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/views/generic/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2004">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/pretraga.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="43" column="99" lean-forward="true" selection-start-line="43" selection-start-column="99" selection-end-line="43" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/drama.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/filozofija.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/horor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="38" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/istorija.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/knjige_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/ljubavni_roman.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knjigee.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dodaj_slike_za_proizvode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/contrib/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/punibazu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="62" column="3" lean-forward="false" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="3" />
-          <folding>
-            <marker date="1593600280875" expanded="true" signature="24:409" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="40:395" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="433:1111" ph="SELECT * FRO... *" />
-            <marker date="1593600280875" expanded="true" signature="491:1099" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="509:1037" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="1136:1578" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="1154:1548" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="1605:2009" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="1621:2007" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="2033:2852" ph="SELECT koris... korisnik_id" />
-            <marker date="1593600280875" expanded="true" signature="2092:2825" ph="SELECT TaskR... TaskRestAPI_korisnici" />
-            <marker date="1593600280875" expanded="true" signature="2870:3252" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="2886:3230" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="3275:3647" ph="SELECT * FRO... komentar" />
-            <marker date="1593600280875" expanded="true" signature="3275:3652" ph="SELECT * FRO... komentar" />
-            <marker date="1593600280875" expanded="true" signature="3291:3634" ph="SELECT komen... TaskRestAPI_komentarinaknjigama" />
-            <marker date="1593600280875" expanded="true" signature="3673:3730" ph="SELECT isbn,... missing_value" />
-            <marker date="1593600280875" expanded="true" signature="3673:3781" ph="SELECT isbn,... missing_value" />
-            <marker date="1593600280875" expanded="true" signature="3673:3792" ph="SELECT isbn,... missing_value" />
-            <marker date="1593600280875" expanded="true" signature="3809:3838" ph="SELECT usern... auth_osoba" />
-            <marker date="1593600280875" expanded="true" signature="3809:3888" ph="SELECT usern... auth_user" />
-            <marker date="1593600280875" expanded="true" signature="3914:3960" ph="SELECT COUNT... auth_osoba" />
-            <marker date="1593600280875" expanded="true" signature="3987:4045" ph="SELECT COUNT... TaskRestAPI_narudzbine" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/index2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjige.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="39" column="76" lean-forward="false" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="52" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="86" lean-forward="false" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/public/knjige/komentarisanje_knjiga.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -965,72 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/POST_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/korisnik_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="118" column="100" lean-forward="false" selection-start-line="118" selection-start-column="100" selection-end-line="118" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,23 +808,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding>
-            <element signature="e#307#316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testSamo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="34">
           <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1066,43 +820,376 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="578">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="148" column="51" lean-forward="false" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/PostaNotifCenter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="19" column="87" lean-forward="false" selection-start-line="19" selection-start-column="87" selection-end-line="19" selection-end-column="87" />
+        <state relative-caret-position="637">
+          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="148" column="51" lean-forward="false" selection-start-line="148" selection-start-column="51" selection-end-line="148" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/knjige_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/ljubavni_roman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/istorija.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/horor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/filozofija.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/fantastika.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/drama.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/drama.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/filozofija.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/horor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/istorija.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/knjige_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/ljubavni_roman.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="489" column="6" lean-forward="false" selection-start-line="489" selection-start-column="6" selection-end-line="489" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1508">
+          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#222#231#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/greska.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjige.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/narudzbine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="56" column="51" lean-forward="true" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/css/ocene.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/nalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="22" column="87" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-918">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/forBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="37" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="93" column="183" lean-forward="false" selection-start-line="93" selection-start-column="183" selection-end-line="93" selection-end-column="183" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="306" column="22" lean-forward="false" selection-start-line="306" selection-start-column="22" selection-end-line="306" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <caret line="57" column="5" lean-forward="true" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <marker date="1593821173630" expanded="true" signature="3803:3810" ph="×" />
+          </folding>
         </state>
       </provider>
     </entry>

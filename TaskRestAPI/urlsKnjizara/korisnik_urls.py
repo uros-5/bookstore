@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls import include
 from django.conf.urls import url
-from TaskRestAPI.views import *
+from TaskRestAPI.viewsKnjizara.POSTViews import *
 
 urlpatterns = [
     path('',login_korisnika,name="nalog"),

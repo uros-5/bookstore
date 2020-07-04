@@ -18,6 +18,7 @@
     }
     </style>
     <script src="{% static 'javascript/knjiga.js' %}"></script>
+    <link rel="stylesheet" href='{% static "css/ocene.css" %}' type="text/css">
 {% endblock %}
 
 
@@ -90,8 +91,7 @@ Primer knjige
                             </select>
                         </p>
                         <a href="#" >
-                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal"
-                            onclick="dodaj_u_korpu('{{ knjiga.ISBN }}','{% url "dodavanje_u_korpu" %}');">
+                            <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal" data-value='{{ knjiga.ISBN }}' value='{% url "dodavanje_u_korpu" %}'>
                                 Stavi u korpu
                             </button></a><br>
 
@@ -113,7 +113,7 @@ Primer knjige
                     {% if ocenjivanje == "DA" %}
 
                         {% if ocene|length < 1 %}
-                        <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Budite prvi koji ce da oceni knjigu.</p></span>
+                        <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp <button class="btn btn-outline-success my-2" data-toggle="modal" data-target="#exampleModal" >Budite prvi koji ce da oceni knjigu.</button></p></span>
                         {% endif %}
                     {% elif ocenjivanje == "NE" %}
                         <span><p>&#10032;&#10032;&#10032;&#10032;&#10032;; &nbsp Niste kupili knjigu.</p></span>
@@ -170,7 +170,7 @@ Primer knjige
                     <div>
                         <form method="post" action="{% url "komentarisanje" knjiga.id %}">
                             {% csrf_token %}
-                            <textarea  name="komentar" type="text" cols="35" rows="5"></textarea>
+                            <textarea  data-value= '{% csrf_token %}'name="komentar" type="text" cols="35" rows="5"></textarea>
                             <button type="submit" style=" display: flex;" class="btn btn-outline-success my-2">Posalji</button>
                         </form>
                     </div>

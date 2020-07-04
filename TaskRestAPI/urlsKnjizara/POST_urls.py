@@ -1,7 +1,7 @@
 from django.urls import path
 from django.urls import include
 from django.conf.urls import url
-from TaskRestAPI.views import *
+from TaskRestAPI.viewsKnjizara.POSTViews import *
 
 urlpatterns = [
 	path(r'registracija', regpage, name="registracija"),
@@ -13,6 +13,7 @@ urlpatterns = [
 	path(r'povecaj_kolicinu', akcije_za_korpu, name="povecaj_kolicinu"),
 	path(r'naruci_iz_korpe', akcije_za_korpu, name="naruci_iz_korpe"),
 	path(r'ocenjivanje_knjiga', login_required(Ocenjivanje_knjiga_forma.as_view()), name="ocenjivanje_knjiga"),
+	path(r'ocenjivanje_knjige',ocenjivanje_knjige,name="ocenjivanje_knjige"),
 	path(r'komentarisanje_knjiga', login_required(Komentarisanje_knjiga_forma.as_view()), name="komentarisanje_knjiga"),
 	path(r'komentarisanje^(?P<idKnjige>.*)$', komentarisanje, name="komentarisanje")
 ]
