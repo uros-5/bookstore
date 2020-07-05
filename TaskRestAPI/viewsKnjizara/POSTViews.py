@@ -1,5 +1,5 @@
 from TaskRestAPI.views import *
-
+from TaskRestAPI.viewsKnjizara.kategorijaViews import oceneKnjiga
 # registracija
 def regpage(request):
 	if request.POST:
@@ -221,6 +221,7 @@ class Korisnici_narudzbine(ListView):
 					knjige.append(knjiga0)
 				if (len(stavke_narudzbine) > 0):
 					narudzbina.append(knjige)
+					narudzbina[0]['ukupno'] = round(narudzbina[0]['ukupno'],2)
 					narudzbine.append(narudzbina)
 		print(len(narudzbine))
 		return narudzbine
@@ -280,7 +281,6 @@ class Komentar_forma(forms.Form):
 
 @csrf_exempt
 def ocenjivanje_knjige(request):
-
 	return_value = {}
 	if len(request.POST) > 0:
 		try:
@@ -293,16 +293,19 @@ def ocenjivanje_knjige(request):
 			if(len(oceneZaKnjigu)>0):
 				oceneZaKnjigu[0].ocena = ocena
 				oceneZaKnjigu[0].save()
-				return_value.setdefault("poruka",1)
+				return_value.setdefault("poruka",2)
 			elif(len(oceneZaKnjigu)<1):
 				ocenaObj = OceneKnjiga()
 				ocenaObj.knjiga = knjigaObj
 				ocenaObj.korisnik_id = int(request.session["korisnikInfoId"])
 				ocenaObj.ocena = ocena
 				ocenaObj.save()
-				return_value.setdefault("poruka", 2)
+				return_value.setdefault("poruka",1)
+			oceneKnjige = oceneKnjiga(knjigaObj.id,forJson = True)
+			return_value.setdefault("oceneKnjige",oceneKnjige)
 
-		except:
+		except Exception as e:
+			print(e)
 			print("greska")
 	print(return_value)
 	return HttpResponse(json.dumps(return_value), content_type=
@@ -413,6 +416,3 @@ def dodavanje_knjiga_za_korpu(request):
 				return_value = 1
 	return HttpResponse(json.dumps(return_value), content_type=
 	"application/json")
-
-
-

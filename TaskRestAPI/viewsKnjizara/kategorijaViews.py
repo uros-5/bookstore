@@ -51,7 +51,6 @@ def knjiga_look(request, ISBN):
 		ocenjivanje = "LOG"
 		#OVDE
 		if ("korisnikInfoId" in request.session.keys()):
-			print("tu")
 			#udji u narudzbine i vidi korID
 			narudzbineIDs = Narudzbine.objects.filter(korisnik_id=
 				int(request.session["korisnikInfoId"]))[:]
@@ -59,17 +58,20 @@ def knjiga_look(request, ISBN):
 				idNar = i.id
 				stavkeNar = StavkeNarudzbine.objects.filter(narudzbina_id=idNar).filter(knjiga_id=knjigaID)
 				if(len(stavkeNar)>0):
-					ocenjivanje = "DA"
-					print("moze ocenjivati")
+					if(i.placeno == True):
+						ocenjivanje = "DA"
+					else:
+						ocenjivanje = "NE JOS"
+					break
 				else:
 					ocenjivanje = "NE"
-					print("ne moze ocenjivati")
 
 
 			#za svaku nar udji u stavke
 			#za svaku stvaku vidi knjige
 			#poredi id knjige sa mojim idknjige
-
+		print(ocenjivanje)
+		print(oceneLista)
 		form = komentarisanje(request,knjigaID)
 		return render(request, 'public/knjige/knjiga.html', {"knjiga": knjiga, "ocene": oceneLista,
 													  "komentarLista": komentarLista,"form":form,
@@ -89,15 +91,16 @@ def srediNaslov(naslov):
 	return naslov
 
 
-def oceneKnjiga(knjigaID):
-	oceneLista = []
-	knjiga = knjigaID
-	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
-	for i in range(len(ocene)):
-		ocena = ocene[i].ocena
-		username = ocene[i].korisnik
-		oceneLista.append([username, ocena])
-	return oceneLista
+# def oceneKnjiga(knjigaID,forJson = False):
+# 	oceneLista = []
+# 	knjiga = knjigaID
+# 	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
+# 	for i in range(len(ocene)):
+# 		ocena = ocene[i].ocena
+# 		if(forJson == True)
+# 		username = ocene[i].korisnik.
+# 		oceneLista.append([username, ocena])
+# 	return oceneLista
 
 
 def komentari(knjigaID):

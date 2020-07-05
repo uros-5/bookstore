@@ -178,7 +178,6 @@ def login_korisnika(request):
 			username = form.cleaned_data["username"]
 			password = form.cleaned_data["password"]
 			user = authenticate(username=username, password=password)
-			print(user)
 			if user:
 				print("postoji")
 				login(request, user)
@@ -286,7 +285,6 @@ class Korisnici_narudzbine(ListView):
 				if (len(stavke_narudzbine) > 0):
 					narudzbina.append(knjige)
 					narudzbine.append(narudzbina)
-		print(len(narudzbine))
 		return narudzbine
 
 
@@ -324,7 +322,6 @@ def komentarisanje(request,idKnjige=""):
 			knk.komentar = komentar
 			knk.save()
 
-			print("komentarisano")
 			return HttpResponseRedirect(reverse('index'))
 		else:
 			return {'form': form}
@@ -457,7 +454,6 @@ def setupSessionForKorisnik(request):
 			korisnik1 = Korisnici.objects.filter(korisnik_id=request.session["_auth_user_id"])
 			if (len(korisnik1) > 0):
 				request.session["korisnikInfoId"] = korisnik1[0].id
-				print("e tooooooo")
 
 # class Knjiga_look(ListView):
 #     model = Knjige
@@ -537,7 +533,6 @@ def knjiga_look(request, ISBN):
 		ocenjivanje = "LOG"
 		#OVDE
 		if ("korisnikInfoId" in request.session.keys()):
-			print("tu")
 			#udji u narudzbine i vidi korID
 			narudzbineIDs = Narudzbine.objects.filter(korisnik_id=
 				int(request.session["korisnikInfoId"]))[:]
@@ -575,14 +570,18 @@ def srediNaslov(naslov):
 	return naslov
 
 
-def oceneKnjiga(knjigaID):
+def oceneKnjiga(knjigaID,forJson = False):
 	oceneLista = []
 	knjiga = knjigaID
 	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
 	for i in range(len(ocene)):
 		ocena = ocene[i].ocena
-		username = ocene[i].korisnik
-		oceneLista.append([username, ocena])
+		if(forJson == True):
+			username = User.objects.get(id=Korisnici.objects.get(id=ocene[i].korisnik_id).korisnik_id).username
+			oceneLista.append([username, ocena])
+		else:
+			username = ocene[i].korisnik
+			oceneLista.append([username, ocena])
 	return oceneLista
 
 
@@ -596,4 +595,3 @@ def komentari(knjigaID):
 		username = komentari[i].korisnik
 		komentarLista.append([username, grad, komentar])
 	return komentarLista
-

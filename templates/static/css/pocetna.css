@@ -1,6 +1,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
 	margin:0px;
+	display:none;
 }
 
 
@@ -53,6 +54,8 @@ a .nova-knjiga__slika {
 	background-color: #1877c4 !important;
 }
 .center-content-color {
+
 	background-color: #76b8ee !important;
 }
+
 /* .i-am-centered { margin: auto; max-width: 300px;} */
