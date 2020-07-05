@@ -5,6 +5,7 @@
     <link rel="stylesheet" href='{% static "css/pocetna.css" %}' type="text/css">
     <script src='{% static "javascript/index.js" %}'></script>
 
+
 {% endblock %}
 
 
@@ -15,7 +16,7 @@
 			<div class="row center-content-color">
 
 
-				<div class="col-sm-12"><div class="ml-2"> <h3>Novo u prodavnici</h3> </div></div>
+				<div class="col-sm-12" ><div class="ml-2"> <h3>Novo u prodavnici</h3> </div></div>
 					{% for knjiga in najnovijeKnjige %}
 						<div class="col nova-knjiga">
 							<h6> {{ knjiga.naslov|truncatechars:14}}</h6>

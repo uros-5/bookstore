@@ -5,10 +5,615 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68360c10-f8ce-4b52-b24c-5fd4e9846b29" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Server.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" afterPath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/punibazu.py" afterPath="$PROJECT_DIR$/punibazu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/forheader.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/213330_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/213366_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/213884_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/215707_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/221896_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/221917_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/222745_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/225056_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/225142_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/225159_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/227663_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/234988_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/246514_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/246516_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/247631_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/249299_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/254543_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/271254_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/282384_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/282550_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/284564_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/288129_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/288142_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/289203_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296243_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296248_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296249_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296263_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296284_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/296856_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/298191_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/300749_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/300762_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/302417_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/303143_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/303146_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/306331_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/311947_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/312242_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/313322_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314036_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314666_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314695_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314701_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314907_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314908_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314913_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/314932_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/315080_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/315081_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317147_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317149_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317352_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317353_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317709_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317732_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317870_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317883_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317913_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317914_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/317919_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318258_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318258_600_600px2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318259_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318331_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318342_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318373_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318474_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318566_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/318718_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/319540_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/320089_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/322110_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323205_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323308_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323309_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323310_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323311_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/323492_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324467_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324718_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324758_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324760_1_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324947_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/324953_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325266_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325290_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325396_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325409_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325410_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325457_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325459_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325506_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325526_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325629_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/325670_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326171_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326178_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326181_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326182_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326188_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326189_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326190_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326192_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326197_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326201_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326204_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326256_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326257_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326296_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326297_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326301_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326462_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326466_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326478_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326561_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326579_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326581_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326586_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326589_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326631_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326692_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326699_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326784_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326828_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326842_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326845_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326870_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326871_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/326899_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327090_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327141_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327542_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327615_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327617_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327618_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327845_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327846_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327849_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327853_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327856_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327862_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327865_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327866_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327868_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/327869_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328094_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328148_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328351_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328457_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328464_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328473_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328488_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328535_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328536_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328537_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328538_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328539_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328616_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328636_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328824_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328825_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328826_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328827_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328828_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328837_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328853_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328868_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328877_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328883_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328946_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328948_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328951_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328953_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328954_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328955_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/328956_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329087_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329088_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329130_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329131_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329133_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329134_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329136_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329137_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329138_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329190_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329191_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329193_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329194_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329386_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329746_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329785_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329786_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/329816_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330219_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330233_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330254_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330301_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330472_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330473_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330480_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330482_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330483_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330490_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330512_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330590_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330598_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330599_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330733_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330739_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330741_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330754_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330755_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330766_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330775_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330776_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330779_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330780_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330784_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330791_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330838_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330839_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330840_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330842_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330847_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330948_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330958_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330959_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330966_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330967_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/330970_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331118_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331123_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331126_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331131_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331134_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331222_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331226_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331228_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331229_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331238_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331376_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331394_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331400_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331411_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331413_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331432_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331439_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331441_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331583_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331685_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331694_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331772_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331854_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331873_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/331998_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332000_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332001_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332054_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332058_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332110_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332150_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332156_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332164_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332173_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332253_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332363_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332380_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332417_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332521_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332522_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332545_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332547_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332757_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332822_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332895_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332896_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332898_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332900_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332971_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332982_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/332987_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333007_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333016_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333243_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333394_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333395_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333443_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333446_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333689_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333700_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333701_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333703_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333704_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333709_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333728_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333732_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333742_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333744_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333749_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333750_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333793_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/333804_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334163_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334168_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334466_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334664_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334665_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334668_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334687_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334688_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334690_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/334705_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335150_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335158_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335435_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335452_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335486_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335496_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335518_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335535_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335537_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335672_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335673_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335759_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335868_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335958_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335979_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335983_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335992_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335993_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335994_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/335997_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336021_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336022_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336027_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336030_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336031_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336062_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336063_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336068_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336132_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336207_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336209_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336212_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336260_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336310_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336792_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336797_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336798_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336800_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336802_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336804_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336824_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336826_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336931_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/336976_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337139_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337141_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337412_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337597_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337815_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337816_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/337879_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338060_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338061_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338062_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338137_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338325_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338476_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338509_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338590_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338603_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338609_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338620_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338624_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338625_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338626_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338629_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338644_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338675_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338754_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338756_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338765_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338772_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338958_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338960_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338983_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338985_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338992_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338997_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/338999_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339076_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339077_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339225_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339230_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339235_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339251_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339252_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339260_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339262_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339265_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339281_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339295_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339296_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339433_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339437_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339438_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339454_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339465_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339509_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339510_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339511_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339512_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339630_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339633_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339728_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339730_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339754_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339755_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339900_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339949_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339950_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/339951_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340092_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340235_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340238_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340314_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340318_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340322_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340327_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340417_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340418_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340419_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340428_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340618_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340620_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340629_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340632_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340638_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340645_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/340762_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341770_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341788_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341818_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341834_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341868_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341908_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341914_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341917_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341967_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341970_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341971_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341972_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341973_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/341974_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342369_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342383_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342389_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342391_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342392_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342394_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342397_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342400_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/342714_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343366_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343378_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343383_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343400_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343402_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343410_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343412_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343414_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343436_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343440_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343441_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343483_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343488_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343494_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343495_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343571_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343579_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343580_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343586_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343613_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343617_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343620_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343623_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343629_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343632_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343633_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343649_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343667_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343673_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343677_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343678_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343683_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343688_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343753_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343883_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343886_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343976_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/343994_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344043_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344100_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344102_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344107_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344111_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344121_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344150_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344157_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344160_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344163_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344164_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344190_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344244_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344282_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344346_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344387_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344396_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344402_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344405_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344407_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344416_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344424_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/media/images/slike_proizvoda/344694_600_600px.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/forheader.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/web-programiranje-projektni-uros-mrkobrada.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/asgi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Server/wsgi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ServerMobilnoBankaPosta.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/admin.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/apps.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/migrations/0001_initial.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/migrations/0002_auto_20200409_1944.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/migrations/0003_utiscikorisnika.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/migrations/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/models.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/templatetags/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/templatetags/pomnozi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/tests.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dodaj_slike_za_proizvode.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/knjigee.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/punibazu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runServer2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/base.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/greska.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/knjige.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/komentarisanje_knjiga.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/ocenjivanje_knjiga.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/pretraga.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/knjige/unos_knjige.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/korisnik_podaci.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/lista_korisnika.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/logout.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/nalog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/ocenjene_knjige.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/public/korisnik/registracija.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/base0.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/login.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/modalZaKnjige.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/ocene.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/pocetna.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/stajl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/css/zadva.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/javascript/forBase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/javascript/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/javascript/lib/jquery-3.5.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zabazu/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zabazu/podaci.dat.bak" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zabazu/podaci.dat.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zabazu/podaci.dat.dir" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,44 +637,54 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="punibazu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/punibazu.py">
+      <file leaf-file-name="POST_urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Upiti.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-              <folding>
-                <marker date="1593600280875" expanded="true" signature="24:409" ph="SELECT * FRO... id" />
-                <marker date="1593600280875" expanded="true" signature="40:395" ph="SELECT TaskR... TaskRestAPI_knjige" />
-                <marker date="1593600280875" expanded="true" signature="433:1111" ph="SELECT id,is... *" />
-                <marker date="1593600280875" expanded="true" signature="491:1099" ph="SELECT * FRO... id" />
-                <marker date="1593600280875" expanded="true" signature="509:1037" ph="SELECT TaskR... TaskRestAPI_knjige" />
-                <marker date="1593600280875" expanded="true" signature="1136:1578" ph="SELECT * FRO... id" />
-                <marker date="1593600280875" expanded="true" signature="1154:1548" ph="SELECT TaskR... TaskRestAPI_knjige" />
-                <marker date="1593600280875" expanded="true" signature="1605:2009" ph="SELECT * FRO... id" />
-                <marker date="1593600280875" expanded="true" signature="1621:2007" ph="SELECT TaskR... TaskRestAPI_knjige" />
-                <marker date="1593600280875" expanded="true" signature="2033:2852" ph="SELECT koris... korisnik_id" />
-                <marker date="1593600280875" expanded="true" signature="2092:2825" ph="SELECT TaskR... TaskRestAPI_korisnici" />
-                <marker date="1593600280875" expanded="true" signature="2870:3252" ph="SELECT * FRO... id" />
-                <marker date="1593600280875" expanded="true" signature="2886:3230" ph="SELECT TaskR... TaskRestAPI_knjige" />
-                <marker date="1593600280875" expanded="true" signature="3275:3652" ph="SELECT * FRO... komentar" />
-                <marker date="1593600280875" expanded="true" signature="3291:3634" ph="SELECT komen... TaskRestAPI_komentarinaknjigama" />
-                <marker date="1593600280875" expanded="true" signature="3673:3792" ph="SELECT id,is... missing_value" />
-                <marker date="1593600280875" expanded="true" signature="3809:3888" ph="SELECT usern... auth_user" />
-                <marker date="1593600280875" expanded="true" signature="3914:3960" ph="SELECT COUNT... auth_osoba" />
-                <marker date="1593600280875" expanded="true" signature="3987:4045" ph="SELECT COUNT... TaskRestAPI_narudzbine" />
-              </folding>
+            <state relative-caret-position="-192">
+              <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pocetna.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/static/css/pocetna.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/public/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="382">
+              <caret line="46" column="104" lean-forward="false" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,22 +703,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>OVDE</find>
-      <find>tu</find>
-      <find>Budite</find>
-      <find>PORT</find>
-      <find>data</find>
-      <find>sablon</find>
-      <find>TaskRestAPI.knjige_urls</find>
-      <find>setupSessionForKorisnik</find>
-      <find>Kategorija_look</find>
-      <find>login_korisnika</find>
-      <find>path\(\'ljubavni_roman\/\'\, include\(\'TaskRestAPI\.knjige_urls\.ljubavni_roman\'\)\, name\=\&quot;ljubavni_roman\/\&quot;\)\,\n\	path\(\'istorija\/\'\, include\(\'TaskRestAPI\.knjige_urls\.istorija\'\)\, name\=\&quot;istorija\/\&quot;\)\,\n\	path\(\'horor\/\'\, include\(\'TaskRestAPI\.knjige_urls\.horor\'\)\, name\=\&quot;horor\/\&quot;\)\,\n\	path\(\'filozofija\/\'\, include\(\'TaskRestAPI\.knjige_urls\.filozofija\'\)\, name\=\&quot;filozofija\/\&quot;\)\,\n\	path\(\'fantastika\/\'\, include\(\'TaskRestAPI\.knjige_urls\.fantastika\'\)\, name\=\&quot;fantastika\/\&quot;\)\,\n\	path\(\'drama\/\'\, include\(\'TaskRestAPI\.knjige_urls\.drama\'\)\, name\=\&quot;drama\/\&quot;\)\,</find>
-      <find>include(.*'\))</find>
-      <find>stavi</find>
-      <find>budite</find>
-      <find>id</find>
-      <find>oncli</find>
       <find>onC</find>
       <find>onclick</find>
       <find>onClick</find>
@@ -118,6 +717,22 @@
       <find>reg</find>
       <find>re.</find>
       <find>infoId</find>
+      <find>Ocene i</find>
+      <find>doda</find>
+      <find>OceneKnjiga</find>
+      <find>oceneKnjiga</find>
+      <find>knjiga.html</find>
+      <find>budite</find>
+      <find>btn</find>
+      <find>.btn.btn-outline-success.my-2.default-btn</find>
+      <find>poruka</find>
+      <find>NE&quot;</find>
+      <find>NE</find>
+      <find>&quot;NE&quot;</find>
+      <find>center</find>
+      <find>center-cont</find>
+      <find>col-sm-12</find>
+      <find>row center-content-color</find>
     </findStrings>
     <replaceStrings>
       <replace>cena = 0.0</replace>
@@ -131,11 +746,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/static/css/pocetna.css" />
         <option value="$PROJECT_DIR$/templates/static/css/style.css" />
         <option value="$PROJECT_DIR$/templates/public/dodavanje_stavke_narudzbine.html" />
         <option value="$PROJECT_DIR$/templates/public/pretraga.html" />
-        <option value="$PROJECT_DIR$/templates/public/index.html" />
         <option value="$PROJECT_DIR$/zabazu/ServerZaMobilno.py" />
         <option value="$PROJECT_DIR$/ServerZaMobilno/Upiti.py" />
         <option value="$PROJECT_DIR$/templates/public/knjige.html" />
@@ -162,25 +775,27 @@
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/ljubavni_roman.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/istorija.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/horor.py" />
-        <option value="$PROJECT_DIR$/templates/static/javascript/index.js" />
         <option value="$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
-        <option value="$PROJECT_DIR$/templates/public/base.html" />
         <option value="$PROJECT_DIR$/templates/static/javascript/forBase.js" />
         <option value="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
         <option value="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
         <option value="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" />
         <option value="$PROJECT_DIR$/templates/static/css/ocene.css" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
-        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
-        <option value="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
         <option value="$PROJECT_DIR$/punibazu.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" />
+        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+        <option value="$PROJECT_DIR$/templates/public/index.html" />
+        <option value="$PROJECT_DIR$/templates/static/css/pocetna.css" />
+        <option value="$PROJECT_DIR$/templates/public/base.html" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/index.js" />
       </list>
     </option>
   </component>
@@ -211,6 +826,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -486,13 +1102,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/Programs/Python/Python38/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="last.edited.regexp" value="(nskeklee)" />
@@ -740,16 +1355,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.282516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5064935" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4534632" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24025974" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41774893" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31709957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29211086" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -758,7 +1375,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -775,35 +1391,8 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/static/css/zadva.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testSamo.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Server.py" />
     <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -841,13 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/drama.py" />
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/filozofija.py" />
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/horor.py" />
@@ -855,22 +1437,6 @@
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/knjige_urls.py" />
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/ljubavni_roman.py" />
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" />
-    <entry file="file://$PROJECT_DIR$/Server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1508">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -895,32 +1461,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjige.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="36" column="43" lean-forward="false" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -945,70 +1489,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="22" column="87" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="87" />
-          <folding />
+        <state relative-caret-position="162">
+          <caret line="13" column="121" lean-forward="true" selection-start-line="13" selection-start-column="121" selection-end-line="13" selection-end-column="121" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py">
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="95" column="31" lean-forward="true" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="136">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/forBase.js">
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="37" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="62" column="34" lean-forward="true" selection-start-line="62" selection-start-column="34" selection-end-line="62" selection-end-column="34" />
-          <folding>
-            <marker date="1593821173630" expanded="true" signature="3803:3810" ph="×" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="510">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjige.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1564">
+          <caret line="93" column="39" lean-forward="false" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+        <state relative-caret-position="306">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
+    <entry file="file://$PROJECT_DIR$/punibazu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="93" column="183" lean-forward="false" selection-start-line="93" selection-start-column="183" selection-end-line="93" selection-end-column="183" />
+        <state relative-caret-position="734">
+          <caret line="207" column="50" lean-forward="false" selection-start-line="207" selection-start-column="50" selection-end-line="207" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/forBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1021,67 +1585,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="118" column="30" lean-forward="false" selection-start-line="118" selection-start-column="30" selection-end-line="118" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="453" column="4" lean-forward="false" selection-start-line="453" selection-start-column="4" selection-end-line="453" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="39">
+          <caret line="572" column="4" lean-forward="false" selection-start-line="572" selection-start-column="4" selection-end-line="572" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#45#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="198" column="105" lean-forward="false" selection-start-line="198" selection-start-column="99" selection-end-line="198" selection-end-column="105" />
+        <state relative-caret-position="177">
+          <caret line="304" column="42" lean-forward="false" selection-start-line="304" selection-start-column="40" selection-end-line="304" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/punibazu.py">
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="228" column="0" lean-forward="true" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="124" column="93" lean-forward="false" selection-start-line="124" selection-start-column="93" selection-end-line="124" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/base0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="121" column="26" lean-forward="false" selection-start-line="121" selection-start-column="26" selection-end-line="121" selection-end-column="26" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1593958467012" expanded="true" signature="4599:4606" ph="×" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py">
+    <entry file="file://$PROJECT_DIR$/templates/static/css/pocetna.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding>
-            <marker date="1593600280875" expanded="true" signature="24:409" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="40:395" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="433:1111" ph="SELECT id,is... *" />
-            <marker date="1593600280875" expanded="true" signature="491:1099" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="509:1037" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="1136:1578" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="1154:1548" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="1605:2009" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="1621:2007" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="2033:2852" ph="SELECT koris... korisnik_id" />
-            <marker date="1593600280875" expanded="true" signature="2092:2825" ph="SELECT TaskR... TaskRestAPI_korisnici" />
-            <marker date="1593600280875" expanded="true" signature="2870:3252" ph="SELECT * FRO... id" />
-            <marker date="1593600280875" expanded="true" signature="2886:3230" ph="SELECT TaskR... TaskRestAPI_knjige" />
-            <marker date="1593600280875" expanded="true" signature="3275:3652" ph="SELECT * FRO... komentar" />
-            <marker date="1593600280875" expanded="true" signature="3291:3634" ph="SELECT komen... TaskRestAPI_komentarinaknjigama" />
-            <marker date="1593600280875" expanded="true" signature="3673:3792" ph="SELECT id,is... missing_value" />
-            <marker date="1593600280875" expanded="true" signature="3809:3888" ph="SELECT usern... auth_user" />
-            <marker date="1593600280875" expanded="true" signature="3914:3960" ph="SELECT COUNT... auth_osoba" />
-            <marker date="1593600280875" expanded="true" signature="3987:4045" ph="SELECT COUNT... TaskRestAPI_narudzbine" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="46" column="104" lean-forward="false" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

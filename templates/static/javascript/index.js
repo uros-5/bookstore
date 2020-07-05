@@ -14,5 +14,6 @@ $(document).ready(function() {
             window.open(putanja,"_self");
         });
 
+        $("body").hide().fadeIn(1500);
 
 });

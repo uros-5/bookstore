@@ -11,17 +11,23 @@ $(document).ready(function() {
     $("button:contains('Budite prvi')").on('click', function () {
            ocenjivanje();
         });
+    $("button:contains('Ocenite knjigu')").on('click', function () {
+           ocenjivanje();
+        });
 
 });
 
 
 function zvezdice(br) {
+    document.write(napraviZvezdice(br));
+}
+function napraviZvezdice(br) {
     var ukupno = "";
     var i;
     for (i=0;i<br;i++) {
         ukupno+="&#11088;";
     }
-    document.write(ukupno);
+    return ukupno;
 }
 function komadi() {
     var ukupno = "";
@@ -59,16 +65,9 @@ function poruka_nakon_dodavanja (response) {
     $(".modal-body").css("width","");
     $(".modal-body").css("margin","");
 }
-function poruka_nakon_ocenjivanja(response) {
-    poruka = JSON.parse(response);
-    alert(poruka);
-    if (poruka === 1) {
-        $(".modal-body").html("Uspesno ste ocenili knjigu!");
-    }
-    else if (poruka === 2) {
-        $(".modal-body").html("Azurirali ste svoju ocenu za ovu knjigu.");
-    }
-}
+
+
+
 function ocenjivanje() {
     // alert("okk");
     $(".modal-body").html("");
@@ -101,6 +100,32 @@ function ocenjivanjeKnjige(knjigaISBN,ocena) {
         success:poruka_nakon_ocenjivanja,
         error: $(".modal-body").html("Morate biti prijavljeni za ovu akciju.")
     });
+}
+function poruka_nakon_ocenjivanja(response) {
+    var poruka = response["poruka"];
+    var oceneKnjige = response["oceneKnjige"]
+
+    if (poruka === 1) {
+        $(".modal-body").html("Uspesno ste ocenili knjigu!");
+        napraviNovuTabeluZaOcene(oceneKnjige);
+    }
+    else if (poruka === 2) {
+        $(".modal-body").html("Azurirali ste svoju ocenu za ovu knjigu.");
+        napraviNovuTabeluZaOcene(oceneKnjige);
+    }
+}
+
+function napraviNovuTabeluZaOcene(oceneKnjige) {
+    $("table")[0].remove();
+    // var col = ;
+    $( ".col-xs-12" ).eq(0).append('<table>');
+    $( ".col-xs-12 > table" ).eq(0).append('<tbody><tr> <th>Ocenio</th> <th>Ocena</th> </tr></tbody>');
+
+    for (i = 0;i<oceneKnjige.length;i++) {
+
+        var red = "<tr> <td><b>kor</b></td> <td>ocena</td> </tr>".replaceAll("kor",oceneKnjige[i][0]).replaceAll("ocena",napraviZvezdice(oceneKnjige[i][1]));
+        $("tbody").eq(0).append(red);
+    }
 }
 
 
