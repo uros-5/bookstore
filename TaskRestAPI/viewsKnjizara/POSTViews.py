@@ -185,8 +185,9 @@ class Korisnici_podaci(DetailView):
 
 	def get_context_data(self, **kwargs):
 		context = super(Korisnici_podaci, self).get_context_data(**kwargs)
-		korisnik = Korisnici.objects.get(korisnik_id=self.object.id)
-		context["korisnik"] = korisnik
+		if(self.object.id != 1):
+			korisnik = Korisnici.objects.get(korisnik_id=self.object.id)
+			context["korisnik"] = korisnik
 		return context
 
 
@@ -414,5 +415,50 @@ def dodavanje_knjiga_za_korpu(request):
 				stavke.append(stavka)
 				request.session["korpa"] = stavke
 				return_value = 1
+	return HttpResponse(json.dumps(return_value), content_type=
+	"application/json")
+
+@csrf_exempt
+def azuriranje(request):
+
+	return_value = {}
+	failedInputs = []
+	if len(request.POST) > 0:
+		userInfo = request.POST
+
+		korisnik = Korisnici.objects.get(korisnik_id=userInfo["userID"])
+		user = User.objects.get(id=userInfo["userID"])
+
+
+		for i in userInfo:
+			value = userInfo[i]
+
+			if(len(value) == 0):
+				failedInputs.append(i)
+				continue
+			else:
+				if(i == "first_name"):
+					user.first_name = value
+				elif(i == "last_name"):
+					user.last_name = value
+				elif(i == "ulicaIBroj"):
+					korisnik.ulicaIBroj = value
+				elif(i == "brojPoste"):
+					korisnik.brojPoste = value
+				elif(i == "telefon"):
+					korisnik.telefon = value
+		if(len(failedInputs) == 0):
+			korisnik.save()
+			user.save()
+			odgovor = "Uspesno ste azurirali svoje podatke."
+			return_value["poruka"] = 1
+		else:
+
+			odgovor ="Ispravite {}.".format(failedInputs).replace("'","").replace("[","").replace("]","")
+			return_value["poruka"] = 2
+
+		return_value["odgovor"] = odgovor
+
+
 	return HttpResponse(json.dumps(return_value), content_type=
 	"application/json")

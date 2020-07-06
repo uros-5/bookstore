@@ -16,6 +16,7 @@ urlpatterns = [
 	# path(r'ocenjivanje_knjiga', login_required(Ocenjivanje_knjiga_forma.as_view()), name="ocenjivanje_knjiga"),
 	path(r'ocenjivanje_knjige',ocenjivanje_knjige,name="ocenjivanje_knjige"),
 	path(r'komentarisanje_knjiga', login_required(Komentarisanje_knjiga_forma.as_view()), name="komentarisanje_knjiga"),
-	path(r'komentarisanje^(?P<idKnjige>.*)$', komentarisanje, name="komentarisanje")
+	path(r'komentarisanje^(?P<idKnjige>.*)$', komentarisanje, name="komentarisanje"),
+	path(r'azuriranje',azuriranje,name="azuriranje") 
 
 ]

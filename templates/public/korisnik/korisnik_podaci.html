@@ -8,6 +8,8 @@
 
 {% block headcss %}
     {{ block.super }}<link rel="stylesheet" href='{% static "css/login.css" %}' type="text/css">
+    <script src='{% static "javascript/knjiga.js" %}'></script>
+    <script src='{% static "javascript/korisnik_podaci.js" %}'></script>
 {% endblock %}
 
 {% block h1 %}
@@ -17,8 +19,7 @@ Vasi nalog > Vasi podaci
 {% block article_content %}
     <div class="row center-content-color d-flex justify-content-center">
 
-        <form method="post" action="">
-            {% csrf_token %}
+
 
             <div class="d-flex justify-content-center default-look">
                 <div class="col">
@@ -37,40 +38,41 @@ Vasi nalog > Vasi podaci
 
                     <p>Ime</p>
                     <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ user.first_name }}">
+                        <input type="text" class="form-control" id="first_name" value="{{ user.first_name }}" >
                     </div>
 
                     <p>Prezime</p>
                     <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ user.last_name }}">
+                        <input type="text" class="form-control" id = "last_name" value="{{ user.last_name }}">
                     </div>
+                    {% if user.id != 1 %}
 
-                    <p>Ulica i broj</p>
-                    <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ object.ulicaIBroj }}">
-                    </div>
+                      <p>Ulica i broj</p>
+                      <div class="bitne-inf-look__part bitne-inf-look__part2">
+                          <input type="text" class="form-control" id = "ulicaIBroj" value="{{ object.ulicaIBroj }}">
+                      </div>
 
-                    <p>Ulica i broj</p>
-                    <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ object.brojPoste }}">
-                    </div>
+                      <p>Broj poste</p>
+                      <div class="bitne-inf-look__part bitne-inf-look__part2">
+                          <input type="text" class="form-control" id="brojPoste" value="{{ object.brojPoste }}">
+                      </div>
 
-                    <p>Mesto</p>
-                    <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ object.grad }}">
-                    </div>
+                      <p>Mesto</p>
+                      <div class="bitne-inf-look__part bitne-inf-look__part2">
+                          <input type="text" class="form-control" id="grad" value="{{ object.grad }}">
+                      </div>
 
-                    <p>Telefon</p>
-                    <div class="bitne-inf-look__part bitne-inf-look__part2">
-                        <input type="text" class="form-control" value="{{ object.telefon }}">
-                    </div>
-                    <a href="{% url 'registracija' %}"><button class="btn btn-outline-success my-2 default-btn">Snimi izmene</button></a>
-
+                      <p>Telefon</p>
+                      <div class="bitne-inf-look__part bitne-inf-look__part2">
+                          <input type="text" class="form-control" id="telefon" value="{{ object.telefon }}">
+                      </div>
+                    {% endif %}
+                    <button class="btn btn-outline-success my-2 default-btn" data-toggle="modal" data-target="#exampleModal"  value="{% url 'azuriranje' %}" data-value = "{{ user.id }}" >Snimi izmene</button>
+                    <script>modalZaDom();</script>
 
 
                 </div>
             </div>
-        </form>
     </div>
 
 {% endblock %}
