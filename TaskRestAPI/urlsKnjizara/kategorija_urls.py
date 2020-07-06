@@ -4,7 +4,7 @@ from django.conf.urls import url
 from TaskRestAPI.viewsKnjizara.kategorijaViews import Kategorija_look,knjiga_look
 
 urlpatterns = [
-	path('ljubavni_roman/', Kategorija_look.as_view(), name="ljubavni_roman"),
+	path(r'ljubavni_roman/', Kategorija_look.as_view(), name="ljubavni_roman"),
 	path(r'ljubavni_roman/<str:ISBN>/',knjiga_look,name="ljubavni_roman_id"),
 
 	path('istorija/', Kategorija_look.as_view(), name="istorija"),
@@ -22,9 +22,10 @@ urlpatterns = [
 	path('drama/', Kategorija_look.as_view(), name="drama"),
 	path(r'drama/<str:ISBN>/',knjiga_look,name="drama_id"),
 
-	path("pretraga", Kategorija_look.as_view(), name="pretraga")
+	path("pretraga/", Kategorija_look.as_view(), name="pretraga"),
+	path(r"pretraga/?page=2",Kategorija_look.as_view(), name="pretraga_id"),
+
+	path(r'autor/',Kategorija_look.as_view(), name="autor"),
+	# path(r'autor/<int:id>/',Kategorija_look.as_view(), name="autor")
 
 ]
-
-
-

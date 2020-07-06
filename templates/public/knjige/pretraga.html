@@ -36,7 +36,11 @@
                 <div class="row justify-content-center">
                     {% for knjiga in object_list %}
                         <div class="col-sm-3" style="margin:10px;">
+                          {% if "pretraga" not in request.path %}
                             <a href="{% url request.path|change_url:1 knjiga.ISBN %}">
+                          {% elif "pretraga" in request.path %}
+                            <!--<a href="{% url request.path|change_url:1 knjiga.ISBN %}"> -->
+                          {% endif }
 {#                                <p>{{ knjiga.ISBN }}</p>#}
                                 <img src="{{ knjiga.slika.url }}" width="150" height="220"/>
                             </a>

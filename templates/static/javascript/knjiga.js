@@ -169,4 +169,3 @@ function modalZaDom(){
       '</div>'
     );
 }
-

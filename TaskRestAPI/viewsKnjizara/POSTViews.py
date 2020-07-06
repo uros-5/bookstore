@@ -102,183 +102,33 @@ class Komentarisanje_knjiga_forma(CreateView):
 	fields = ("komentar",)
 
 
-# login korisnika
-def login_korisnika(request):
-	setupSessionForKorisnik(request)
-
-	if ("korpa" not in request.session.keys()):
-		request.session["korpa"] = []
-	if request.POST:
-		form = Form_login(request.POST)
-		if (form.is_valid()):
-			username = form.cleaned_data["username"]
-			password = form.cleaned_data["password"]
-			user = authenticate(username=username, password=password)
-			print(user)
-			if user:
-				print("postoji")
-				login(request, user)
-				setupSessionForKorisnik(request)
-				if request.GET.get('next') is not None:
-					return redirect(request.GET['next'])
-				return HttpResponseRedirect(reverse('index'))
-		else:
-			print("pogresno")
-			return render(request, 'public/korisnik/nalog.html', {'form': form})
-	else:
-		form = Form_login()
-		return render(request, 'public/korisnik/nalog.html', {'form': form})
 
 
-class Form_login(forms.Form):
-	username = forms.CharField(label="Username")
-	password = forms.CharField(label="Lozinka", widget=forms.PasswordInput)
+@login_required
+def prikaz_korpe(request):
+	korpa = request.session["korpa"]
+	stavke = []
+	for stavka in korpa:
+		knjiga = Knjige.objects.get(ISBN=stavka["knjigaISBN"])
+		isbn = knjiga.ISBN
+		slika = knjiga.slika
+		naslov = knjiga.naslov
+		cena = knjiga.cena
+		kolicina = stavka["kolicina"]
+		stavke.append({"isbn": isbn, "slika": slika, "naslov": naslov, "cena": cena, "kolicina": kolicina}, )
+	ukupno = 0
+	for i in range(len(stavke)):
+		ukupno += stavke[i]["cena"] * stavke[i]["kolicina"]
 
-	def clean(self):
-		cleaned_data = super(Form_login, self).clean()
-		username = self.cleaned_data.get("username")
-		password = self.cleaned_data.get("password")
-		if not authenticate(username=username, password=password):
-			raise forms.ValidationError("Wrong login or password!")
-		return self.cleaned_data
+	return render(request, 'public/knjige/dodavanje_stavke_narudzbine.html',
+				  {"korpa": stavke, "ukupno": str(ukupno)})
 
 
-# logout korisnika
-def logout_korisnika(request):
-	logout(request)
-	return render(request, 'public/korisnik/logout.html')
 
-
-# za prikaz liste
-class Korisnici_lista(ListView):
-	model = Korisnici
-	template_name = 'public/korisnik/lista_korisnika.html'
-	paginate_by = 5
-
-	def get_queryset(self):
-		queryset = Korisnici.objects.filter(is_korisnik=True)
-		lista = []
-		for i in range(len(queryset)):
-			recnik = {}
-			recnik.setdefault("ulicaIBroj", queryset[i].ulicaIBroj)
-			recnik.setdefault("brojPoste", queryset[i].brojPoste)
-			recnik.setdefault("grad", queryset[i].grad)
-			recnik.setdefault("telefon", queryset[i].telefon)
-
-			user = User.objects.get(id=queryset[i].korisnik_id)
-			recnik.setdefault("first_name", user.first_name)
-			recnik.setdefault("last_name", user.last_name)
-			recnik.setdefault("username", user.username)
-
-			lista.append(recnik)
-
-			user = None
-
-		return lista
 
 	# return queryset
 
 
-class Korisnici_podaci(DetailView):
-	model = Korisnici
-	template_name = 'public/korisnik/korisnik_podaci.html'
-
-	def get_context_data(self, **kwargs):
-		context = super(Korisnici_podaci, self).get_context_data(**kwargs)
-		if(self.object.id != 1):
-			korisnik = Korisnici.objects.get(korisnik_id=self.object.id)
-			context["korisnik"] = korisnik
-		return context
-
-
-class Korisnici_narudzbine(ListView):
-	model = Korisnici
-	template_name = 'public/korisnik/narudzbine.html'
-	paginate_by = 5
-
-	def get_queryset(self):
-		narudzbine_korisnika = Narudzbine.objects.filter(korisnik_id=self.request.session["korisnikInfoId"])
-		narudzbine = []
-		if (len(narudzbine_korisnika) > 0):
-			narudzbine = []
-			# narudzbine = [[{'id':6,'poslato':"ne"},["naslov","cena","kom"],["naslov","cena","kom"]]]
-			for i in range(len(narudzbine_korisnika)):
-				narudzbina = []
-				narudzbina.append(
-					{'id': narudzbine_korisnika[i].id, 'placeno': narudzbine_korisnika[i].placeno, 'ukupno': 0,
-					 'kolicina': 0, 'datum': narudzbine_korisnika[i].datumNarucivanja})
-				stavke_narudzbine = StavkeNarudzbine.objects.filter(narudzbina_id=narudzbine_korisnika[i].id)
-				knjige = []
-
-				for i2 in range(len(stavke_narudzbine)):
-					knjiga0 = []
-					knjiga = Knjige.objects.get(id=stavke_narudzbine[i2].knjiga_id)
-					knjiga0.append(knjiga.naslov)
-					knjiga0.append(float(knjiga.cena))
-					narudzbina[0]['kolicina'] += stavke_narudzbine[i2].kolicina
-					narudzbina[0]['ukupno'] += float(knjiga.cena * stavke_narudzbine[i2].kolicina)
-					knjiga0.append(stavke_narudzbine[i2].kolicina)
-					knjiga0.append(knjiga.slika)
-					knjige.append(knjiga0)
-				if (len(stavke_narudzbine) > 0):
-					narudzbina.append(knjige)
-					narudzbina[0]['ukupno'] = round(narudzbina[0]['ukupno'],2)
-					narudzbine.append(narudzbina)
-		print(len(narudzbine))
-		return narudzbine
-
-
-class Korisnici_ocenjene_knjige(ListView):
-	model = Korisnici
-	template_name = 'public/korisnik/ocenjene_knjige.html'
-	paginate_by = 5
-
-	def get_queryset(self):
-		ocene = OceneKnjiga.objects.filter(korisnik_id=self.request.session["korisnikInfoId"])
-		lista = []
-
-		for i in range(len(ocene)):
-			review = {}
-			review.setdefault('ocena', ocene[i].ocena)
-			knjiga = Knjige.objects.get(id=ocene[i].knjiga_id)
-			review.setdefault('naslov', knjiga.naslov)
-			lista.append(review)
-		return lista
-def komentarisanje(request,idKnjige=""):
-
-	if request.POST:
-		form = Komentar_forma(request.POST)
-
-		if form.is_valid():
-			putanja = str(request.path)
-			komentar = form.cleaned_data["komentar"]
-			korisnik = Korisnici.objects.get(id=idKnjige)
-			knjiga = Knjige.objects.get(id=idKnjige)
-
-			knk = KomentariNaKnjigama()
-			knk.korisnik = korisnik
-			knk.knjiga = knjiga
-			knk.odobren = False
-			knk.komentar = komentar
-			knk.save()
-
-			print("komentarisano")
-			return HttpResponseRedirect(reverse('index'))
-		else:
-			return {'form': form}
-	else:
-		form = Komentar_forma()
-		return {'form': form}
-
-class Komentar_forma(forms.Form):
-	komentar = forms.CharField(label="komentar", max_length=50)
-
-	def clean(self):
-		cleaned_data = super(Komentar_forma, self).clean()
-		komentarDuzina = len(self.cleaned_data.get("komentar"))
-		if komentarDuzina < 0 and komentarDuzina > 50:
-			raise forms.ValidationError("Komentar treba da je max 50 karaktera!")
-		return self.cleaned_data
 
 @csrf_exempt
 def ocenjivanje_knjige(request):

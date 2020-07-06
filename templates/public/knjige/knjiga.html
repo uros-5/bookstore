@@ -48,7 +48,7 @@ Primer knjige
                         <p>
                             Autor:
                             <span>
-                                {{ knjiga.autor }}
+                                <a href="{% url 'autor' %}{{ knjiga.autor_id }}">{{ knjiga.autor }}</a>
                             </span>
                         </p>
 
@@ -62,7 +62,11 @@ Primer knjige
                         <p>
                             Oblast:
                             <span>
-                                {{ knjiga.kategorija }}
+                                {% if knjiga.kategorija|lower == "ljubavni roman" %}
+                                    <a  href="{% url 'ljubavni_roman' %}" >{{ knjiga.kategorija }}</a>
+                                {% else %}
+                                <a  href="{% url knjiga.kategorija|lower %}" >{{ knjiga.kategorija }}</a>
+                                {% endif %}
                             </span>
                         </p>
 

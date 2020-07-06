@@ -1,5 +1,4 @@
 from TaskRestAPI.views import *
-from TaskRestAPI.viewsKnjizara.POSTViews import komentarisanje
 
 class Kategorija_look(ListView):
 	model = Korisnici
@@ -7,8 +6,7 @@ class Kategorija_look(ListView):
 	paginate_by = 12
 
 	def get_queryset(self):
-		print(self.request.path)
-		if (str(self.request.path) == "/ljubavni_roman/"):
+		if (str(self.request.path).startswith("/ljubavni")):
 			knjige_all = Knjige.objects.filter(kategorija="Ljubavni roman")
 			return knjige_all
 		elif (self.request.path == "/istorija/"):
@@ -31,10 +29,31 @@ class Kategorija_look(ListView):
 			knjige_all = Knjige.objects.filter(kategorija="Drama")
 			return knjige_all
 
-		elif (self.request.path == "/pretraga"):
-			print("nestoooo")
-			knjige_all = Knjige.objects.filter(kategorija="Ljubavni roman")
+		elif (self.request.path.startswith("/autor/")):
+			print(self.request)
+			knjige_all = Knjige.objects.filter(kategorija="Drama")
 			return knjige_all
+
+		elif (self.request.path == "/pretraga/"):
+
+			pretraga = str(self.request.GET.get("pretraga")).upper()
+			knjige_all = Knjige.objects.all().filter(naslov__contains=pretraga)
+			print(knjige_all.count())
+			return knjige_all
+def oceneKnjiga(knjigaID,forJson = False):
+	oceneLista = []
+	knjiga = knjigaID
+	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
+	for i in range(len(ocene)):
+		ocena = ocene[i].ocena
+		if(forJson == True):
+			username = User.objects.get(id=Korisnici.objects.get(id=ocene[i].korisnik_id).korisnik_id).username
+			oceneLista.append([username, ocena])
+		else:
+			username = ocene[i].korisnik
+			oceneLista.append([username, ocena])
+	return oceneLista
+
 def knjiga_look(request, ISBN):
 	kategorija = "/" + str(request.path).split("/")[1] + "/"
 	pathsCategory = ["/ljubavni_roman/","/istorija/",
@@ -70,8 +89,7 @@ def knjiga_look(request, ISBN):
 			#za svaku nar udji u stavke
 			#za svaku stvaku vidi knjige
 			#poredi id knjige sa mojim idknjige
-		print(ocenjivanje)
-		print(oceneLista)
+
 		form = komentarisanje(request,knjigaID)
 		return render(request, 'public/knjige/knjiga.html', {"knjiga": knjiga, "ocene": oceneLista,
 													  "komentarLista": komentarLista,"form":form,

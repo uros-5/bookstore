@@ -17,7 +17,22 @@ Narudzbine
                     <h3>Vase narudzbine</h3>
                     <p></p>
                     {% if object_list|length > 0 %}
+                            {% if is_paginated %}
+                                <div class="pagination justify-content-center">
+                                    <span>
+                                        {% if page_obj.has_previous %}
+                                            <a href="{% url 'narudzbine' %}?page={{ page_obj.previous_page_number }}">Previous</a>
+                                        {% endif %}
+                                    <span style="margin-left:15px;margin-right:15px;">
+                                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                    </span>
+                                        {% if page_obj.has_next %}
+                                            <a href="{% url 'narudzbine' %}?page={{ page_obj.next_page_number }}">Next</a>
+                                        {% endif %}
+                                    </span>
+                                </div>
 
+                            {% endif %}
                         {% for i in object_list %}
                             <table class="table table-bordered">
                                 <p>Narudzbine od {{ i.0.datum }}</p>
@@ -59,6 +74,25 @@ Narudzbine
                                 </tbody>
                             </table>
                     {% endfor %}
+
+                        {% if is_paginated %}
+                                <div class="pagination justify-content-center">
+                                    <span>
+                                        {% if page_obj.has_previous %}
+                                            <a href="{% url 'narudzbine' %}?page={{ page_obj.previous_page_number }}">Previous</a>
+                                        {% endif %}
+                                    <span style="margin-left:15px;margin-right:15px;">
+                                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                    </span>
+                                        {% if page_obj.has_next %}
+                                            <a href="{% url 'narudzbine' %}?page={{ page_obj.next_page_number }}">Next</a>
+                                        {% endif %}
+                                    </span>
+                                </div>
+
+                        {% endif %}
+
+
                     {% endif %}
                 </div>
             </div>
