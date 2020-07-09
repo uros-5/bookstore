@@ -43,6 +43,7 @@ class Kategorija_look(ListView):
 def oceneKnjiga(knjigaID,forJson = False):
 	oceneLista = []
 	knjiga = knjigaID
+
 	ocene = OceneKnjiga.objects.filter(knjiga=knjiga)
 	for i in range(len(ocene)):
 		ocena = ocene[i].ocena
