@@ -116,19 +116,21 @@ Primer knjige
                 <div class="col-xs-12">
                     </br>
                     <h5>Ocene i misljenja citalaca</h5>
-                    {% if ocenjivanje == "DA" %}
-
+                    {% if zvezdiceNaModalu == "DA" %}
                         {% if ocene|length < 1 %}
                             <span><p>&#10032;&#10032;&#10032;&#10032;&#10032; &nbsp <button class="btn btn-outline-success my-2" data-toggle="modal" data-target="#exampleModal" >Budite prvi koji ce da oceni knjigu.</button></p></span>
-                        {% elif ocene|length >= 1 %}
+                        {% elif ocene|length == 1 %}
+
                             <span><p>&#10032;&#10032;&#10032;&#10032;&#10032; &nbsp <button class="btn btn-outline-success my-2" data-toggle="modal" data-target="#exampleModal" >Ocenite knjigu.</button></p></span>
                         {% endif %}
-                    {% elif ocenjivanje == "NE" %}
+
+                    {% elif zvezdiceNaModalu == "NE" %}
                         <span><p>&#10032;&#10032;&#10032;&#10032;&#10032; &nbsp Niste kupili knjigu.</p></span>
-                    {% elif ocenjivanje == "LOG" %}
+                    {% elif zvezdiceNaModalu == "LOG" %}
                         <span><p>&#10032;&#10032;&#10032;&#10032;&#10032; &nbsp Morate biti ulogovani za ovu akciju.</p></span>
-                    {% elif ocenjivanje == "NE JOS" %}
+                    {% elif zvezdiceNaModalu == "NE JOS" %}
                         <span><p>&#10032;&#10032;&#10032;&#10032;&#10032; &nbsp Niste platili.</p></span>
+
                     {% endif %}
                 </div>
 

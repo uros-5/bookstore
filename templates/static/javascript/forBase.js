@@ -64,7 +64,7 @@ function enableNav() {
                 });
          }
          else if(i == 2) {
-             var url = "/dodavanje_stavke_narudzbine";
+             var url = "/korpa";
              $(this).on('mousedown', function(e) {
                     clickSetUp(e,url);
 
