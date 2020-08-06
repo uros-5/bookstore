@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/TaskRestAPI/urls.py" line="0" />
+    <bookmark url="file://$PROJECT_DIR$/Knjizara/urls.py" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68360c10-f8ce-4b52-b24c-5fd4e9846b29" name="Default" comment="" />
+    <list default="true" id="68360c10-f8ce-4b52-b24c-5fd4e9846b29" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/allUrls/knjige_urls.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/utils/Knjiga.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/utils/Korpa.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/utils/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/viewsKnjizara/POSTViews.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Knjizara/viewsKnjizara/__init__.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/BankNotifCenter.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/BankNotifCenter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/NotifCenter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/PostaNotifCenter.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/PostaNotifCenter.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/izvestajiBanka/dfsds/izvestaj.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/izvestajiBanka/izvestaj - Copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/izvestajiPosta/dfsfd/izvestaj.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BankaPosta/izvestajiPosta/izvestaj - Copy.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ServerMobilnoBankaPosta.bat" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/migrations/0002_auto_20200409_1944.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/migrations/0003_utiscikorisnika.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runServer2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/public/index2.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/settings.py" afterPath="$PROJECT_DIR$/Server/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Server/urls.py" afterPath="$PROJECT_DIR$/Server/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/index.html" afterPath="$PROJECT_DIR$/templates/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" afterPath="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/korisnik/nalog.html" afterPath="$PROJECT_DIR$/templates/public/korisnik/nalog.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/public/korisnik/ocenjene_knjige.html" afterPath="$PROJECT_DIR$/templates/public/korisnik/ocenjene_knjige.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/javascript/forBase.js" afterPath="$PROJECT_DIR$/templates/static/javascript/forBase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/javascript/knjiga.js" afterPath="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/admin.py" afterPath="$PROJECT_DIR$/Knjizara/admin.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/apps.py" afterPath="$PROJECT_DIR$/Knjizara/apps.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/migrations/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/allUrls/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/migrations/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/templatetags/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/models.py" afterPath="$PROJECT_DIR$/Knjizara/models.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/templatetags/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/utils/Korisnik.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py" afterPath="$PROJECT_DIR$/Knjizara/templatetags/change_url.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/templatetags/pomnozi.py" afterPath="$PROJECT_DIR$/Knjizara/templatetags/pomnozi.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/tests.py" afterPath="$PROJECT_DIR$/Knjizara/tests.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/urls.py" afterPath="$PROJECT_DIR$/Knjizara/urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/templatetags/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" afterPath="$PROJECT_DIR$/Knjizara/allUrls/korisnik_urls.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/__init__.py" afterPath="$PROJECT_DIR$/Knjizara/utils/Korisnik.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" afterPath="$PROJECT_DIR$/Knjizara/viewsKnjizara/knjigeViews.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py" afterPath="$PROJECT_DIR$/Knjizara/viewsKnjizara/nalogViews.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,34 +82,43 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="korisnik_urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Knjizara/allUrls/korisnik_urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>form</find>
-      <find>dodaj</find>
-      <find>nakon_ocenj1</find>
-      <find>addU</find>
-      <find>reg</find>
-      <find>re.</find>
-      <find>infoId</find>
-      <find>Ocene i</find>
-      <find>doda</find>
-      <find>OceneKnjiga</find>
-      <find>knjiga.html</find>
-      <find>budite</find>
-      <find>btn</find>
-      <find>.btn.btn-outline-success.my-2.default-btn</find>
       <find>poruka</find>
       <find>NE&quot;</find>
       <find>NE</find>
@@ -70,11 +135,28 @@
       <find>autor</find>
       <find>src</find>
       <find>img</find>
+      <find>reg</find>
+      <find>korpu</find>
+      <find>dodavanje</find>
+      <find>kolicina</find>
+      <find>cleaned_data</find>
+      <find>request.session[&quot;korpa&quot;]</find>
+      <find>request.session</find>
+      <find>oceneKnj</find>
+      <find>oceneknjiga</find>
+      <find>kate</find>
+      <find>zahtev</find>
+      <find>request.POST</find>
+      <find>request</find>
+      <find>form.cleaned_data\[.*\]</find>
     </findStrings>
     <replaceStrings>
       <replace>cena = 0.0</replace>
       <replace>TaskRestAPI.urls.knjige_urls</replace>
       <replace>Kategorija_look.as_view()</replace>
+      <replace>getRegInput(.*)</replace>
+      <replace>getRegInput(\m)</replace>
+      <replace>getRegInput(&quot;\s&quot;)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -83,57 +165,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/static/css/style.css" />
-        <option value="$PROJECT_DIR$/templates/public/dodavanje_stavke_narudzbine.html" />
-        <option value="$PROJECT_DIR$/templates/public/pretraga.html" />
-        <option value="$PROJECT_DIR$/zabazu/ServerZaMobilno.py" />
-        <option value="$PROJECT_DIR$/ServerZaMobilno/Upiti.py" />
-        <option value="$PROJECT_DIR$/templates/public/knjige.html" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" />
-        <option value="$PROJECT_DIR$/templates/public/knjiga.html" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/POST_urls.py" />
-        <option value="$PROJECT_DIR$/Server/settings.py" />
-        <option value="$PROJECT_DIR$/ServerZaMobilno/ServerZaMobilno.py" />
-        <option value="$PROJECT_DIR$/testSamo.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerZaMobilno.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/NotifCenter.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/PostaNotifCenter.py" />
-        <option value="$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urls/kategorija_urls.py" />
-        <option value="$PROJECT_DIR$/Server/urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/drama.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/fantastika.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/filozofija.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/knjige_urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/knjigeViews.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/formViews.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/ljubavni_roman.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/istorija.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/horor.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/kategorija_urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urls.py" />
         <option value="$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js" />
         <option value="$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html" />
         <option value="$PROJECT_DIR$/templates/static/css/ocene.css" />
-        <option value="$PROJECT_DIR$/punibazu.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
-        <option value="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
-        <option value="$PROJECT_DIR$/templates/public/index.html" />
         <option value="$PROJECT_DIR$/templates/static/css/pocetna.css" />
-        <option value="$PROJECT_DIR$/templates/public/base.html" />
         <option value="$PROJECT_DIR$/templates/static/javascript/index.js" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py" />
         <option value="$PROJECT_DIR$/templates/public/korisnik/narudzbine.html" />
         <option value="$PROJECT_DIR$/templates/public/knjige/knjige.html" />
         <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py" />
-        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
         <option value="$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py" />
-        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
         <option value="$PROJECT_DIR$/templates/static/javascript/forBase.js" />
+        <option value="$PROJECT_DIR$/templates/public/base.html" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py" />
+        <option value="$PROJECT_DIR$/templates/public/index.html" />
+        <option value="$PROJECT_DIR$/templates/static/javascript/knjiga.js" />
+        <option value="$PROJECT_DIR$/templates/public/knjige/knjiga.html" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/utils/Korpa.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/utils/Knjiga.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/views.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewModel/Korpa.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewModel/Knjiga.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/knjigeViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py" />
+        <option value="$PROJECT_DIR$/TaskRestAPI/apps.py" />
+        <option value="$PROJECT_DIR$/Knjizara/urlsKnjizara/knjige_urls.py" />
+        <option value="$PROJECT_DIR$/Server/settings.py" />
+        <option value="$PROJECT_DIR$/dodaj_slike_za_proizvode.py" />
+        <option value="$PROJECT_DIR$/punibazu.py" />
+        <option value="$PROJECT_DIR$/Knjizara/views.py" />
+        <option value="$PROJECT_DIR$/Knjizara/viewsKnjizara/knjigeViews.py" />
+        <option value="$PROJECT_DIR$/Knjizara/utils/Knjiga.py" />
+        <option value="$PROJECT_DIR$/Knjizara/viewsKnjizara/nalogViews.py" />
+        <option value="$PROJECT_DIR$/Knjizara/allUrls/korisnik_urls.py" />
+        <option value="$PROJECT_DIR$/templates/public/korisnik/nalog.html" />
+        <option value="$PROJECT_DIR$/templates/public/korisnik/ocenjene_knjige.html" />
+        <option value="$PROJECT_DIR$/Knjizara/utils/Korisnik.py" />
+        <option value="$PROJECT_DIR$/Knjizara/viewsKnjizara/POSTViews.py" />
+        <option value="$PROJECT_DIR$/Knjizara/allUrls/knjige_urls.py" />
       </list>
     </option>
   </component>
@@ -164,6 +246,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -213,28 +296,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="javascript" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -310,7 +371,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,7 +385,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemId" value="media" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knjizara" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Knjizara" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -342,11 +435,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemId" value="Knjizara" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="urlsKnjizara" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,7 +453,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemId" value="Knjizara" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -378,33 +471,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
+              <option name="myItemId" value="Knjizara" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="miniAppsZaKnjizaru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web-programiranje-projektni-uros-mrkobrada" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaskRestAPI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="miniAppsZaKnjizaru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ServerMobilnoBankaPosta" />
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,13 +489,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
+              <option name="myItemId" value="Knjizara" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="allUrls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -433,7 +507,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="last.edited.regexp" value="(nskeklee)" />
   </component>
   <component name="RecentsManager">
@@ -678,15 +752,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30170575" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19989339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5064935" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4534632" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41774893" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987013" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31709957" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -709,199 +784,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/random stuff/little Apps/BankNotifCenter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/knjige_urls.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/ljubavni_roman.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/istorija.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/horor.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/filozofija.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/fantastika.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/knjige_urls/drama.py" />
-    <entry file="file://$PROJECT_DIR$/Server/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/drama.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/filozofija.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/horor.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/istorija.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/knjige_urls.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/ljubavni_roman.py" />
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/knjige_urls/fantastika.py" />
-    <entry file="file://$PROJECT_DIR$/Server/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/dodavanje_stavke_narudzbine.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/ocene.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/nalog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/Upiti.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="121" lean-forward="true" selection-start-line="13" selection-start-column="121" selection-end-line="13" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="93" column="39" lean-forward="false" selection-start-line="93" selection-start-column="39" selection-end-line="93" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/base0.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="104" lean-forward="false" selection-start-line="46" selection-start-column="104" selection-end-line="46" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="3" lean-forward="false" selection-start-line="16" selection-start-column="36" selection-end-line="18" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/pocetna.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/contrib/auth/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="37" column="4" lean-forward="false" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="108" column="32" lean-forward="false" selection-start-line="108" selection-start-column="32" selection-end-line="108" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/public/korisnik/narudzbine.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/nalogViews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="87" column="57" lean-forward="false" selection-start-line="87" selection-start-column="57" selection-end-line="87" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/POSTViews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2074">
-          <caret line="161" column="4" lean-forward="false" selection-start-line="161" selection-start-column="4" selection-end-line="162" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -919,59 +810,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/korisnik_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="6" column="39" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/kategorija_urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="65" column="63" lean-forward="false" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/viewsKnjizara/kategorijaViews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="22" lean-forward="true" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/javascript/forBase.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/templatetags/change_url.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRestAPI/templatetags/pomnozi.py">
+    <entry file="file://$PROJECT_DIR$/Knjizara/templatetags/pomnozi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,22 +821,316 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/punibazu.py">
+    <entry file="file://$PROJECT_DIR$/knjigee.py" />
+    <entry file="file://$PROJECT_DIR$/templates/public/index2.html" />
+    <entry file="file://$PROJECT_DIR$/TaskRestAPI/urlsKnjizara/POST_urls.py" />
+    <entry file="file://$PROJECT_DIR$/templates/public/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="734">
-          <caret line="207" column="50" lean-forward="false" selection-start-line="207" selection-start-column="50" selection-end-line="207" selection-end-column="50" />
-          <folding />
+        <state relative-caret-position="68">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knjigee.py">
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/forBase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1068">
+          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/registracija.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/korisnik_podaci.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/korisnik_podaci.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runServer2.py" />
+    <entry file="file://$PROJECT_DIR$/Knjizara/miniAppsZaKnjizaru/ServerMobilnoBankaPosta/ServerMobilnoBankaPosta.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/knjiga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/knjige/knjiga.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="130" column="59" lean-forward="true" selection-start-line="130" selection-start-column="59" selection-end-line="130" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/javascript/stavkenarudzbine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="80" column="36" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-681742492/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-508">
+          <caret line="731" column="6" lean-forward="false" selection-start-line="731" selection-start-column="6" selection-end-line="731" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="383" column="6" lean-forward="false" selection-start-line="383" selection-start-column="6" selection-end-line="383" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/migrations/0002_auto_20200409_1944.py" />
+    <entry file="file://$PROJECT_DIR$/Knjizara/templatetags/change_url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="869" column="0" lean-forward="false" selection-start-line="869" selection-start-column="0" selection-end-line="869" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/apps/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1921">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/asgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/punibazu.py" />
+    <entry file="file://$PROJECT_DIR$/dodaj_slike_za_proizvode.py" />
+    <entry file="file://$PROJECT_DIR$/Knjizara/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/utils/Korpa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="12" lean-forward="false" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/utils/Knjiga.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1352">
+          <caret line="55" column="4" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#29#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/viewsKnjizara/knjigeViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python38/Lib/site-packages/django/contrib/auth/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/utils/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="156" column="48" lean-forward="false" selection-start-line="156" selection-start-column="48" selection-end-line="156" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/nalog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="30" column="54" lean-forward="false" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/utils/Korisnik.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="153" column="39" lean-forward="false" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/public/korisnik/ocenjene_knjige.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="32" column="17" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/base0.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/viewsKnjizara/POSTViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1306">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/allUrls/knjige_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/viewsKnjizara/nalogViews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Knjizara/allUrls/korisnik_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
       </provider>

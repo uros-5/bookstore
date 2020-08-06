@@ -15,16 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from TaskRestAPI import urls
+from Knjizara import urls
 from django.urls import include
-from TaskRestAPI import views
+from Knjizara import views
 from django.conf.urls import url
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('TaskRestAPI.urls'))
+    path('',include('Knjizara.urls'))
 ]
 # if settings.DEBUG:
 if settings.DEBUG:

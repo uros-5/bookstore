@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'TaskRestAPI.apps.TaskrestapiConfig'
+    'Knjizara.apps.KnjizaraConfig'
 ]
 
 MIDDLEWARE = [
@@ -140,4 +140,4 @@ AUTH_USER_EMAIL_UNIQUE = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 
-# AUTH_USER_MODEL = 'TaskRestAPI.Korisnici'
+# AUTH_USER_MODEL = 'Knjizara.Korisnici'

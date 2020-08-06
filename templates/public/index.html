@@ -54,7 +54,7 @@
 					<h6>TestKnjizara:Filozofija</h6>
 					<hr>
 
-                    {% for knjiga in kategorija1 %}
+                    {% for knjiga in filozofijaKnjige %}
 
                         <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" />
@@ -88,7 +88,7 @@
 					<h6>TestKnjizara:Istorija</h6>
 					<hr>
 
-					{% for knjiga in kategorija2 %}
+					{% for knjiga in istorijaKnjige %}
 
                         <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" />
@@ -130,7 +130,7 @@
 					<h6>TestKnjizara:&nbsp Ljubavni roman</h6>
 
 					
-					{% for knjiga in randKat1 %}
+					{% for knjiga in ljubavniRomanKnjige %}
                         <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
                             <span>
@@ -154,7 +154,7 @@
 				<div class="col-sm-6">
 					<h6>TestKnjizara:&nbsp Drama</h6>
 
-                    {% for knjiga in randKat2 %}
+                    {% for knjiga in dramaKnjige %}
                         <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
                             <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
                             <span>

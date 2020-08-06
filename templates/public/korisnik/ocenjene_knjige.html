@@ -28,7 +28,7 @@ Ocenjene knjige
                         <tbody>
                             {% for knjiga in object_list %}
                             <tr>
-                                <th scope="row">#</th>
+                                <th scope="row">{{ knjiga.rbr }}</th>
                                 <td>{{ knjiga.naslov }}</td>
                                 <td>{{ knjiga.ocena }}</td>
                             </tr>

@@ -5,54 +5,33 @@ $(document).ready(function() {
 
     $("button:contains('Stavi u korpu')").on('click', function () {
            var knjigaISBN = $(this).attr("data-value");
+           var kolicina = getKolicina();
            var url = $(this).attr("value");
-           dodaj_u_korpu(knjigaISBN,url);
+
+           var podaci = {'knjigaISBN':knjigaISBN,'kolicina':kolicina};
+           ajaxPOST(podaci,url,poruka_nakon_dodavanja);
         });
     $("button:contains('Budite prvi')").on('click', function () {
-           ocenjivanje();
+           zvezdiceNaModalu();
         });
     $("button:contains('Ocenite knjigu')").on('click', function () {
-           ocenjivanje();
+           zvezdiceNaModalu();
         });
 
 });
 
 
-function zvezdice(br) {
-    document.write(napraviZvezdice(br));
-}
-function napraviZvezdice(br) {
-    var ukupno = "";
-    var i;
-    for (i=0;i<br;i++) {
-        ukupno+="&#11088;";
-    }
-    return ukupno;
-}
-function komadi() {
-    var ukupno = "";
-    var i;
-    for (i=2;i<12;i++) {
-        var br = (i).toString();
-        var option = document.createElement("option");
-        option.text = br;
-        option.value = br;
-        var select = document.getElementById("kolicina");
-        select.appendChild(option);
-    }
-
-}
-function dodaj_u_korpu(knjigaISBN,url) {
-    var kolicina = getKolicina();
+function ajaxPOST(podaci,url,success) {
     $.ajax({
         type: 'POST',
         url: url,
-        data:{'knjigaISBN':knjigaISBN,'kolicina':kolicina},
+        data:podaci,
         dataType:'json',
-        success:poruka_nakon_dodavanja,
+        success:success,
         error: $(".modal-body").html("Morate biti prijavljeni za ovu akciju.")
     });
 }
+
 function poruka_nakon_dodavanja (response) {
     poruka = JSON.parse(response);
     if (poruka === 1) {
@@ -68,39 +47,20 @@ function poruka_nakon_dodavanja (response) {
 
 
 
-function ocenjivanje() {
-    // alert("okk");
-    $(".modal-body").html("");
-    $(".modal-body").append('<div class="rate">');
-    for (i = 5;i>0;i--) {
-        var id="star"+i;
-        var value = i+"";
 
-        var nekiText = i+" stars";
-        var forAdd = '<input type="radio" id="idd" name="rate" value="valuee" /> <label for="idd" title="valuee">valuee stars</label>'.replaceAll("idd",id).replaceAll("valuee",value).replaceAll('\"',"'");
-        $(".rate").append(forAdd);
-    }
-    $(".modal-body").css("width","50%");
-    $(".modal-body").css("margin","0 auto");
+
+function odabirOcene () {
     var labels = $("label");
     labels.on('click',function () {
-        ocenjivanjeKnjige(getISBN(),$(this).attr("title"));
+        var knjigaISBN = getISBN();
+        var ocena = $(this).attr("title");
+        var url = "/ocenjivanje_knjige";
+        var podaci = {'knjigaISBN':getISBN(),'ocena':ocena};
+        ajaxPOST(podaci,url,poruka_nakon_ocenjivanja);
 
      });
-
 }
 
-
-function ocenjivanjeKnjige(knjigaISBN,ocena) {
-    $.ajax({
-        type: 'POST',
-        url: "/ocenjivanje_knjige",
-        data:{'knjigaISBN':knjigaISBN,'ocena':ocena},
-        dataType:'json',
-        success:poruka_nakon_ocenjivanja,
-        error: $(".modal-body").html("Morate biti prijavljeni za ovu akciju.")
-    });
-}
 function poruka_nakon_ocenjivanja(response) {
     var poruka = response["poruka"];
     var oceneKnjige = response["oceneKnjige"]
@@ -128,6 +88,7 @@ function napraviNovuTabeluZaOcene(oceneKnjige) {
     }
 }
 
+//getters
 
 function getISBN() {
     var isbn = $(".btn.btn-outline-success.my-2.default-btn").attr("data-value");
@@ -144,10 +105,33 @@ function getKolicina() {
    var kol  = parseInt(e.options[e.selectedIndex].value);
    return kol;
 }
-function testzakol(knjiga) {
 
-    alert(knjiga);
+// VEZANO ZA DODAVANJE ELEMENATA NA DOM knjiga.html
+function zvezdice(br) {
+    document.write(napraviZvezdice(br));
 }
+function napraviZvezdice(br) {
+    var ukupno = "";
+    var i;
+    for (i=0;i<br;i++) {
+        ukupno+="&#11088;";
+    }
+    return ukupno;
+}
+function komadi() {
+    var ukupno = "";
+    var i;
+    for (i=2;i<12;i++) {
+        var br = (i).toString();
+        var option = document.createElement("option");
+        option.text = br;
+        option.value = br;
+        var select = document.getElementById("kolicina");
+        select.appendChild(option);
+    }
+
+}
+
 function modalZaDom(){
     document.write(
       '<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
@@ -168,4 +152,23 @@ function modalZaDom(){
       '</div>' +
       '</div>'
     );
+}
+
+function zvezdiceNaModalu() {
+    //DODAVANJE ZVEZDICA ZA OCENJIVANJE NA MODALU
+    $(".modal-body").html("");
+    $(".modal-body").append('<div class="rate">');
+    for (i = 5;i>0;i--) {
+        var id="star"+i;
+        var value = i+"";
+
+        var nekiText = i+" stars";
+        var forAdd = '<input type="radio" id="idd" name="rate" value="valuee" /> <label for="idd" title="valuee">valuee stars</label>'.replaceAll("idd",id).replaceAll("valuee",value).replaceAll('\"',"'");
+        $(".rate").append(forAdd);
+    }
+    $(".modal-body").css("width","50%");
+    $(".modal-body").css("margin","0 auto");
+    //ODABIR OCENE
+    odabirOcene();
+
 }
