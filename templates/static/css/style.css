@@ -87,3 +87,15 @@ a[data-info="logo"] {
 .komentar-kol textarea {
 	resize: none;
 }
+@font-face {
+   font-family: urosFont;
+   src: url("UrosFont.ttf");
+}
+
+.font-zvezdica {
+	font-family:urosFont;
+	color:rgb(255,172,51);
+}
+/*.no-border {*/
+	/*border:1px solid #fff0 !important;*/
+/*}*/

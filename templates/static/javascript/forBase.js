@@ -26,7 +26,7 @@ function clickSetUp(e,url) {
     }
 }
 function porukaNakonOdgovora(response) {
-
+    console.log(response);
     $("body").html(response);
     enableNav();
     // var popup = window.open('/pretraga/',"_blank");

@@ -8,10 +8,11 @@ $(document).ready(function() {
            // alert(putanja);
             window.open(putanja,"_self");
         });
-       $(".p-2").on('click', function () {
+       $(".slika-index").on('click', function () {
            var putanja = $(this).attr("id").toString().toLowerCase().replace(" ","_");
             // alert(putanja);
-            window.open(putanja,"_self");
+           console.log("fsf");
+           window.open(putanja,"_self");
         });
 
         $("body").hide().fadeIn(1500);

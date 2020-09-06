@@ -114,7 +114,8 @@ function napraviZvezdice(br) {
     var ukupno = "";
     var i;
     for (i=0;i<br;i++) {
-        ukupno+="&#11088;";
+        // ukupno+="&#11088;";
+        ukupno+="a";
     }
     return ukupno;
 }

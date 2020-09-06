@@ -13,14 +13,19 @@ Primer knjiga
 {% block article_content %}
 
     <div class="row center-content-color d-flex justify-content-center">
+        {% if request.path == "/pretraga/" %}
+        <div class="d-flex justify-content-center default-look" style="border:1px solid #fff0;">
+        {% else %}
         <div class="d-flex justify-content-center default-look">
 
+        {% endif %}
             <div class="col-sm-12">
-
                     {% if is_paginated %}
+
                     <div class="pagination justify-content-center">
                         <span>
                             {% if page_obj.has_previous %}
+
                                 <a href="{% url request.path|change_url %}?page={{ page_obj.previous_page_number }}">Previous</a>
                             {% endif %}
                         <span style="margin-left:15px;margin-right:15px;">
