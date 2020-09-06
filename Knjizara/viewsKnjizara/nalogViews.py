@@ -20,7 +20,7 @@ def login_korisnika(request):
 
 			return HttpResponseRedirect(reverse('index'))
 
-		elif (provera == False):
+		elif (provera == False or provera == None):
 
 			return render(request, 'public/korisnik/nalog.html', {'form': form})
 	else:

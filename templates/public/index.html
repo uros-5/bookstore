@@ -56,8 +56,8 @@
 
                     {% for knjiga in filozofijaKnjige %}
 
-                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
-                            <img src="media{{ knjiga.slika }}" />
+                        <div class="p-2" >
+                            <img src="media{{ knjiga.slika }}" class="slika-index" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}"/>
                             <span>
 
                                 <p class="aktuelne-knjige">
@@ -90,8 +90,8 @@
 
 					{% for knjiga in istorijaKnjige %}
 
-                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
-                            <img src="media{{ knjiga.slika }}" />
+                        <div class="p-2">
+                            <img src="media{{ knjiga.slika }}" class="slika-index" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}" />
                             <span>
 
                                 <p class="aktuelne-knjige">
@@ -131,8 +131,8 @@
 
 					
 					{% for knjiga in ljubavniRomanKnjige %}
-                        <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
-                            <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
+                        <div class="p-2">
+                            <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh slika-index" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}" />
                             <span>
 
                                 <p class="aktuelne-knjige top-knjige-fs">
@@ -156,7 +156,7 @@
 
                     {% for knjiga in dramaKnjige %}
                         <div class="p-2" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}">
-                            <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh"/>
+                            <img src="media{{ knjiga.slika }}" class="aktuelne-knjige top-knjige-wh slika-index" id="/{{ knjiga.kategorija }}/{{ knjiga.ISBN }}" />
                             <span>
 
                                 <p class="aktuelne-knjige top-knjige-fs">
