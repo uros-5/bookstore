@@ -41,8 +41,16 @@ def index(request):
 												 "ljubavniRomanKnjige":knjiga.dodavanjeIAutora(ljubavniRomanKnjige),
 												 "dramaKnjige":knjiga.dodavanjeIAutora(dramaKnjige)})
 
-
-
+def index2(request):
+	setupSessionForKorisnik(request)
+	najnovijeKnjige = knjiga.getNajnovije()
+	filozofijaKnjige = knjiga.getKategorija("Filozofija",10)
+	istorijaKnjige = knjiga.getKategorija("Istorija",10)
+	return render(request,"public/index2.html",{
+		"najnovijeKnjige":najnovijeKnjige,
+		"filozofijaKnjige":knjiga.dodavanjeIAutora(filozofijaKnjige),
+		"istorijaKnjige":knjiga.dodavanjeIAutora(istorijaKnjige),
+		"ukupnoSve":korpa.getUkupno(korpa.getKorpa(request))})
 
 def setupSessionForKorisnik(request):
 	# print(type(request.session["_auth_user_id"]))

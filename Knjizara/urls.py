@@ -20,6 +20,8 @@ urlpatterns = [
 	# LINKOVI KORISNIKA
 	path('nalog/', include('Knjizara.allUrls.korisnik_urls')),
 
+	path('pocetna2', views.index2,name="index2")
+
 
 
 ]

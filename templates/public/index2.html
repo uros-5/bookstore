@@ -1,0 +1,85 @@
+{% extends "public/base2.html" %}
+{% load static %}
+{% block headcss %}
+    {{ block.super }}
+{% endblock %}
+
+{% block article_content %}
+<p class="main-container__label">Novo u prodavnici</p>
+        <div class="cards">
+            {% for knjiga in najnovijeKnjige %}
+            <div class="card card__text-center">
+                <h3 title="{{ knjiga.naslov }}" class="card__title">{{ knjiga.naslov|truncatechars:14 }}</h3>
+                <div class="card__image">
+                    <a href="/{{ knjiga.kategorija|lower }}/{{ knjiga.ISBN }}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a>
+                </div>
+                <p class="card__price">Cena</p>
+                <p class="card__price">{{ knjiga.cena }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- <p class="main-container__label main-container__label--first-half">
+            
+        </p> -->
+
+        <div class="cards cards--set cards--first-half">
+            <p class="main-container__label">TestKnjizara:Filozofija</p>
+            {% for knjiga in filozofijaKnjige %}
+            <div class="card card--row">
+                <div class="card__image">
+                    <a href="/{{ knjiga.kategorija|lower }}/{{ knjiga.ISBN }}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a>
+                </div>
+                <div class="card--group-data">
+                    <h3 title="{{ knjiga.naslov }}" class="card__title">{{ knjiga.naslov|truncatechars:14 }}</h3>
+                    <p class="card__description">{{ "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit."|truncatechars:70 }}</p>
+                    <p class="card__author">{{ knjiga.autor }}</p>
+                    <p class="card__price">{{ knjiga.cena }}</p>
+                </div>
+            </div>
+            {% endfor %}
+
+            
+        </div>
+
+        <div class="cards cards--set cards--second-half">
+            <p class="main-container__label">TestKnjizara:Istorija</p>
+            {% for knjiga in istorijaKnjige %}
+            <div class="card card--row">
+                <div class="card__image">
+                    <a href="/{{ knjiga.kategorija|lower }}/{{ knjiga.ISBN }}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a>
+                </div>
+                <div class="card--group-data">
+                    <h3 title="{{ knjiga.naslov }}" class="card__title">{{ knjiga.naslov|truncatechars:20 }}</h3>
+                    <p class="card__description">{{ "Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit."|truncatechars:70 }}</p>
+                    <p class="card__author">{{ knjiga.autor }}</p>
+                    <p class="card__price">{{ knjiga.cena }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <p class="main-container__label">Komentari korisnika</p>
+
+        <div class="comments">
+            <div class="comments__comment">
+                <h4 class="comments__comment__user">Username</h4>
+                <p class="comments__comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="comments__comment">
+                <h4 class="comments__comment__user">Username</h4>
+                <p class="comments__comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="comments__comment">
+                <h4 class="comments__comment__user">Username</h4>
+                <p class="comments__comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="comments__comment">
+                <h4 class="comments__comment__user">Username</h4>
+                <p class="comments__comment__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+{% endblock %}
