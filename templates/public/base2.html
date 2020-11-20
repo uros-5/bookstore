@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% block headcss %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title_html %}Knjizara Test - {% endblock %}
+    </title>
+    <link rel="stylesheet" href='{% static "css/styles.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "css/modal.css" %}' type="text/css">
+    <script src='{% static "javascript/lib/jquery-3.5.0.min.js" %}'></script>
+    <script src='{% static "javascript/docs.js" %}'></script>
+    <script src='{% static "javascript/korpa.js" %}'></script>
+    {% endblock %}
+</head>
+<body>
+
+    <nav class="nav-container" >
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-container__inner">
+            <a class="home-link" href="/">KnjizaraTest</a>
+            <ul class="top-nav" id="main-menu">
+                <li><i class="fas fa-search"></i></li>
+                <li><i class="fas fa-shopping-basket"></i></li>
+                <li><i class="fas fa-user"></i></li>
+            </ul>
+        </div>
+    </nav>
+    {% if user.is_authenticated %}
+    <!-- kada je ulogovan -->
+    <div class="modal-container modal-option--not-visible">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items modal-items-gap">
+            <div class="modal-item modal-item--full-column selected-option"></div>
+            <h3 class="modal-option__title">Nalog</h3>
+            <button class="button button--big modal-item--full-column">Korisnicki podaci</button>
+            <button class="button button--big modal-item--full-column">Naruceno</button>
+            <button class="button button--big modal-item--full-column">Utisci</button>
+            <button class="button button--big modal-item--full-column">Ocene i misljenja</button>
+            <button class="button button--big modal-item--full-column">Logout</button>
+        </div>
+    </div>
+    {% else %}
+    <!-- ukoliko korisnik nije ulogovan -->
+    <div class="modal-container modal-option--not-visible">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items">
+            <div class="modal-item selected-option">
+                <h3 class="modal-option__title">login</h3>
+            </div> 
+            <div class="modal-item">
+                <h3 class="modal-option__title">register</h3>
+            </div>
+            <div class="modal-item two-columns">
+                <div class="modal-option">
+                    <p>Username</p>
+                    <input type="text"/>
+                    <p>Password</p>
+                    <input type="text"></input>
+                    <button class="modal-option__button">login</button>
+                </div>
+                <div class="modal-option modal-option--not-visible">
+                    <p>Ime</p>
+                    <input type="text"/>
+                    <p>Prezime</p>
+                    <input type="text"/>
+                    <p>Email</p>
+                    <input type="text"/>
+                    <p>username</p>
+                    <input type="text"/>
+                    <p>Password</p>
+                    <input type="text"/>
+                    <p>Password confirm</p>
+                    <input type="text"/>
+                    <button class="modal-option__button">register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- korpa -->
+    <div class="modal-container modal-option--not-visible">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items">
+            <div class="modal-item modal-item--full-column selected-option">
+                <h3 class="modal-option__title">Sadrzaj korpe</h3>
+                <h4>Ukupno: {{ ukupnoSve }}din</h4>
+                <div class="korpa">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        {% block article_content %} {% endblock %}
+    </div>
+
+    <div class="footer">
+        <p>&copy; KnjizaraTest</p>
+    </div>
+
+    <script>
+        (function () {
+            let button = document.getElementsByClassName("menu-toggle")[0];
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                console.log("hello");
+                var menu = document.getElementById('main-menu');
+                menu.classList.toggle('is-open');
+            });
+
+            /* setForModal(); */
+            setForNav();
+            setForModal();
+            getKorpa();
+        })();
+    </script>
+
+
+    
+</body>
+</html>

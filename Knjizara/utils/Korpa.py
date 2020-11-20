@@ -60,18 +60,25 @@ def getStavke(korpa,Knjige):
 		naslov = knjiga.naslov
 		cena = knjiga.cena
 		kolicina = stavka["kolicina"]
-		stavke.append({"isbn": isbn, "slika": slika, "naslov": naslov, "cena": cena, "kolicina": kolicina}, )
+		stavke.append({"isbn": isbn, "slika": str(slika), "naslov": naslov, "cena": round(float(cena),2), "kolicina": kolicina, "ukupno":round(float(cena*kolicina),2)})
 	return stavke
 
 def setUkupno(stavke):
 	ukupno = 0
 	for i in range(len(stavke)):
 		ukupno += stavke[i]["cena"] * stavke[i]["kolicina"]
-	return ukupno
+	return round(float(ukupno),2)
 
 def setKorpa(request,podaci):
 	request.session["korpa"] = podaci
 
+def getUkupno(korpa):
+	ukupno = 0
+	for i in korpa:
+		print(korpa)
+		knjigaUkupno = Knjige.objects.get(ISBN=i["knjigaISBN"]).cena * i["kolicina"]
+		ukupno += knjigaUkupno
+	return float(round(ukupno,2))
 
 
 def setStavka(knjigaISBN,kolicina):
@@ -93,7 +100,7 @@ def delKnjiga(request,knjiga):
 		if (korpa[i]["knjigaISBN"] == knjiga):
 			del korpa[i]
 			setKorpa(request,korpa)
-			return_value = setReturnValue(knjiga,2)
+			return_value = setReturnValue(knjiga,2,ukupnoSve=getUkupno(korpa))
 			break
 	return return_value
 def setKolicina(request,knjiga,akcija):
@@ -102,12 +109,14 @@ def setKolicina(request,knjiga,akcija):
 	for i in range(len(korpa)):
 		if (korpa[i]["knjigaISBN"] == knjiga):
 			kolicina = getKolicina(korpa[i])
+			print(korpa[i])
 			if(akcija == "oduzimanje"):
 				if (kolicina > 1):
 					kolicina -= 1
 					korpa[i]["kolicina"] = kolicina
 				setKorpa(request,korpa)
-				return_value = setReturnValue(knjiga,3,kolicina)
+				ukupno = getUkupnoForKnjiga(knjiga,kolicina)
+				return_value = setReturnValue(knjiga,3,kolicina,ukupno,getUkupno(korpa))
 				break
 
 			elif(akcija == "dodavanje"):
@@ -115,7 +124,9 @@ def setKolicina(request,knjiga,akcija):
 					kolicina += 1
 					korpa[i]["kolicina"] = kolicina
 				setKorpa(request, korpa)
-				return_value = setReturnValue(knjiga, 4, kolicina)
+				ukupno = getUkupnoForKnjiga(knjiga,kolicina)
+				return_value = setReturnValue(knjiga,3,kolicina,ukupno,getUkupno(korpa))
+				print("serbia")
 				break
 	return return_value
 
@@ -147,5 +158,16 @@ def narucivanjeKnjige(request,korisnik,timezone):
 def getKolicina(knjiga):
 	return knjiga["kolicina"]
 
-def setReturnValue(knjigaISBN="",poruka=0,kolicina = 0):
-	return {"knjigaISBN":knjigaISBN,"poruka":poruka,"kolicina":kolicina}
+def getUkupnoForKnjiga(isbn,kolicina):
+	print(Knjige)
+	cena = Knjige.objects.get(ISBN=isbn).cena
+	return round(float(cena*kolicina),2)
+
+def setReturnValue(knjigaISBN="",poruka=0,kolicina = 0,ukupno=0,ukupnoSve=0):
+	returnValue = {"knjigaISBN":knjigaISBN,"poruka":poruka,"kolicina":kolicina}
+	if poruka in (3,4):
+		returnValue.setdefault("ukupno",ukupno)
+		returnValue.setdefault("ukupnoSve",ukupnoSve)
+	elif poruka == 2:
+		returnValue.setdefault("ukupnoSve",ukupnoSve)
+	return returnValue

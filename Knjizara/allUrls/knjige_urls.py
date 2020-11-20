@@ -14,6 +14,9 @@ urlpatterns = [
 	#PRIKAZ KORPE
 	path(r'korpa/', prikaz_korpe, name="korpa"),
 
+	#TEST AJAX
+	path(r'test22',test22,name="test22"),
+
 	#BRISANJE IZ KORPE
 	path(r'brisanje_iz_korpe', akcije_za_korpu, name="brisanje_iz_korpe"),
 

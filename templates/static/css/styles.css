@@ -1,0 +1,367 @@
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&family=Oxygen:wght@300;700&display=swap");
+
+:root {
+    box-sizing: border-box;			
+    --brand-color : #0E51A7;
+    --brand-gray: #274D7E;
+    --brand-dark: #05326D;
+    --brand-light: #4282D3;
+    --brand-white-light: #6997D3;
+
+    --comp-main: #FF9E00;
+    --comp-gray: #BF8830;
+    --comp-dark: #A66600;
+    --comp-light: #FFB640;
+    --comp-white-light: #FFC973;
+    font-size: 1rem;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+.test {
+    text-align: center;
+}
+
+
+.nav-container {
+    background-color: var(--brand-light);
+    position: relative;
+}
+
+.menu-toggle {
+    position: absolute;
+    top: 0.2em;
+    right: 0em;
+    display: block;
+    text-indent: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.nav-container__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 1.5em 0;
+}
+
+.home-link {
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Oxygen','sans-serif';
+    font-weight: bold;
+    color: var(--brand-dark);
+}
+
+.top-nav {
+    display: none;
+    list-style-type: none;
+    align-items: end;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main-container {
+    display: grid;
+    max-width: 1080px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.main-container__label {
+    grid-column: 1 / 3;
+    font-family: BlinkMacSystemFont, sans-serif;
+    font-size:0.9em;
+    font-weight: 100;
+}
+
+h2,h3,h4,h5,h6 {
+    font-weight: 900;
+}
+
+
+.main-container__label--first-half {
+    grid-column: 1 / 3;
+}
+
+.main-container__label--second-half {
+    grid-column: 1 / 3;
+}
+
+@media (min-width:30em) {
+    .main-container__label--first-half {
+        grid-column: 1 / 2;
+    }
+    
+    .main-container__label--second-half {
+        grid-column: 2 / 3;
+    }
+}
+
+@media(min-width:30em) {
+    :root {
+        font-size: 1.15em;
+    }
+    .top-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media(min-width: 40.625em) {
+    :root {
+        font-size: 1.3em;
+    }
+}
+
+@media(min-width: 56.25em) {
+    :root {
+        font-size: 1.5em;
+    }
+}
+
+@media(min-width: 75em) {
+    :root {
+        font-size: 1.6em;
+    }
+}
+
+.top-nav > li {
+     margin-left:0.2em;
+     padding:0.3em;
+     cursor: pointer;
+}
+
+
+.top-nav i {
+    color:var(--comp-light);
+}
+
+.is-open {
+    display: flex;
+}
+
+.cards , .comments {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x:scroll;
+    z-index: 1;
+}
+
+.cards--set {
+    flex-direction: column;
+}
+
+.cards--first-half, .cards--second-half {
+    grid-column: 1 / 3;
+}
+
+.comments__comment {
+    background-color: var(--brand-white-light);
+}
+
+.comments__comment__user {
+    text-decoration: underline;
+}
+
+.comments__comment__text {
+    background-color: var(--brand-light);
+}
+
+@media (min-width: 40.625em) {
+    .cards--first-half {
+        grid-column: 1 / 2;
+    }
+    
+    .cards--second-half {
+        grid-column: 2 / 3;
+    }
+}
+@media (min-width:66em) {
+    .cards,.comments {
+        flex-wrap: wrap;
+        overflow-x:hidden;
+        justify-content: center;
+    }
+}
+
+.card {
+    color:white;
+    display: flex;
+    /*! justify-content: space-between; */
+    flex-direction: column;
+    padding: 0.5em;
+    background-color: var(--brand-color);
+}
+
+.card--entire-row {
+    grid-column: 1 / 3;
+    justify-content: flex-start;
+}
+@media (min-width: 46.625em) {
+    .card {
+        /* this module is problem */
+        /*! justify-content: center; */
+    }
+
+    .comments {
+        flex-direction: column;
+    }
+
+    .comments__comment {
+        margin: 0.2em 0em;
+    }
+}
+
+.card--row {
+    flex-direction: row;
+}
+.card--group-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.3em;
+}
+
+.card__img {
+    border:1px solid black;
+    border-radius: 0.2em;
+}
+
+.card__title, .card__price , .card__description , .card__author , .card__pages {
+    font-family: Oxygen;
+    font-size:0.7em;
+}
+
+.card__text-center {
+    text-align: center;
+    line-height: 0.3em;
+}
+
+.button {
+    padding: 0.4em;
+    background: linear-gradient(var(--brand-light),var(--brand-gray));
+    color: white;
+    border-radius: 0.15em;
+    border: 0;
+    text-align: center;
+    transition: all 0.6s ease;
+}
+
+.button:active {
+    border: 2px solid var(--comp-dark);
+}
+
+.button:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--brand-light),white);
+    color: black;
+}
+
+.button--success {
+    background: linear-gradient(var(--brand-light),green)
+}
+
+.button--danger {
+    background: linear-gradient(var(--brand-light),red);
+}
+
+.button--big {
+    font-size:0.95em;
+    padding: 0.4em 0.6em;
+}
+
+.book-table {
+    grid-column: 1 / 3;
+    border: 2px solid black;
+    margin-top: 0.5em;
+}
+
+.book-table__username {
+    flex: 1 50%;
+    border-right: 2px solid black;
+    text-decoration: underline;
+}
+
+.book-table__stars {
+    flex: 1 50%;
+    text-decoration: underline;
+}
+
+.original-username {
+    flex: 1 50%;
+}
+
+.full-comment {
+    flex: 1 50%;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.table {
+    border:1px solid black;
+    grid-column: 1.5fr;
+    margin-bottom: 0.5em;
+}
+
+.footer {
+    grid-column: 1 / 3;
+    text-align: center;
+    background-color: var(--brand-light);
+}
+
+.korpa {
+    grid-column: 1 / 3;
+}
+
+.korpa__item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:wheat;
+    border: 1px solid black;
+}
+
+.korpa__item__slika {
+    border:0.5px solid green;
+    margin: 0.25em;
+}
+
+.korpa__item__details > * {
+    border-bottom: 4px  solid black;
+}
+
+.korpa__item__details{
+    flex: 1 59%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@font-face {
+    font-family: urosFont;
+    src: url("UrosFont.ttf");
+ }
+ 
+ .font-zvezdica {
+     font-family:urosFont;
+     color:rgb(255,172,51);
+ }

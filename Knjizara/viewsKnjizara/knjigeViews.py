@@ -17,6 +17,7 @@ class Kategorija_view(ListView):
 
 def knjiga_look(request, ISBN):
 	kategorija = "/" + str(request.path).split("/")[1] + "/"
+	print(kategorija)
 	pathsCategory = ["/ljubavni_roman/","/istorija/",
 					 "/fantastika/","/filozofija/",
 					 "/horor/","/drama/"
@@ -32,7 +33,7 @@ def knjiga_look(request, ISBN):
 
 		form = komentarisanje(request,knjiga.id)
 
-		return render(request, 'public/knjige/knjiga.html', {"knjiga": knjiga, "ocene": oceneLista,
+		return render(request, 'public/knjiga2.html', {"knjiga": knjiga, "ocene": oceneLista,
 													  "komentarLista": komentarLista,"form":form,
 															 "zvezdiceNaModalu":ocenjivanje})
 

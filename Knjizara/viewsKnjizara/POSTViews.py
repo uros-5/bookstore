@@ -72,8 +72,16 @@ def prikaz_korpe(request):
 	knjige = korpa.getKorpa(request)
 	stavke = korpa.getStavke(knjige,Knjige)
 	ukupno = korpa.setUkupno(stavke)
+	print(ukupno)
 	return render(request, 'public/knjige/dodavanje_stavke_narudzbine.html',
 				  {"korpa": stavke, "ukupno": str(ukupno)})
+
+@login_required
+def test22(request):
+	knjige = korpa.getKorpa(request)
+	stavke = korpa.getStavke(knjige,Knjige)
+	ukupno = korpa.setUkupno(stavke)
+	return HttpResponse(json.dumps({"stavke":stavke,"ukupno":ukupno}),content_type = "application/json")
 
 @csrf_exempt
 def akcije_za_korpu(request):
@@ -93,7 +101,7 @@ def akcije_za_korpu(request):
 			korisnik = Korisnici.objects.get(id=int(request.session["korisnikInfoId"]))
 
 			return_value = korpa.narucivanjeKnjige(request,korisnik, timezone)
-
+	print(return_value)
 	return HttpResponse(json.dumps(return_value), content_type=
 	"application/json")
 
