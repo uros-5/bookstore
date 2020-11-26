@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% load static %}
+{% load narudzbine_tags %}
+{% block headcss %}
+    {{ block.super }}
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+        .full-table {
+            grid-column: 1 / 3;
+        }
+    </style>
+{% endblock %}
+{% block article_content %}
+    {% if is_paginated %}
+    <h1 class="main-container__label">Vase narudzbine</h1>
+    <div class="main-container__label">
+        <span>
+            {% if page_obj.has_previous %}
+                <a href="{% url 'narudzbine' %}?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+        <span style="margin-left:15px;margin-right:15px;">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+            <a href="{% url 'narudzbine' %}?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+        </span>
+    </div>
+
+    {% endif %}
+    {% for narudzbina in object_list %}
+    <h1 class="main-container__label">{{ narudzbina.datumNarucivanja }}</h1>
+    <table class="full-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Naslov</th>
+                <th>Cena</th>
+                <th>Kom</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% with stavke=narudzbina|get_stavke %}
+            {% for stavka in stavke %}
+                <tr>
+                    <td>
+                        <img src="/media{{ stavka.knjiga.slika }}" width="84">
+                    </td>
+                    <td>{{ stavka.knjiga.naslov }}</td>
+                    <td>{{ stavka.knjiga.cena }}</td>
+                    <td>{{ stavka.kolicina }}</td>
+                </tr>
+            {% endfor %}
+        {% endwith %}
+        <tr>
+            <td rowspan="2">
+            </td>
+            <td><b>Ukupno</b></td>
+            <td>{{ narudzbina|stavka_ukupno }}.din</td>
+            <td>{{ narudzbina|stavke_kolicina }}</td>
+        </tr>
+        <tr>
+            <td><b>Placeno</b></td>
+            {% if narudzbina.placeno == True %}
+                <td>Da</td>
+            {% else %}
+                <td>Ne</td>
+            {% endif %}
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+    {% endfor %}
+{% endblock %}

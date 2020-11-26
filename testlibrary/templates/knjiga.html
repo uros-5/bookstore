@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headcss %}
+    {{ block.super }}
+    
+    <script src="{% static 'javascript/knjiga.js' %}"></script>
+    <script src="{% static 'javascript/komentarisanje.js' %}"></script>
+    <script src="{% static 'javascript/ocenjivanje.js' %}"></script>
+
+    <script>
+        let isbn = '{{ knjiga.ISBN }}';
+        console.log("ok")
+    </script>
+    <style>
+        .user-data__button {
+            font-size: 0.65em;
+            margin-top: 0.3em;
+        }
+        .remove-scroll {
+            height: auto;
+            overflow-y: auto;
+        }
+        
+        .rate {
+            list-style-type:none;
+            margin:0px;
+            padding:0px;
+            display:flex;
+            justify-content:space-around;
+            margin-bottom: 1em;
+        }
+    </style>
+{% endblock %}
+
+{% block article_content %}
+    <h3 class="main-container__label">{{ knjiga.naslov }}</h3>
+    <div class="card card--row card--entire-row">
+        <div class="card__image">
+            <img src="{{ knjiga.slika.url }}" width="300" height="380"/>
+        </div>
+        <div class="card--group-data">
+            <h3 class="card__author"><a style="text-decoration:none;color:white;" href="{% url 'author' knjiga.autor.id %}">{{ knjiga.autor }}</a></h3>
+            <p class="card__description">
+                <a style="text-decoration:none;color:white;" href="{% url 'kategorija' knjiga.kategorija %}" >{{ knjiga.kategorija }}</a>
+            </p>
+            <p class="card__pages">Strana: {{ knjiga.strana }}</p>
+            <p class="card__price">Cena: {{ knjiga.cena }}</p>
+        </div>
+    </div>
+    <form class="main-container__label" action="{% url 'add_to_korpa' %}" style="margin-top:0.5em;">
+        {% csrf_token %}
+        <input type="submit" value="Dodaj u korpu" class="button button--big"></input>
+    </form>
+    <h2 class="main-container__label">✰✰✰✰✰  Ocene i misljenja citalaca</h2>
+    <div>
+        <button class="button button--big">Ocenite</button>
+    </div>
+    
+    <table class="book-table">
+        <tr>
+            <th>Username</th>
+            <th>Rating</th>
+        </tr>
+        {% for i in ocene %}
+        <tr>
+            <td>{{ i.korisnik }}</td>
+            <td class="font-zvezdica" ><script>zvezdice({{ i.ocena }});</script></td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2 class="main-container__label">Komentari i utisci</h2>
+    <table class="book-table">
+        <tr>
+            <th>Username</th>
+            <th>Comment</th>
+        </tr>
+        {% for i in komentari %}
+        <tr>
+            <td>{{ i.korisnik }}</td>
+            <td class="font-zvezdicaClassFixLater" >{{ i.komentar }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <!-- modal-option--not-visible -->
+    <div class="modal-container modal-option--not-visible remove-scroll">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items">
+            <div class="modal-item modal-item--full-column selected-option">
+                <h3 class="modal-option__title">{{ placeno_poruka }}</h3>
+                {% if placeno == 3 or placeno == 4 %}
+                    <h3 class="modal-option__title">&nbsp;</h3>
+                    <ul class="rate">
+                        <li class="font-zvezdica">a</li>
+                        <li class="font-zvezdica">a</li>
+                        <li class="font-zvezdica">a</li>
+                        <li class="font-zvezdica">a</li>
+                        <li class="font-zvezdica">a</li>
+                      </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <input class="main-container__label user-data__button" type="text"></input>
+    <div>
+        <button class="button button--big user-data__button">Komentarisi</button>
+    </div>
+    {% endblock %}
+
+    {% block scripts %}
+        {{ block.super }}
+
+        knjigaKorpaAddListener();
+        addKomentarBtnListener();
+        addOcenjivanjeListener();
+        setHover({{ placeno }});
+
+    {% endblock %}

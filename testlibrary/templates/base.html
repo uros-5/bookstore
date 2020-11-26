@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% block headcss %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title_html %}Knjizara Test - {% endblock %}
+    </title>
+    <link rel="stylesheet" href='{% static "styles.css" %}' type="text/css">
+    <link rel="stylesheet" href='{% static "modal.css" %}' type="text/css">
+    <script src='{% static "javascript/lib/jquery-3.5.0.min.js" %}'></script>
+    <script src='{% static "javascript/docs.js" %}'></script>
+    <script src='{% static "javascript/korpa.js" %}'></script>
+    <script src='{% static "javascript/log.js" %}'></script>
+    <script src='{% static "javascript/reg.js" %}'></script>
+    <script>
+        let index = 1;
+    </script>
+    {% endblock %}
+</head>
+<body>
+
+    <nav class="nav-container" >
+        <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-container__inner">
+            <a class="home-link" href="/">KnjizaraTest</a>
+            <ul class="top-nav" id="main-menu">
+                <li><i class="fas fa-search"></i></li>
+                <li><i class="fas fa-shopping-basket"></i></li>
+                <li><i class="fas fa-user"></i></li>
+            </ul>
+        </div>
+    </nav>
+    
+    {% if not user.is_authenticated %}
+    <!-- ukoliko korisnik nije ulogovan -->
+    <div class="modal-container modal-option--not-visible">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items">
+            <div class="modal-item selected-option">
+                <h3 class="modal-option__title">login</h3>
+            </div> 
+            <div class="modal-item">
+                <h3 class="modal-option__title">register</h3>
+            </div>
+            <div class="modal-item two-columns">
+                <form method="POST" action="{% url 'log-user' %}" class="modal-option" id="log-form">
+                    {% csrf_token %} 
+                    <p>Username</p>
+                    <input id="log-form-username" type="text"/>
+                    <p>Password</p>
+                    <input id="log-form-password" type="password"></input>
+                    <input type="submit" value="login" class="modal-option__button"></input>
+                </form>
+                <form method="POST" action="{% url 'reg-user' %}" class="modal-option modal-option--not-visible" id="reg-form">
+                    {% csrf_token %} 
+                    <p>Ime</p>
+                    <input id="reg-form-name" type="text"/>
+                    <p>Prezime</p>
+                    <input id="reg-form-last-name" type="text"/>
+                    <p>Email</p>
+                    <input id="reg-form-email" type="email"/>
+                    <p>username</p>
+                    <input id="reg-form-username" type="text"/>
+                    <p>Password</p>
+                    <input id="reg-form-password" type="password"/>
+                    <p>Password confirm</p>
+                    <input id="reg-form-password-check" type="password"/>
+                    <input type="submit" value="login" class="modal-option__button"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- korpa -->
+    <div class="modal-container modal-option--not-visible">
+        <i class="fas fa-times modal-close"></i>
+        <div class="modal-items">
+            <div class="modal-item modal-item--full-column selected-option">
+                <h3 class="modal-option__title">Sadrzaj korpe</h3>
+                <h4 id="ukupno-iznos">Ukupno: {{ ukupnoSve }}din</h4>
+                <form id="narucivanje-form" action="{% url 'narucivanje' %}" method="POST" >
+                    {% csrf_token %}
+                    <button class="button button--big">Naruci</button>
+                </form>
+                <div class="korpa">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        {% block article_content %} {% endblock %}
+    </div>
+
+    <div class="footer">
+        <p>&copy; KnjizaraTest</p>
+    </div>
+
+    <script>
+        {% block scripts %}
+        (function () {
+            let button = document.getElementsByClassName("menu-toggle")[0];
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                console.log("hello");
+                var menu = document.getElementById('main-menu');
+                menu.classList.toggle('is-open');
+            });
+            // kada je ulogovan
+            {% if user.is_authenticated %}
+                insertUserModal(false);
+            {% endif %}
+            setForNav();
+            setForModal();
+            getKorpa();
+            addListenerLogBtn();
+            addListenerRegBtn();
+            setNaruciListener();
+        })();
+        {% endblock %}
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headcss %}
+    {{ block.super }}
+    <style>
+        .kategorija-knjiga {
+            grid-column: 1 / 3;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .kategorija-knjiga__item {
+            flex: 1 33.3%;
+        }
+    </style>
+{% endblock %}
+
+{% block article_content %}
+{% if is_paginated %}
+    <div class="main-container__label">
+        <span>
+            {% if page_obj.has_previous %}
+                <a href="{% url 'kategorija' kategorija %}?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+        <span style="margin-left:15px;margin-right:15px;">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+            <a href="{% url 'kategorija' kategorija %}?page={{ page_obj.next_page_number }}">Next</a>
+        {% endif %}
+        </span>
+    </div>
+
+{% endif %}
+        <div class="kategorija-knjiga">
+            {% for knjiga in object_list %}
+            <div class="kategorija-knjiga__item">
+                <div class="card">
+                    <div class="card__image">
+                        <a href="{% url 'knjiga' knjiga.ISBN %}"><img src="/media{{ knjiga.slika }}" width="150" height="220"/></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}
