@@ -20,28 +20,27 @@ from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # KNJIGE
     path('',views.index,name="index"),
-    # path('narudzbine',views.narudzbine_korisnik),
     path('knjiga/<str:isbn>',views.knjiga,name="knjiga"),
-    path('kat/<str:kategorija>',views.kategorija,name="kategorija"),
-    path('author/<int:id>',views.author,name="author"),
-    path('korisnik_info',views.korisnik_info),
-    path('logout',views.user_logout,name="logout"),
-    # JSON
-    path("korpa",views.prikaz_korpe),
-    path("add_to_korpa/",views.add_to_korpa,name="add_to_korpa"),
-    path("set_kolicina/",views.set_kolicina),
-    path("brisanje_iz_korpe/",views.brisanje_iz_korpe,name="brisanje_iz_korpe"),
-    path("log-user/",views.login_user,name="log-user"),
-    path("reg-user",views.register_user,name="reg-user"),
-    path("user_info",views.user_info,name="user_info"),
-    path("user-info-update/",views.user_info_update,name="user-info-update"),
     path("narucivanje/",views.narucivanje,name="narucivanje"),
     path("komentarisanje/",views.komentarisanje,name="komentarisanje"),
     path("ocenjivanje/",views.ocenjivanje,name="ocenjivanje"),
     path("kategorija/<str:kategorija>",views.Kategorija_view.as_view(),name="kategorija"),
     path("narudzbine",views.Narudzbine_view.as_view(),name="narudzbine"),
-    path("ocene-i-misljenja",views.ocene_i_misljenja,name="ocene_i_misljenja")
+    # KORPA
+    path("korpa",views.prikaz_korpe),
+    path("add_to_korpa/",views.add_to_korpa,name="add_to_korpa"),
+    path("set_kolicina/",views.set_kolicina),
+    path("brisanje_iz_korpe/",views.brisanje_iz_korpe,name="brisanje_iz_korpe"),
+    # KORISNIK
+    path("log-user/",views.login_user,name="log-user"),
+    path("reg-user",views.register_user,name="reg-user"),
+    path("user_info",views.user_info,name="user_info"),
+    path("user-info-update/",views.user_info_update,name="user-info-update"),
+    path("ocene-i-misljenja",views.ocene_i_misljenja,name="ocene_i_misljenja"),
+    path('logout',views.user_logout,name="logout"),
+    path('author/<int:id>',views.author,name="author"), 
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

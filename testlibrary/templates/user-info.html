@@ -20,8 +20,6 @@
     <input class="user-data" disabled type="text" value="{{ korisnik }}">
     <p class="main-container__label">E-mail</p>
     <input class="user-data" disabled type="text" value="{{ request.user.email }}">
-
-
     <p class="main-container__label">Ime</p>
     <input class="user-data" type="text" value="{{ request.user.first_name }}">
     <p class="main-container__label">Prezime</p>
@@ -35,7 +33,6 @@
     <div class="user-data">
         <button class="button user-data__button">Potvrdi</button>
     </div>
-    
 {% endblock %}
 {% block scripts %}
 {{ block.super }}

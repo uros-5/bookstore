@@ -67,19 +67,13 @@ def knjiga(request,isbn):
 def author(request,id):
     author = Korisnici.objects.get(id=id)
 
-def kategorija(request,kategorija):
-    kategorija = Knjige.objects.filter(kategorija=kategorija)
-
-def korisnik_info(request):
-    setupSessionForKorisnik(request)
-    return render(request,"index.html")
-
+@login_required
 def user_info(request):
     print(request.session.keys())
     user2 = get_korisnik(request)
     return render(request,"user-info.html",{"korisnik":user2})
 
-
+@login_required
 def user_info_update(request):
     data = dict(request.POST)
     sablon = re.compile(r'userInfo\[(.*)\]')
@@ -179,6 +173,7 @@ def check_reg_form(request):
                     return 2
     return True
 
+@login_required
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse('index'))
@@ -191,6 +186,7 @@ def narucivanje(request):
         return HttpResponse(json.dumps({"narucivanje":True}),content_type = "application/json")
     return HttpResponse(json.dumps({"narucivanje":False}),content_type = "application/json")
 
+@login_required
 def komentarisanje(request):
     komentarObj = KomentariNaKnjigama()
     komentarObj.korisnik = Korisnici.get_from_req(request)
@@ -242,7 +238,8 @@ class Narudzbine_view(ListView):
         context["narudzbine"] = Narudzbine().narudzbine_korisnik(request.session["_auth_user_id"])
 
         return context """
-    
+
+@login_required  
 def ocene_i_misljenja(request):
     ocene = OceneKnjiga.objects.filter(korisnik=request.session["_auth_user_id"])
     komentari = KomentariNaKnjigama.objects.filter(korisnik=request.session["_auth_user_id"])
