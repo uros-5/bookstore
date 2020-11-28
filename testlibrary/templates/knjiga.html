@@ -2,8 +2,6 @@
 {% load static %}
 {% block headcss %}
     {{ block.super }}
-    
-    <script src="{% static 'javascript/knjiga.js' %}"></script>
     <script src="{% static 'javascript/komentarisanje.js' %}"></script>
     <script src="{% static 'javascript/ocenjivanje.js' %}"></script>
 
@@ -83,7 +81,7 @@
         {% endfor %}
     </table>
     <!-- modal-option--not-visible -->
-    <div class="modal-container modal-option--not-visible remove-scroll">
+    <div class="modal-container modal-container--not-visible remove-scroll">
         <i class="fas fa-times modal-close"></i>
         <div class="modal-items">
             <div class="modal-item modal-item--full-column selected-option">

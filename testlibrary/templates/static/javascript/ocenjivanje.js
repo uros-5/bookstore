@@ -8,7 +8,7 @@ function addOcenjivanjeListener () {
     setCloseRatingModal(2);
     $(".button:contains('Ocenite')").click(function(event) {
         event.preventDefault();
-        modalContainer.classList.toggle("modal-option--not-visible");
+        modalContainer.classList.toggle("modal-container--not-visible");
         setBodyBackgroundColorRating(2);
     })
 }
@@ -70,7 +70,7 @@ function setCloseRatingModal(index) {
 
     modalClose.addEventListener('click', function(event) {
         event.preventDefault();
-        modalContainer.classList.toggle("modal-option--not-visible");
+        modalContainer.classList.toggle("modal-container--not-visible");
         setBodyBackgroundColor(index);
         // ajaks
         if (clickedStar != 0) {
