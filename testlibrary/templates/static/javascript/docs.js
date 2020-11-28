@@ -25,7 +25,7 @@ function addUserIconListener(elem) {
     elem.addEventListener('click', function(event) {
         event.preventDefault();
         modalContainer = getClass("modal-container",0);
-        modalContainer.classList.toggle("modal-option--not-visible");
+        modalContainer.classList.toggle("modal-container--not-visible");
         setBodyBackgroundColor(0);
     } );
 }
@@ -36,7 +36,7 @@ function addUserBucketListener(elem) {
         console.log("hello");
         getKorpa();
         modalContainer = getClass("modal-container",1);
-        modalContainer.classList.toggle("modal-option--not-visible");
+        modalContainer.classList.toggle("modal-container--not-visible");
         setBodyBackgroundColor(1);
     } );
 }
@@ -77,7 +77,7 @@ function setCloseModal(index) {
 
     modalClose.addEventListener('click', function(event) {
         event.preventDefault();
-        modalContainer.classList.toggle("modal-option--not-visible");
+        modalContainer.classList.toggle("modal-container--not-visible");
         setBodyBackgroundColor(index);
     });
 }
@@ -144,7 +144,7 @@ function raiseModal() {
 }
 
 function insertUserModal(check) {
-    let modalLogged = '<div class="modal-container modal-option--not-visible"> <i class="fas fa-times modal-close"></i> <div class="modal-items modal-items-gap"> <div class="modal-item modal-item--full-column selected-option"></div> <h3 class="modal-option__title">Nalog</h3> <a href="/user_info" class="button button--big modal-item--full-column">Korisnicki podaci</a> <a href="/narudzbine" class="button button--big modal-item--full-column">Naruceno</a> <a class="button button--big modal-item--full-column">Utisci</a> <a href="/ocene-i-misljenja" class="button button--big modal-item--full-column">Ocene i misljenja</a> <a href="/logout" class="button button--big modal-item--full-column">Logout</a> </div> </div>';
+    let modalLogged = '<div class="modal-container modal-container--not-visible"> <i class="fas fa-times modal-close"></i> <div class="modal-items modal-items-gap"> <div class="modal-item modal-item--full-column selected-option"></div> <h3 class="modal-option__title">Nalog</h3> <a href="/user_info" class="button button--big modal-item--full-column">Korisnicki podaci</a> <a href="/narudzbine" class="button button--big modal-item--full-column">Naruceno</a> <a class="button button--big modal-item--full-column">Utisci</a> <a href="/ocene-i-misljenja" class="button button--big modal-item--full-column">Ocene i misljenja</a> <a href="/logout" class="button button--big modal-item--full-column">Logout</a> </div> </div>';
     if (check == true) {
         $(".modal-container")[0].remove()
         $(".nav-container").after(modalLogged);
