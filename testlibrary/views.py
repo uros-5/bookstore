@@ -231,7 +231,7 @@ class Narudzbine_view(ListView):
     paginate_by = 3
     
     def get_queryset(self):
-        return Narudzbine.objects.filter(korisnik=get_korisnik(request)).all()
+        return Narudzbine.objects.filter(korisnik=get_korisnik(self.request)).all()
     
     """ def get_context_data(self, **kwargs):
         context = super(Narudzbine_view, self).get_context_data(**kwargs)
