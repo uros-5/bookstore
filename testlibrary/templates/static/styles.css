@@ -14,6 +14,9 @@
     --comp-dark: #A66600;
     --comp-light: #FFB640;
     --comp-white-light: #FFC973;
+
+    /* opacity for colors */
+    --brand-color-10: #0e50a712;
     font-size: 1rem;
 }
 *,
@@ -162,6 +165,7 @@ h2,h3,h4,h5,h6 {
     justify-content: flex-start;
     overflow-x:scroll;
     z-index: 1;
+    background-color: var(--brand-color-10);
 }
 
 .cards--set {
@@ -202,12 +206,11 @@ h2,h3,h4,h5,h6 {
 }
 
 .card {
-    color:white;
+    color:black;
     display: flex;
     /*! justify-content: space-between; */
     flex-direction: column;
     padding: 0.5em;
-    background-color: var(--brand-color);
 }
 
 .card--entire-row {
@@ -247,6 +250,23 @@ h2,h3,h4,h5,h6 {
 .card__title, .card__price , .card__description , .card__author , .card__pages {
     font-family: Oxygen;
     font-size:0.7em;
+}
+
+.card__image > a > img > a > img{
+    border: 0;
+    transition: border 0.2s linear;
+}
+
+.card__image > a > img:active {
+    border:1px solid var(--comp-light);
+
+}
+
+.card__image > a > img:hover {
+    border: 0.5px solid var(--comp-light);
+    border-style: dashed double none;
+    transition: border 0.5s linear;
+    
 }
 
 .card__text-center {

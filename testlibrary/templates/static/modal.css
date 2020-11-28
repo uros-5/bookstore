@@ -13,6 +13,17 @@
     box-shadow: 5px 5px var(--brand-gray);
     height: 25em;
     overflow-y: scroll;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform 0.3s , visibility 0.2s , opacity 0.3s ease-in;
+}
+
+.modal-container--not-visible {
+    opacity: 0.00;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: transform 0.1s , visibility 0.4s , opacity 0.4s ease-in-out;
 }
 
 .modal-items {
@@ -48,6 +59,7 @@
     display: flex;
     flex-direction: column;
     background-color: white;
+    border-radius: 0.2em;
 }
 
 .modal-option  {

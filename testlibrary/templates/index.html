@@ -11,7 +11,6 @@
             <div class="card card__text-center">
                 <h3 title="{{ knjiga.naslov }}" class="card__title">{{ knjiga.naslov|truncatechars:14 }}</h3>
                 <div class="card__image">
-                    <!-- <a href="/{{ knjiga.kategorija|lower }}/{{ knjiga.ISBN }}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a> -->
                     <a href="{% url 'knjiga' knjiga.ISBN %}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a>
                 </div>
                 <p class="card__price">Cena</p>
@@ -25,7 +24,6 @@
             {% for knjiga in knjige_filozofija %}
             <div class="card card--row">
                 <div class="card__image">
-                    <!-- <a href="/{{ knjiga.kategorija|lower }}/{{ knjiga.ISBN }}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a> -->
                     <a href="{% url 'knjiga' knjiga.ISBN %}"><img src="media{{ knjiga.slika }}" width="150" height="220"/></a>
                 </div>
                 <div class="card--group-data">
