@@ -37,9 +37,9 @@
             <img src="{{ knjiga.slika.url }}" width="300" height="380"/>
         </div>
         <div class="card--group-data">
-            <h3 class="card__author"><a style="text-decoration:none;color:white;" href="{% url 'author' knjiga.autor.id %}">{{ knjiga.autor }}</a></h3>
+            <h3 class="card__author"><a style="text-decoration:none;color:black;" href="{% url 'author' knjiga.autor.id %}">{{ knjiga.autor }}</a></h3>
             <p class="card__description">
-                <a style="text-decoration:none;color:white;" href="{% url 'kategorija' knjiga.kategorija %}" >{{ knjiga.kategorija }}</a>
+                <a style="text-decoration:none;color:black;" href="{% url 'kategorija' knjiga.kategorija %}" >{{ knjiga.kategorija }}</a>
             </p>
             <p class="card__pages">Strana: {{ knjiga.strana }}</p>
             <p class="card__price">Cena: {{ knjiga.cena }}</p>
