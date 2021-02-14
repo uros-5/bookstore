@@ -4,6 +4,10 @@ Example of how can one library work with Django Framework
 
 ## Screenshots
 
+![Django books photo](./django.png)
+
+
+
 ![Django books demo](https://github.com/uros-5/django-books/blob/master/media/gifs/django-books.gif)
 
 
