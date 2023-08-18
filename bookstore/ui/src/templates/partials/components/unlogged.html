@@ -1,0 +1,43 @@
+<div id="register" x-data class="modal-container modal-container--not-visible"
+  :class="{'modal-container--not-visible': $store.all.modal.visible == false, 'z11': $store.all.modal.current == 'user'}">
+  <i x-show="$store.all.modal.current == 'user'" @click="$store.all.modal.close()" class="fas fa-times modal-close"></i>
+  <div x-show="$store.all.modal.current == 'user'" @click.outside="$store.all.modal.close()" class="modal-items">
+    <div class="modal-item" @click="$store.all.user.setSelected('login')"
+      :class="{'selected-option': $store.all.user.selected == 'login'}">
+      <h3 class="modal-option__title">login</h3>
+    </div>
+    <div class="modal-item" @click="$store.all.user.setSelected('register')"
+      :class="{'selected-option': $store.all.user.selected == 'register'}">
+      <h3 class="modal-option__title">register</h3>
+    </div>
+    <div class="modal-item two-columns">
+      <form x-show="$store.all.user.selected == 'login'" method="POST" action="{% url 'log-user' %}"
+        class="modal-option" id="log-form">
+        {% csrf_token %}
+        <p>Username</p>
+        <input x-model="$store.all.user.username" id="log-form-username" name="username" type="text" />
+        <p>Password</p>
+        <input x-model="$store.all.user.password" id="log-form-password" name="password" type="password"></input>
+        <input hx-post="/log-user/" hx-target="#register" hx-swap="outerHTML" type="submit" value="login"
+          class="modal-option__button"></input>
+      </form>
+      <form x-show="$store.all.user.selected == 'register'" method="POST" action="{% url 'reg-user' %}"
+        class="modal-option" id="reg-form">
+        {% csrf_token %}
+        <p>Ime</p>
+        <input id="reg-form-name" type="text" />
+        <p>Prezime</p>
+        <input id="reg-form-last-name" type="text" />
+        <p>Email</p>
+        <input id="reg-form-email" type="email" />
+        <p>Korisnicko ime</p>
+        <input id="reg-form-username" type="text" />
+        <p>Lozinka</p>
+        <input id="reg-form-password" type="password" />
+        <p>Potvrda lozinke</p>
+        <input id="reg-form-password-check" type="password" />
+        <input type="submit" value="login" class="modal-option__button"></input>
+      </form>
+    </div>
+  </div>
+</div>

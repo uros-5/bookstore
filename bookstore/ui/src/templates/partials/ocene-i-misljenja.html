@@ -1,0 +1,48 @@
+{% if check_data == True %}
+<h1 class="main-container__label">Ocene i misljenja</h1>
+<table class="full-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Ocena</th>
+      <th>Komentar</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for ocena in ocene %}
+    <tr>
+      <td>
+        <a href="{% url 'knjiga' ocena.knjiga.ISBN %}" hx-get="{% url 'knjiga' ocena.knjiga.ISBN %}"
+          hx-swap="innerHTML swap:0.5s" hx-push-url="true" hx-target=".main-container"><img
+            src="/media{{ ocena.knjiga.slika }}" width="220" height="220" /> </a>
+      </td>
+      <td class="font-zvezdica zvezdica-yellow">{{ ocena.ocena|calculate_rating }}</td>
+      {% with komentar=ocena.knjiga|book_comment:user %}
+      <td>{{ komentar }}</td>
+      {% endwith %}
+    </tr>
+    {% endfor %}
+
+    {% for komentar in komentari %}
+    <tr>
+      <td>
+        <a href="{% url 'knjiga' komentar.knjiga.ISBN %}" hx-get="{% url 'knjiga' komentar.knjiga.ISBN %}"
+          hx-swap="innerHTML swap:0.5s" hx-push-url="true" hx-target=".main-container"><img
+            src="/media{{ komentar.knjiga.slika }}" width="220" height="220" /> </a>
+      </td>
+      {% with ocena=komentar.knjiga|book_rating:user %}
+      <td class="font-zvezdica zvezdica-yellow">{{ ocena }}</td>
+      {% endwith %}
+      <td>{{ komentar.komentar }}</td>
+    </tr>
+    {% endfor %}
+
+  </tbody>
+</table>
+
+{% endif %}
+<script>
+  document.title = "Ocene i misljenja"
+  document.querySelector(".main-container").id = "";
+</script>

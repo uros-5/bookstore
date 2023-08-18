@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headcss %}
+{{ block.super }}
+<style>
+  .user-data__button {
+    font-size: 0.65em;
+    margin-top: 0.3em;
+  }
+</style>
+{% endblock %}
+
+{% block article_content %}
+{% include "partials/user-info.html" %}
+{% endblock %}

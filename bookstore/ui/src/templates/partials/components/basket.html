@@ -1,0 +1,21 @@
+<div x-data="{sum: 0}" class="modal-container modal-container--not-visible"
+  :class="{'modal-container--not-visible': $store.all.modal.visible == false, 'z11': $store.all.modal.current == 'basket'}">
+  <i @click="$store.all.modal.close()" class="fas fa-times modal-close"></i>
+  <div x-show="$store.all.modal.current == 'basket'" @click.outside="$store.all.modal.close();" class="modal-items">
+    <div class="modal-item modal-item--full-column selected-option none-pointer">
+      <h3 class="modal-option__title">Sadrzaj korpe</h3>
+      <h4 id="ukupno-iznos" x-text="`Ukupno: ${sum.toFixed(2)}`"></h4>
+      <form hx-post="{% url 'narucivanje' %}" hx-target="#server-msg" hx-swap="innerHTML" id="narucivanje-form"
+        action="{% url 'narucivanje' %}" method="POST">
+        {% csrf_token %}
+        <button class="button button--big">Naruci</button>
+      </form>
+      <form id="korpa" class="korpa" x-data>
+        {% csrf_token %}
+        {% for book in request.session.korpa.values %}
+        {% include "partials/components/basket_item.html" %}
+        {% endfor %}
+      </form>
+    </div>
+  </div>
+</div>

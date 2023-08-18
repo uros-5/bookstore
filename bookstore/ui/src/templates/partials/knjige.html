@@ -1,0 +1,19 @@
+{% include "partials/components/books_pagination.html" %}
+<div class="kategorija-knjiga">
+  {% for knjiga in object_list %}
+  <div class="kategorija-knjiga__item">
+    <div class="card">
+      <div class="card__image">
+        <a href="{% url 'knjiga' knjiga.ISBN %}" hx-get="{% url 'knjiga' knjiga.ISBN %}" hx-swap="innerHTML swap:0.5s"
+          hx-push-url="true" hx-target=".main-container"><img src="/media{{ knjiga.slika }}" width="150"
+            height="220" /></a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% include "partials/components/books_pagination.html" %}
+<script>
+  document.title = "{{ kategorija }}"
+  document.querySelector(".main-container").id = "";
+</script>
