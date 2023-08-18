@@ -1,0 +1,21 @@
+<div id="logged" x-data="" class="modal-container modal-container--not-visible"
+  :class="{'modal-container--not-visible': $store.all.modal.visible == false, 'z11': $store.all.modal.current == 'user'}">
+  <i x-show="$store.all.modal.current == 'user'" @click="$store.all.modal.close();"
+    class="fas fa-times modal-close"></i>
+  <div x-show="$store.all.modal.visible == true && $store.all.modal.current == 'user'"
+    @click.outside="$store.all.modal.close();" class="modal-items modal-items-gap">
+    <div class="modal-item modal-item--full-column selected-option"></div>
+    <h3 class="modal-option__title">Nalog</h3>
+    <a @click="$store.all.modal.toggle();" href="/user_info" hx-get="/user_info" hx-swap="innerHTML swap:0.5s"
+      hx-push-url="true" hx-target=".main-container" class="button button--big modal-item--full-column">Korisnicki
+      podaci</a>
+    <a @click="$store.all.modal.toggle();" href="/narudzbine" hx-get="/narudzbine" hx-swap="innerHTML swap:0.5s"
+      hx-push-url="true" hx-target=".main-container" class="button button--big modal-item--full-column">Naruceno</a>
+    <a class="button button--big modal-item--full-column">Utisci</a>
+    <a @click="$store.all.modal.toggle();" href="/ocene-i-misljenja" hx-get="/ocene-i-misljenja"
+      hx-swap="innerHTML swap:0.5s" hx-push-url="true" hx-target=".main-container"
+      class="button button--big modal-item--full-column">Ocene i misljenja</a>
+    <a @click="$store.all.modal.toggle(); $store.all.user.reset();" href="/logout" hx-get="/logout" hx-swap="outerHTML"
+      hx-push-url="true" hx-target="#logged" class="button button--big modal-item--full-column">Logout</a>
+  </div>
+</div>

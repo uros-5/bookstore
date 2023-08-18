@@ -1,0 +1,29 @@
+<div x-ref="{{ book.ISBN }}" x-init="sum += s();" class="book2"
+  x-data="basketData(Number({{ book.cena }}), {{ book.count }})">
+  <div class="korpa__item" id="{{ book.ISBN }}">
+    <img class="korpa__item__slika" src="/media{{ book.img }}" width="180" height="250" />
+    <div class="korpa__item__details">
+      <p>Naslov: {{ book.title }} </p>
+      <p>Cena: {{ book.cena }} din </p>
+      <p x-text="ukupno()"></p>
+    </div>
+    <p x-text="all()" style="flex: 1 50%;"></p>
+    <p style="display: none" x-text="sum"></p>
+  </div>
+
+  <button hx-post="/basket" hx-swap="none" class="book2 del-btn"
+    hx-vals='js:{"action": "d", "ISBN": "{{ book.ISBN }}", "csrfmiddlewaretoken": book_action_csrf() }'
+    @click="del($refs['{{ book.ISBN }}'], $data)">Obrisi</button>
+  <button hx-post="/basket" hx-swap="none"
+    hx-vals='js:{"action": "-", "ISBN": "{{ book.ISBN }}", "csrfmiddlewaretoken": book_action_csrf() }'
+    @click="decr($data)">-</button>
+  <button hx-post="/basket" hx-swap="none"
+    hx-vals='js:{"action": "+", "ISBN": "{{ book.ISBN }}", "csrfmiddlewaretoken": book_action_csrf() }'
+    @click="incr($data)">+</button>
+</div>
+
+<script>
+  function book_action_csrf() {
+    return document.querySelector(".korpa input").value
+  }
+</script>

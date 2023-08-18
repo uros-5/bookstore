@@ -1,0 +1,24 @@
+<div x-data class="modal-container modal-container--not-visible remove-scroll"
+  :class="{'modal-container--not-visible': $store.all.modal.visible == false, 'z11': $store.all.modal.current == 'ratings'}">
+  <i @click="$store.all.modal.close()" class="fas fa-times modal-close"></i>
+  <div x-show="$store.all.modal.current == 'ratings'" @click.outside="$store.all.modal.close();" class="modal-items">
+    <form hx-post="{% url 'ocenjivanje' %}" hx-target="#ratings" hx-swap="beforeend"
+      class="modal-item modal-item--full-column selected-option">
+      {% csrf_token %}
+      <input type="hidden" name="ocena" x-bind:value="$store.all.ratings.rating" />
+      <input x-ignore type="hidden" name="ISBN" value="{{ knjiga.ISBN }}" />
+      <h3 class="modal-option__title">{{ placeno_poruka }}</h3>
+      {% if placeno == 3 or placeno == 4 %}
+      <h3 class="modal-option__title">&nbsp;</h3>
+      <ul x-data="" x-ref="data_star" @mouseover.away="$store.all.ratings.rating = 0;" class="rate"
+        x-bind:data-star="$store.all.ratings.rating">
+        <button @mouseover="$store.all.ratings.rating = 1;" class="font-zvezdica">a</button>
+        <button @mouseover="$store.all.ratings.rating = 2;" class="font-zvezdica">a</button>
+        <button @mouseover="$store.all.ratings.rating = 3;" class="font-zvezdica">a</button>
+        <button @mouseover="$store.all.ratings.rating = 4;" class="font-zvezdica">a</button>
+        <button @mouseover="$store.all.ratings.rating = 5;" class="font-zvezdica">a</button>
+      </ul>
+      {% endif %}
+    </form>
+  </div>
+</div>

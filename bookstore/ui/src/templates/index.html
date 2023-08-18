@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headcss %}
+{{ block.super }}
+{% endblock %}
+
+{% block article_content %}
+{% include "partials/index.html" %}
+{% endblock %}

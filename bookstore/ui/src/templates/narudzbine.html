@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block headcss %}
+{{ block.super }}
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+
+  .full-table {
+    grid-column: 1 / 3;
+  }
+</style>
+{% endblock %}
+{% block article_content %}
+{% include "partials/narudzbine.html" %}
+{% endblock %}

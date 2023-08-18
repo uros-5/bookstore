@@ -1,0 +1,24 @@
+<form hx-post="{% url 'user-info-update' %}" hx-swap="none">
+  {% csrf_token %}
+  <p class="main-container__label l2">Username</p>
+  <input class="user-data d2" disabled type="text" value="{{ korisnik }}">
+  <p class="main-container__label l2">E-mail</p>
+  <input class="user-data d2" disabled type="text" value="{{ request.user.email }}">
+  <p class="main-container__label l2">Ime</p>
+  <input name="first_name" class="user-data d2" type="text" value="{{ request.user.first_name }}">
+  <p class="main-container__label l2">Prezime</p>
+  <input name="last_name" class="user-data d2" type="text" value="{{ request.user.last_name }}">
+  <p class="main-container__label l2">Grad</p>
+  <input name="grad" class="user-data d2" type="text" value="{{ korisnik.grad }}">
+  <p class="main-container__label l2">Ulica i broj</p>
+  <input name="ulicaIBroj" class="user-data d2" type="text" value="{{ korisnik.ulicaIBroj }}">
+  <p class="main-container__label l2">Telefon</p>
+  <input name="telefon" class="user-data d2" type="text" value="{{ korisnik.telefon }}">
+  <div class="user-data d2">
+    <button class="button user-data__button">Potvrdi</button>
+  </div>
+</form>
+<script>
+  document.title = "Korisnicki podaci"
+  document.querySelector(".main-container").id = "user-info";
+</script>

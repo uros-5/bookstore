@@ -1,0 +1,20 @@
+{% if is_paginated %}
+<div class="main-container__label">
+  <span>
+    {% if page_obj.has_previous %}
+    <a href="{% url 'kategorija' kategorija %}?page={{ page_obj.previous_page_number }}"
+      hx-get="{% url 'kategorija' kategorija %}?page={{ page_obj.previous_page_number }}" hx-swap="innerHTML swap:0.5s"
+      hx-push-url="true" hx-target=".main-container">Previous</a>
+    {% endif %}
+    <span style="margin-left:15px;margin-right:15px;">
+      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+    </span>
+    {% if page_obj.has_next %}
+    <a href="{% url 'kategorija' kategorija %}?page={{ page_obj.next_page_number }}"
+      hx-get="{% url 'kategorija' kategorija %}?page={{ page_obj.next_page_number }}" hx-swap="innerHTML swap:0.5s"
+      hx-push-url="true" hx-target=".main-container">Next</a>
+    {% endif %}
+  </span>
+</div>
+
+{% endif %}

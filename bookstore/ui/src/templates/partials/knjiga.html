@@ -1,0 +1,68 @@
+<h3 id="category" class="main-container__label">{{ knjiga.naslov }}</h3>
+<div class="card card--row card--entire-row">
+  <div class="card__image">
+    <img src="{{ knjiga.slika.url }}" width="300" height="380" />
+  </div>
+  <div class="card--group-data">
+    <h3 class="card__author"><a style="text-decoration:none;color:black;" href="{% url 'author' knjiga.autor.id %}"
+        hx-get="{% url 'author' knjiga.autor.id %}" hx-swap="innerHTML swap:6.5s" hx-push-url="true"
+        hx-target=".main-container">
+        {{ knjiga.autor }}</a></h3>
+    <p class="card__description">
+      <a style="text-decoration:none;color:black;" href="{% url 'kategorija' knjiga.kategorija %}"
+        hx-get="{% url 'kategorija' knjiga.kategorija %}" hx-swap="innerHTML swap:0.5s" hx-push-url="true"
+        hx-target=".main-container">
+        {{ knjiga.kategorija }}</a>
+    </p>
+    <p class="card__pages">Strana: {{ knjiga.strana }}</p>
+    <p class="card__price">Cena: {{ knjiga.cena }}</p>
+  </div>
+</div>
+<form class="main-container__label" x-data="" style="margin-top:0.5em;">
+  {% csrf_token %}
+  <input type="hidden" name="action" value="a" /> <input type="hidden" name="ISBN" value="{{ knjiga.ISBN }}" />
+  <input type="submit" value="Dodaj u korpu" hx-post="/basket" hx-target=".korpa" hx-swap="beforeend"
+    class="button button--big" />
+</form>
+<h2 class="main-container__label">✰✰✰✰✰ Ocene i misljenja citalaca</h2>
+<div x-data>
+  <button x-data @click="$store.all.modal.toggle(); $store.all.modal.current = 'ratings';"
+    class="button button--big">Ocenite</button>
+</div>
+
+<table id="ratings" class="book-table">
+  <tr>
+    <th>Username</th>
+    <th>Rating</th>
+  </tr>
+  {% for i in ocene %}
+  {% include 'partials/components/rating.html' %}
+  {% endfor %}
+</table>
+
+<h2 class="main-container__label">Komentari i utisci</h2>
+<table id="comments" class="book-table">
+  <tr>
+    <th>Username</th>
+    <th>Comment</th>
+  </tr>
+  {% for i in komentari %}
+  {% include "partials/komentar.html" %}
+  {% endfor %}
+</table>
+<!-- modal-option--not-visible -->
+{% include "partials/components/rating_modal.html" %}
+
+<form hx-post="{% url 'komentarisanje' %}" hx-target="#comments" hx-swap="beforeend">
+  {% csrf_token %}
+  <input name="komentar" class="main-container__label user-data__button" type="text" />
+  <input type="hidden" name="ISBN" value="{{ knjiga.ISBN }}" />
+  <div>
+    <button class="button button--big user-data__button">Komentarisi</button>
+  </div>
+</form>
+
+<script>
+  document.title = "{{ knjiga.naslov }}";
+  document.querySelector(".main-container").id = "book";
+</script>

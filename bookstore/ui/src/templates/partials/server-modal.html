@@ -1,0 +1,10 @@
+<div class="modal-container lower" x-data="" :class="{'modal-container--not-visible': $store.all.modal.visible == false,
+   'z11': $store.all.modal.current == 'server'}">
+  <i x-show="$store.all.modal.current == 'server'" @click="$store.all.modal.close()"
+    class="fas fa-times modal-close"></i>
+  <div x-show="$store.all.modal.current == 'server'" @click.outside="$store.all.modal.close();" class="modal-items">
+    <div class="modal-item modal-item--full-column selected-option none-pointer">
+      <h3 id="server-msg" class="modal-option__title"></h3>
+    </div>
+  </div>
+</div>
