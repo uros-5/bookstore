@@ -23,7 +23,6 @@ categories = [
 ]
 
 shelve_file = shelve.open(SHELVE_DATA, "r")
-print(shelve_file.keys())
 
 
 def random_street():
@@ -322,22 +321,22 @@ def create_categories():
 
 
 def run():
-    # create_users()
+    create_users()
 
-    # create_publisher()
+    create_publisher()
 
-    # create_books()
+    create_books()
 
-    # create_orders()
+    create_orders()
 
-    # create_order_items()
+    create_order_items()
 
-    # pay_for_books()
+    pay_for_books()
 
-    # create_comments_on_books()
+    create_comments_on_books()
 
     set_imgs()
 
-    # create_categories()
+    create_categories()
 
     # create_ratings()

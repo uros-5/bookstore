@@ -8,7 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 
-from django.conf import os
+import os
 
 MEDIA_FOLDER = "./bookstore/ui/src/media/images/books"
 
@@ -92,7 +92,18 @@ def create_new(slika: str, naslov: str):
     return "ok"
 
 
+def create_folders():
+    folders = os.listdir(MEDIA_FOLDER)
+    if "old" not in folders:
+        os.mkdir(f"{MEDIA_FOLDER}/old")
+    if "real" not in folders:
+        os.mkdir(f"{MEDIA_FOLDER}/real")
+    if "resized" not in folders:
+        os.mkdir(f"{MEDIA_FOLDER}/resized")
+
+
 def start():
+    create_folders()
     with ThreadPoolExecutor(max_workers=8) as executor:
         futures = []
         books = {"books": []}

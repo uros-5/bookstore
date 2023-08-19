@@ -9,8 +9,9 @@
   <title>
     {% block title_html %}Knjizara Test - {% endblock %}
   </title>
-  <link rel="stylesheet" href='{% static "css/styles.css" %}' type="text/css">
-  <link rel="stylesheet" href='{% static "css/modal.css" %}' type="text/css">
+  <link rel="stylesheet" href='{% static "css/styles.min.css" %}' type="text/css">
+  <link rel="stylesheet" href='{% static "css/modal.min.css" %}' type="text/css">
+  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
   <script src='{% static "javascript/vite/index.js" %}'></script>
   <script src='{% static "javascript/lib/cdn.min.js" %}' defer></script>
   <script src='{% static "javascript/lib/htmx.min.js" %}'></script>
@@ -25,15 +26,6 @@
   <script src="//unpkg.com/alpinejs" defer></script>
   -->
   <!--  <script src="//unpkg.com/alpinejs" defer></script> -->
-  <script>
-    function zvezdice(counter) {
-      let ukupno = "";
-      for (let i = 0; i < counter; i++) {
-        ukupno += "a ";
-      }
-      document.write(ukupno);
-    }
-  </script>
   <style>
     .main-modal-visible {
       position: absolute;

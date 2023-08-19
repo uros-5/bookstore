@@ -11,3 +11,5 @@ dist-ssr
 *.local
 venv
 src/media/images/books/real
+*pnpm-lock.yaml
+./bookstore/migrations
