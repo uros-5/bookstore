@@ -68,7 +68,7 @@ def add_book(request, isbn) -> Tuple[Union[bool, None], Union[dict, str]]:
 def create_order(request: HttpRequest):
     order = Narudzbine()
     order.datumNarucivanja = timezone.now()
-    order.placeno = False
+    order.placeno = True
     order.korisnik = Korisnici.objects.filter(
         korisnik=User.objects.get(id=request.session["_auth_user_id"])
     )[0]

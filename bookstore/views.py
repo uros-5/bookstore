@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from bookstore.basket2 import (
+from bookstore.basket import (
     init_basket,
     set_count,
     setup_user_session,
@@ -296,7 +296,3 @@ def template_str(request, template):
     if request.headers.get("HX-Request"):
         return f"partials/{template}"
     return template
-
-
-def vue(request):
-    return render(request, "vue.html")
